@@ -76,5 +76,38 @@ a{
 }
 img{
     display: flex;
-    height: 400px;
+    height: 80%;
+}
+
+@media (max-width: 810px){
+
+    .formulario{
+        flex-direction: column;
+        height: 98%;
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 90%;
+    }
+    h2{
+        font-size: 40px;
+    }
+    .login{
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+    }
+    input{
+        width: 90%;
+        height: 35px;
+    }
+    button{
+        width: 90%;
+        height: 35px;
+    }
+    img{
+        display: none;
+    }
+    .links{
+        font-size: 13px;
+    }
 }
