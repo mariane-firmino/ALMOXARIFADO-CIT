@@ -31,14 +31,23 @@
                         </div>
                         <div class="form-group half">
                             <label class="form-label">Curso</label>
-                            <input type="text" class="form-input" placeholder="Nome do Curso">
+                            <input type="text" class="form-input" list="cursos" placeholder="Selecione ou digite o curso">
+                            <datalist id="cursos">
+                                <option value="Informática">
+                                <option value="Biotecnologia">
+                            </datalist>
                         </div>
                     </div>
 
                     <div class="form-row">
                         <div class="form-group half">
                             <label class="form-label">Ano</label>
-                            <input type="text" class="form-input" placeholder="Ex: 2º ano">
+                            <input type="text" class="form-input" list="anos" placeholder="Selecione ou digite o ano">
+                            <datalist id="anos">
+                                <option value="1º Ano">
+                                <option value="2º Ano">
+                                <option value="3º Ano">
+                            </datalist>
                         </div>
                         <div class="form-group half">
                             <label class="form-label">Telefone</label>
