@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultar Histórico - SACIT</title>
+    <link rel="stylesheet" href="css/consultar-historico.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@400;700;800&family=Inter:wght@600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="avatar-wrapper">
+                    <img src="https://www.figma.com/api/mcp/asset/dce32261-f8c5-45ca-9bed-8f44b9902ac8" alt="Usuário" class="sidebar-avatar">
+                </div>
+                <p class="sidebar-title">Nome</p>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="inicio.html" class="menu-link">
+                    <span class="icon">
+                        <img src="Img/icone_inicio (1).png" alt="Icone Início" class="menu-icon">
+                    </span>
+                    Início
+                </a>
+                <a href="perfil.html" class="menu-link">
+                    <span class="icon">
+                        <img src="Img/icone_perfil.png" alt="Icone Perfil" class="menu-icon">
+                    </span>
+                    Perfil
+                </a>
+                <a href="notificacao-coordenador.html" class="menu-link">
+                    <span class="icon">
+                        <img src="Img/icone_notificacao.png" alt="Icone Notificações" class="menu-icon">
+                    </span>
+                    Notificações
+                </a>
+                <a href="gerenciar-perfil.html" class="menu-link">
+                    <span class="icon">
+                        <img src="Img/icone_gerenciar_perfis.png" alt="Icone Gerenciar Perfis" class="menu-icon">
+                    </span>
+                    Gerenciar Perfis
+                </a>
+                <a href="#" class="menu-link">
+                    <span class="icon">
+                        <img src="Img/icon_consultar_produto (1).png" alt="Icone Consultar Produto" class="menu-icon">
+                    </span>
+                    Consultar Produto
+                </a>
+                <a href="analisar-solicitacao.html" class="menu-link">
+                    <span class="icon">
+                        <img src="Img/icone_analisar_solicitacao.png" alt="Icone Analisar Solicitação" class="menu-icon">
+                    </span>
+                    Analisar Solicitação
+                </a>
+                <a href="controlar-estoque.html" class="menu-link">
+                    <span class="icon">
+                        <img src="Img/icone_controlar_estoque.png" alt="Icone Controlar Estoque" class="menu-icon">
+                    </span>
+                    Controlar Estoque
+                </a>
+                <a href="controlar-produto.html" class="menu-link">
+                    <span class="icon">
+                        <img src="Img/icone_controlar_produto.png" alt="Icone Controlar Produto" class="menu-icon">
+                    </span>
+                    Controlar Produto
+                </a>
+                <a href="consultar-historico.html" class="menu-link active">
+                    <span class="icon">
+                        <img src="Img/icon_historico.png" alt="Icone Consultar Histórico" class="menu-icon">
+                    </span>
+                    Consultar Histórico
+                </a>
+                <a href="sair.html" class="menu-link logout-link">
+                    <span class="icon">
+                        <img src="Img/icone_sair.png" alt="Icone Sair" class="menu-icon">
+                    </span>
+                    Sair
+                </a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="page-header">
+                <div class="page-title">
+                    <div class="title-row">
+                        <span class="title-flag"></span>
+                        <h1>Consultar Histórico</h1>
+                    </div>
+                    <p class="subtitle">Reveja todas as movimentações e registros do sistema.</p>
+                </div>
+                <img src="https://www.figma.com/api/mcp/asset/102bc9f7-5aa5-4947-bd52-66362b954455" alt="SACIT Logo" class="brand-logo">
+            </header>
+
+            <section class="hero-cards">
+                <article class="hero-card">
+                    <p class="hero-label">Registros</p>
+                    <p class="hero-value">1.248</p>
+                    <p class="hero-note">Entradas e saídas</p>
+                </article>
+                <article class="hero-card">
+                    <p class="hero-label">Ações recentes</p>
+                    <p class="hero-value">32</p>
+                    <p class="hero-note">Últimas 24 horas</p>
+                </article>
+                <article class="hero-card warning-card">
+                    <p class="hero-label">Alertas</p>
+                    <p class="hero-value">06</p>
+                    <p class="hero-note">Movimentos críticos</p>
+                </article>
+            </section>
+
+            <section class="filters-section">
+                <div class="filter-group search-field">
+                    <label for="search" class="filter-label">Buscar histórico</label>
+                    <div class="search-box">
+                        <img src="https://www.figma.com/api/mcp/asset/3993ef05-61ae-49a8-bdb0-675bc3cad40e" alt="Pesquisar" class="search-icon">
+                        <input type="text" id="search" placeholder="Digite termo ou código" class="search-input">
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <label for="date" class="filter-label">Data</label>
+                    <input type="date" id="date" class="filter-select">
+                </div>
+                <div class="filter-group">
+                    <label for="type" class="filter-label">Tipo</label>
+                    <select id="type" class="filter-select">
+                        <option>Todos os tipos</option>
+                        <option>Entrada</option>
+                        <option>Saída</option>
+                        <option>Atualização</option>
+                    </select>
+                </div>
+            </section>
+
+            <section class="table-section">
+                <div class="table-heading">
+                    <h2>Histórico de Movimentações</h2>
+                    <p>Visualize todas as ações realizadas no sistema.</p>
+                </div>
+                <div class="table-container">
+                    <table class="history-table">
+                        <thead>
+                            <tr>
+                                <th>Data</th>
+                                <th>Usuário</th>
+                                <th>Ação</th>
+                                <th>Produto</th>
+                                <th>Quantidade</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>12/05/2026</td>
+                                <td>João Silva</td>
+                                <td>Entrada</td>
+                                <td>Baterias</td>
+                                <td>120</td>
+                                <td><span class="status-badge status-success">Confirmado</span></td>
+                            </tr>
+                            <tr>
+                                <td>12/05/2026</td>
+                                <td>Maria Souza</td>
+                                <td>Saída</td>
+                                <td>Toner</td>
+                                <td>25</td>
+                                <td><span class="status-badge status-warning">Pendente</span></td>
+                            </tr>
+                            <tr>
+                                <td>11/05/2026</td>
+                                <td>Pedro Lima</td>
+                                <td>Atualização</td>
+                                <td>Cabo HDMI</td>
+                                <td>0</td>
+                                <td><span class="status-badge status-success">Confirmado</span></td>
+                            </tr>
+                            <tr>
+                                <td>11/05/2026</td>
+                                <td>Luana Reis</td>
+                                <td>Entrada</td>
+                                <td>Mouse Óptico</td>
+                                <td>45</td>
+                                <td><span class="status-badge status-success">Confirmado</span></td>
+                            </tr>
+                            <tr>
+                                <td>10/05/2026</td>
+                                <td>Bruno Alves</td>
+                                <td>Saída</td>
+                                <td>Teclado</td>
+                                <td>15</td>
+                                <td><span class="status-badge status-danger">Rejeitado</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="pagination">
+                    <button class="pagination-btn"><span>&lt;</span></button>
+                    <span class="pagination-info">1 de 5</span>
+                    <button class="pagination-btn"><span>&gt;</span></button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <nav class="footer-links">
+            <a href="inicio.html">Início</a>
+            <a href="sobre.html">Sobre nós</a>
+            <a href="gerenciar-perfil.html">Gerenciar perfis</a>
+            <a href="consultar-historico.html">Consultar Histórico</a>
+        </nav>
+
+        <div class="footer-center">
+            <img src="img/ifro-logo.webp" alt="IFRO Logo" class="footer-logo">
+        </div>
+
+        <div class="footer-contact">
+            <p>Contatos:</p>
+            <p>Telefone: (99) 99999-9999</p>
+            <p>E-mail: algumacoisa@ifro.edu.br</p>
+        </div>
+    </footer>
+</body>
+</html>
