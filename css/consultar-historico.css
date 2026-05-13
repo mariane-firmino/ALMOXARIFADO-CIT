@@ -78,7 +78,9 @@ a {
     font-size: 18px;
     font-weight: 700;
     color: #f5fcf9;
-    transition: background 0.2s ease;
+    transition: all 0.2s ease;
+    flex-direction: row;
+    white-space: nowrap;
 }
 
 .menu-link:hover,
@@ -87,7 +89,10 @@ a {
 }
 
 .menu-icon {
-    width: 28px;
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
     height: 28px;
     object-fit: contain;
 }

@@ -61,18 +61,29 @@ a{
 .menu-link{
     display: flex;
     align-items: center;
-    gap: 16px;
-    padding: 12px 15px;
+    gap: 14px;
+    padding: 14px 18px;
     border-radius: 12px;
-    transition: 0.3s ease;
+    font-size: 18px;
     font-weight: 700;
+    color: #f5fcf9;
+    transition: all 0.2s ease;
+    flex-direction: row;
+    white-space: nowrap;
 }
 
-.menu-link:hover,
-.menu-link.active{
+.menu-link:hover{
     background: #109e8c;
-    padding: 4px 20px;
-    width: 250px;
+}
+
+.menu-link.active {
+    background: #109e8c;
+}
+
+.menu-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
 }
 
 .icon{
@@ -82,11 +93,6 @@ a{
     background: transparent;
 }
 
-.menu-icon{
-    width: 45px;
-    height: 45px;
-    object-fit: contain;
-}
 
 .content{
     padding: 35px;

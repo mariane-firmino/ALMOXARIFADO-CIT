@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultar Produto - SACIT</title>
+    <link rel="stylesheet" href="../css/consultar-produto.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@400;700;800&family=Inter:wght@600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="avatar-wrapper">
+                    <img src="https://www.figma.com/api/mcp/asset/dce32261-f8c5-45ca-9bed-8f44b9902ac8" alt="Usuário" class="sidebar-avatar">
+                </div>
+                <p class="sidebar-title">Nome</p>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="inicio.html" class="menu-link">
+                    <img src="https://www.figma.com/api/mcp/asset/1b6b7bfa-8d9b-425c-9a00-f4603eb14d0d" alt="Início" class="menu-icon">
+                    Início
+                </a>
+                <a href="perfil.html" class="menu-link">
+                    <img src="https://www.figma.com/api/mcp/asset/75f2780b-be68-4ac2-82c6-0c9b3943b5a3" alt="Perfil" class="menu-icon">
+                    Perfil
+                </a>
+                <a href="notificacao-coordenador.html" class="menu-link">
+                    <img src="https://www.figma.com/api/mcp/asset/39bf3900-6e26-44b3-9b36-667a5ff3f7e9" alt="Notificações" class="menu-icon">
+                    Notificações
+                </a>
+                <a href="gerenciar-perfil.html" class="menu-link">
+                    <img src="https://www.figma.com/api/mcp/asset/bb130e22-8db4-4e8f-b67c-71db4809586e" alt="Gerenciar Perfis" class="menu-icon">
+                    Gerenciar Perfis
+                </a>
+                <a href="consultar-produto.html" class="menu-link active">
+                    <img src="https://www.figma.com/api/mcp/asset/cbe64200-21e1-44c6-a6e4-0b262a66239b" alt="Consultar Produto" class="menu-icon">
+                    Consultar Produto
+                </a>
+                <a href="analisar-solicitacao.html" class="menu-link">
+                    <img src="https://www.figma.com/api/mcp/asset/2ad94df5-1adc-4c41-8e90-34a0c800d298" alt="Analisar Solicitação" class="menu-icon">
+                    Analisar Solicitação
+                </a>
+                <a href="controlar-estoque.html" class="menu-link">
+                    <img src="https://www.figma.com/api/mcp/asset/171951bf-7856-4e5b-981b-a6492b6a707e" alt="Controlar Estoque" class="menu-icon">
+                    Controlar Estoque
+                </a>
+                <a href="controlar-produto.html" class="menu-link">
+                    <img src="https://www.figma.com/api/mcp/asset/5becb9c6-5ccf-43cf-a06d-8e0b1d1970b1" alt="Controlar Produto" class="menu-icon">
+                    Controlar Produto
+                </a>
+                <a href="consultar-historico.html" class="menu-link">
+                    <img src="https://www.figma.com/api/mcp/asset/2e711ea8-f080-4092-9213-a45dea93659f" alt="Consultar Histórico" class="menu-icon">
+                    Consultar Histórico
+                </a>
+                <a href="sair.html" class="menu-link logout-link">
+                    <img src="https://www.figma.com/api/mcp/asset/67508781-e7c0-4cee-8508-57efea3455dc" alt="Sair" class="menu-icon">
+                    Sair
+                </a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="page-header">
+                <div class="page-title">
+                    <div class="title-row">
+                        <span class="title-flag"></span>
+                        <h1>Consultar Produto</h1>
+                    </div>
+                    <p class="subtitle">Visualize e pesquise produtos disponíveis no sistema.</p>
+                </div>
+                <img src="https://www.figma.com/api/mcp/asset/102bc9f7-5aa5-4947-bd52-66362b954455" alt="SACIT Logo" class="brand-logo">
+            </header>
+
+            <section class="hero-cards">
+                <article class="hero-card">
+                    <p class="hero-label">Produtos</p>
+                    <p class="hero-value">1.024</p>
+                    <p class="hero-note">Cadastrados</p>
+                </article>
+                <article class="hero-card">
+                    <p class="hero-label">Em estoque</p>
+                    <p class="hero-value">856</p>
+                    <p class="hero-note">Disponíveis</p>
+                </article>
+                <article class="hero-card warning-card">
+                    <p class="hero-label">Baixo estoque</p>
+                    <p class="hero-value">23</p>
+                    <p class="hero-note">Atenção necessária</p>
+                </article>
+            </section>
+
+            <section class="filters-section">
+                <div class="filter-group search-field">
+                    <label for="search" class="filter-label">Buscar produto</label>
+                    <div class="search-box">
+                        <img src="https://www.figma.com/api/mcp/asset/3993ef05-61ae-49a8-bdb0-675bc3cad40e" alt="Pesquisar" class="search-icon">
+                        <input type="text" id="search" placeholder="Digite nome ou código do produto" class="search-input">
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <label for="category" class="filter-label">Categoria</label>
+                    <select id="category" class="filter-select">
+                        <option value="">Todas as categorias</option>
+                        <option value="eletronicos">Eletrônicos</option>
+                        <option value="escritorio">Material de Escritório</option>
+                        <option value="limpeza">Produtos de Limpeza</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="status" class="filter-label">Status</label>
+                    <select id="status" class="filter-select">
+                        <option value="">Todos os status</option>
+                        <option value="disponivel">Disponível</option>
+                        <option value="baixo">Baixo Estoque</option>
+                        <option value="indisponivel">Indisponível</option>
+                    </select>
+                </div>
+            </section>
+
+            <section class="table-section">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Nome do Produto</th>
+                            <th>Categoria</th>
+                            <th>Quantidade</th>
+                            <th>Status</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>PROD001</td>
+                            <td>Caneta Esferográfica Azul</td>
+                            <td>Material de Escritório</td>
+                            <td>150</td>
+                            <td><span class="status available">Disponível</span></td>
+                            <td><button class="action-btn">Ver Detalhes</button></td>
+                        </tr>
+                        <tr>
+                            <td>PROD002</td>
+                            <td>Resma de Papel A4</td>
+                            <td>Material de Escritório</td>
+                            <td>5</td>
+                            <td><span class="status low">Baixo Estoque</span></td>
+                            <td><button class="action-btn">Ver Detalhes</button></td>
+                        </tr>
+                        <tr>
+                            <td>PROD003</td>
+                            <td>Detergente Líquido</td>
+                            <td>Produtos de Limpeza</td>
+                            <td>0</td>
+                            <td><span class="status unavailable">Indisponível</span></td>
+                            <td><button class="action-btn">Ver Detalhes</button></td>
+                        </tr>
+                        <!-- Adicionar mais linhas conforme necessário -->
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <nav class="footer-links">
+            <a href="#">Início</a>
+            <a href="#">Sobre nós</a>
+            <a href="#">Gerenciar perfis</a>
+            <a href="#">Consultar Produto</a>
+        </nav>
+
+        <div class="footer-center">
+            <img src="../img/ifro-logo.webp" alt="IFRO Logo" class="footer-logo">
+        </div>
+
+        <div class="footer-contact">
+            <p>Contatos:</p>
+            <p>Telefone: (99) 99999-9999</p>
+            <p>E-mail: algumacoisa@ifro.edu.br</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -78,7 +78,7 @@ a {
     font-size: 18px;
     font-weight: 700;
     color: #f5fcf9;
-    transition: background 0.2s ease;
+    transition: all 0.2s ease;
     flex-direction: row;
     white-space: nowrap;
 }
@@ -87,9 +87,13 @@ a {
     background: #109e8c;
 }
 
+.menu-link.active {
+    background: #109e8c;
+}
+
 .menu-icon {
-    width: 28px;
-    height: 28px;
+    width: 24px;
+    height: 24px;
     object-fit: contain;
 }
 
