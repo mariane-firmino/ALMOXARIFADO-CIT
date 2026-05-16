@@ -5,22 +5,22 @@
     color: #14221f;
 }
 
-*{
+*, *::before, *::after {
     box-sizing: border-box;
 }
 
-body{
+body {
     margin: 0;
     min-height: 100vh;
     background: #eef6f2;
 }
 
-a{
+a {
     text-decoration: none;
     color: inherit;
 }
 
-.page{
+.page {
     display: grid;
     grid-template-columns: 280px 1fr;
     min-height: 100vh;
@@ -94,13 +94,12 @@ a{
     object-fit: contain;
 }
 
-.content{
+.content {
     padding: 35px;
     background: #f6f9f8;
 }
 
-
-.page-header{
+.page-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -108,152 +107,164 @@ a{
     margin-bottom: 30px;
 }
 
-.title-row{
+.title-row {
     display: flex;
     align-items: center;
     gap: 12px;
 }
 
-.title-mark{
+.title-mark {
     width: 6px;
     height: 45px;
     border-radius: 5px;
     background: #109e8c;
 }
 
-h1{
+h1 {
     margin: 0;
     font-size: 40px;
 }
 
-.subtitle{
+.subtitle {
     margin-top: 10px;
     font-size: 18px;
 }
 
-.brand-logo{
+.brand-logo {
     width: 140px;
+    max-width: 100%;
 }
 
-.profile-card{
-    background: white;
+.password-card {
+    background: #ffffff;
     border-radius: 22px;
-    padding: 30px;
-
+    padding: 32px;
     width: 100%;
-    max-width: 900px;
-
+    max-width: 700px;
     margin: 40px auto;
-
-    box-shadow: 0 10px 35px rgba(0,0,0,0.08);
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
 }
 
-.profile-card h2{
-    margin-top: 0;
-    margin-bottom: 25px;
-}
-
-.profile-grid{
-    display: grid;
-    grid-template-columns: 300px 1fr;
-    gap: 35px;
-}
-
-.profile-aside{
+.card-heading {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 20px;
+    justify-content: space-between;
+    gap: 18px;
+    margin-bottom: 28px;
 }
 
-.avatar-frame img{
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
+.card-heading h2 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 700;
 }
 
+.section-line {
+    flex: 1;
+    height: 1px;
+    background: #dbe4e2;
+}
 
-.profile-actions{
-    width: 100%;
+.password-form {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 28px;
 }
 
-.btn{
-    display: inline-flex;
+.password-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.password-group label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #14221f;
+}
+
+.password-input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-input {
+    width: 100%;
+    border: 2px solid #d9d9d9;
+    border-radius: 10px;
+    padding: 14px 48px 14px 16px;
+    font-size: 16px;
+    color: #14221f;
+    background: #ffffff;
+    transition: border-color 0.25s ease;
+}
+
+.password-input:focus {
+    outline: none;
+    border-color: #109e8c;
+    box-shadow: 0 0 0 3px rgba(16, 158, 140, 0.12);
+}
+
+.password-toggle {
+    position: absolute;
+    right: 14px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
+    transition: opacity 0.2s ease;
+}
+
+.password-toggle:hover {
+    opacity: 0.8;
+}
+
+.eye-icon {
+    width: 22px;
+    height: 22px;
+    display: block;
+}
+
+.form-actions {
+    display: flex;
+    gap: 14px;
+    margin-top: 8px;
+    justify-content: flex-end;
+}
+
+.btn {
     border: none;
     border-radius: 12px;
-    padding: 14px;
+    padding: 14px 28px;
     font-size: 16px;
-    font-weight: bold;
+    font-weight: 700;
     cursor: pointer;
-    transition: 0.3s ease;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
 }
 
-
-.btn-primary{
+.btn-primary {
     background: #109e8c;
-    color: white;
+    color: #ffffff;
 }
 
-.btn-primary:hover{
-    background: #109e8c;
-    transform: translateY(-4px);
-    box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.16);
 }
 
-.btn-secondary{
-    background: white;
-    border: 1px solid #ccc;
+.btn-secondary {
+    background: #ffffff;
     color: #109e8c;
+    border: 1px solid #d9d9d9;
 }
 
-.btn-secondary:hover{
-    color: #109e8c;
-    transform: translateY(-4px);
-    box-shadow: 0 8px 18px rgba(0,0,0,0.2);
-}
-
-.info-grid{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-}
-
-.info-item{
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.info-icon{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: transparent;
-}
-
-.info-icon img{
-    width: 52px;
-    height: 52px;
-    object-fit: contain;
-}
-
-.info-label{
-    margin: 0;
-    font-size: 14px;
-    color: #5a6a60;
-}
-
-.info-value{
-    margin-top: 5px;
-    font-size: 16px;
-    font-weight: bold;
+.btn-secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
 }
 
 .footer{
@@ -311,129 +322,98 @@ h1{
 }
 
 
-@media(max-width: 1000px){
-
-    .page{
+@media (max-width: 1000px) {
+    .page {
         grid-template-columns: 220px 1fr;
     }
 
-    .sidebar{
+    .sidebar {
         width: 220px;
         padding: 20px 10px;
     }
 
-    .menu-link{
-        font-size: 14px;
+    .menu-link {
+        font-size: 15px;
         gap: 10px;
+        padding: 10px 14px;
     }
 
-    .menu-icon{
-        width: 34px;
-        height: 34px;
-    }
-
-    .content{
-        padding: 20px;
-    }
-
-    .profile-grid{
-        grid-template-columns: 1fr;
-    }
-
-    .info-grid{
-        grid-template-columns: 1fr;
-    }
-
-    .brand-logo{
-        width: 110px;
-    }
-
-    .page-header{
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-}
-
-@media(max-width: 600px){
-
-    .page{
-        grid-template-columns: 85px 1fr;
-    }
-
-    .sidebar{
-        width: 85px;
-        padding: 15px 6px;
-    }
-
-    .sidebar-title{
-        display: none;
-    }
-
-    .menu-link{
-        justify-content: center;
-        padding: 10px 0;
-        font-size: 0;
-    }
-
-    .menu-icon{
+    .menu-icon {
         width: 28px;
         height: 28px;
     }
 
-    .content{
-        padding: 12px;
+    .content {
+        padding: 24px;
     }
 
-    .page-header{
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+    .password-card {
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 700px) {
+    .page {
+        grid-template-columns: 90px 1fr;
     }
 
-    h1{
-        font-size: 28px;
+    .sidebar-title {
+        display: none;
     }
 
-    .subtitle{
-        font-size: 14px;
+    .menu-link {
+        justify-content: center;
+        font-size: 0;
+        padding: 12px 0;
     }
 
-    .profile-card{
+    .menu-link span {
+        margin: 0;
+    }
+
+    .content {
         padding: 18px;
-        margin-top: 20px;
     }
 
-    .avatar-frame img{
-        width: 100px;
-        height: 100px;
+    h1 {
+        font-size: 32px;
     }
 
-    .info-icon img{
-        width: 34px;
-        height: 34px;
-    }
-
-    .info-label{
-        font-size: 13px;
-    }
-
-    .info-value{
+    .subtitle {
         font-size: 14px;
     }
 
-    .btn{
+    .password-card {
+        padding: 22px;
+        margin-top: 18px;
+        max-width: 100%;
+    }
+
+    .password-group label {
         font-size: 14px;
-        padding: 12px;
     }
 
-    .brand-logo{
-        width: 85px;
+    .password-input {
+        font-size: 14px;
+        padding: 12px 40px 12px 14px;
     }
 
-    .footer{
+    .form-actions {
+        justify-content: center;
+    }
+
+    .btn {
+        padding: 12px 24px;
+        font-size: 14px;
+    }
+
+    .footer {
         grid-template-columns: 1fr;
-        gap: 20px;
+        text-align: center;
+    }
+
+    .footer-contact {
+        align-items: center;
         text-align: center;
     }
 }

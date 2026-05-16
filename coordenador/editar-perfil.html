@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Perfil - SACIT</title>
+    <title>Editar Perfil - SACIT</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@400;700&family=Inter:wght@500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/perfil.css">
+    <link rel="stylesheet" href="../css/editar-perfil.css">
 </head>
 <body>
     <div class="page">
@@ -83,7 +83,6 @@
             </nav>
 
         </aside>
-
         <main class="content">
             <header class="page-header">
                 <div class="title-group">
@@ -93,74 +92,65 @@
                     </div>
                     <p class="subtitle">Bem-vindo(a), Nome !</p>
                 </div>
-                <img src="https://www.figma.com/api/mcp/asset/4fb98825-81d2-4bbc-a408-dbdc1b427dd7" alt="SACIT Logo" class="brand-logo" />
+                <img src="../img/logo-sacit.png" alt="SACIT Logo" class="brand-logo" />
             </header>
-
-            <section class="profile-card">
-                <h2>Meus Dados</h2>
-                <div class="profile-grid">
+            <section class="edit-profile-card">
+                <div class="card-heading">
+                    <h2>Meus Dados - Editar Perfil</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="profile-layout">
                     <div class="profile-aside">
-                        <div class="avatar-frame">
-                            <img src="https://www.figma.com/api/mcp/asset/f1ba1dfd-34f9-4a0b-bfee-054b0ae857a7" alt="Avatar" />
+                        <div class="avatar-wrapper">
+                            <img src="https://www.figma.com/api/mcp/asset/f1ba1dfd-34f9-4a0b-bfee-054b0ae857a7" alt="Avatar" class="avatar-image">
+                            <a href="#" class="avatar-edit" title="Editar imagem do perfil"><span>✎</span></a>
                         </div>
                         <div class="profile-actions">
-                            <a href="editar-perfil.html" class="btn btn-primary">Editar perfil</a>
+                            <a href="perfil.html" class="btn btn-primary">Salvar Alterações</a>
                             <a href="alterar-senha.html" class="btn btn-secondary">Alterar senha</a>
                         </div>
                     </div>
-                    <div class="info-grid">
-                        <div class="info-item">
-                            <span class="info-icon">
-                                <img src="../img/icon_nome.png" alt="Ícone de Nome">
-                            </span>
-                            <div class="info-content">
-                                <p class="info-label">Nome</p>
-                                <p class="info-value">Nome Completo</p>
+                    <div class="field-grid">
+                        <div class="field-item">
+                            <span class="field-icon"><img src="../img/icon_nome.png" alt="Ícone de Nome"></span>
+                            <div class="field-content">
+                                <label for="name">Nome</label>
+                                <input id="name" type="text" value="Nome Completo">
                             </div>
                         </div>
-                        <div class="info-item">
-                            <span class="info-icon">
-                                <img src="../img/icone_telefone.png" alt="Ícone de Celular">
-                            </span>
-                            <div class="info-content">
-                                <p class="info-label">Nr Celular</p>
-                                <p class="info-value">(99) 99999-9999</p>
+                        <div class="field-item">
+                            <span class="field-icon"><img src="../img/icone_telefone.png" alt="Ícone de Celular"></span>
+                            <div class="field-content">
+                                <label for="phone">Nr Celular</label>
+                                <input id="phone" type="text" value="(99) 99999-9999">
                             </div>
                         </div>
-                        <div class="info-item">
-                            <span class="info-icon">
-                                <img src="../img/icone_matrisiap.png" alt="Ícone de SIAP">
-                            </span>
-                            <div class="info-content">
-                                <p class="info-label">SIAP</p>
-                                <p class="info-value">00000000</p>
+                        <div class="field-item">
+                            <span class="field-icon"><img src="../img/icone_matrisiap.png" alt="Ícone de SIAP"></span>
+                            <div class="field-content">
+                                <label for="siap">SIAP</label>
+                                <input id="siap" type="text" value="00000000">
                             </div>
                         </div>
-                        <div class="info-item">
-                            <span class="info-icon">
-                                <img src="../img/icone_setor.png" alt="Ícone de Setor">
-                            </span>
-                            <div class="info-content">
-                                <p class="info-label">Setor</p>
-                                <p class="info-value">algum lugar</p>
+                        <div class="field-item">
+                            <span class="field-icon"><img src="../img/icone_setor.png" alt="Ícone de Setor"></span>
+                            <div class="field-content">
+                                <label for="sector">Setor</label>
+                                <input id="sector" type="text" value="algum lugar">
                             </div>
                         </div>
-                        <div class="info-item">
-                            <span class="info-icon">
-                                <img src="../img/icon_email.png" alt="Ícone de Email">
-                            </span>
-                            <div class="info-content">
-                                <p class="info-label">Email</p>
-                                <p class="info-value">algumacoisa@ifro.edu.br</p>
+                        <div class="field-item">
+                            <span class="field-icon"><img src="../img/icon_email.png" alt="Ícone de Email"></span>
+                            <div class="field-content">
+                                <label for="email">Email</label>
+                                <input id="email" type="email" value="algumacoisa@ifro.edu.br">
                             </div>
                         </div>
-                        <div class="info-item">
-                            <span class="info-icon">
-                                <img src="../img/icone_funcao.png" alt="Ícone de Função">
-                            </span>
-                            <div class="info-content">
-                                <p class="info-label">Função</p>
-                                <p class="info-value">Nome Completo</p>
+                        <div class="field-item">
+                            <span class="field-icon"><img src="../img/icone_funcao.png" alt="Ícone de Função"></span>
+                            <div class="field-content">
+                                <label for="role">Função</label>
+                                <input id="role" type="text" value="Nome Completo">
                             </div>
                         </div>
                     </div>
@@ -168,26 +158,21 @@
             </section>
         </main>
     </div>
-
-     <footer class="footer">
-
-            <nav class="footer-links">
-                <a href="inicio.html">Início</a>
-                <a href="#">Sobre nós</a>
-                <a href="gerenciar-perfil.html">Gerenciar perfis</a>
-                <a href="consultar-produto.html">Consultar Produto</a>
-            </nav>
-
-            <div class="footer-center">
-                <img src="../img/ifro-logo.webp" alt="IFRO Logo" class="footer-logo">
-            </div>
-
-            <div class="footer-contact">
-                <p>Contatos:</p>
-                <p>Telefone: (99) 99999-9999</p>
-                <p>E-mail: algumacoisa@ifro.edu.br</p>
-            </div>
-
-        </footer>
+    <footer class="footer">
+        <nav class="footer-links">
+            <a href="inicio.html">Início</a>
+            <a href="#">Sobre nós</a>
+            <a href="gerenciar-perfil.html">Gerenciar perfis</a>
+            <a href="consultar-produto.html">Consultar Produto</a>
+        </nav>
+        <div class="footer-center">
+            <img src="../img/ifro-logo.webp" alt="IFRO Logo" class="footer-logo">
+        </div>
+        <div class="footer-contact">
+            <p>Contatos:</p>
+            <p>Telefone: (99) 99999-9999</p>
+            <p>E-mail: algumacoisa@ifro.edu.br</p>
+        </div>
+    </footer>
 </body>
 </html>
