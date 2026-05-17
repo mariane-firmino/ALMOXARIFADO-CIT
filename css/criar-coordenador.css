@@ -65,21 +65,20 @@ a{text-decoration:none;color:inherit}
 }
 
 .menu-link {
-    width: 250px;
-    display: flex;
     align-items: center;
     gap: 14px;
-    padding: 4px 20px;
+    width: calc(100% + 30px);
+    margin-left: -20px;
+    display: flex;
+    padding: 4px 18px;
     border-radius: 12px;
-    transition: background 0.2s ease;
+    transition: 0.2s ease;
     font-size: 18px;
     font-weight: 700;
     color: #f5fcf9;
-    flex-direction: row;
     white-space: nowrap;
-    padding-left: 6px;
+    padding-left: 4px;
 }
-
 .menu-link:hover{
     background: #109e8c;
 }
@@ -87,8 +86,10 @@ a{text-decoration:none;color:inherit}
 .icon{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     background: transparent;
+    min-width: 35px;
+    margin-left: -15px;
 }
 
 .perfil-icon {

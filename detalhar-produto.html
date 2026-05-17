@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Detalhar Produto | SACIT</title>
+    <link rel="stylesheet" href="css/detalhar-produto.css">
+</head>
+<body>
+<div class="page">
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <div class="avatar-wrapper">
+                <img src="img/avatar.png" alt="avatar" class="sidebar-avatar">
+            </div>
+            <div>
+                <h3 class="sidebar-title">Coordenador</h3>
+                <p class="sidebar-sub">Área administrativa</p>
+            </div>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a class="menu-link" href="coordenador/inicio.html">Início</a>
+            <a class="menu-link" href="coordenador/controlar-estoque.html">Controlar Estoque</a>
+            <a class="menu-link" href="coordenador/controlar-produto.html">Controlar Produto</a>
+            <a class="menu-link active" href="detalhar-produto.html">Detalhar Produto</a>
+            <a class="menu-link" href="coordenador/sair.html">Sair</a>
+        </nav>
+    </aside>
+
+    <main class="content">
+        <header class="page-header">
+            <div class="header-title">
+                <div class="title-flag"></div>
+                <div>
+                    <h1>Detalhes do produto</h1>
+                    <p>Visão completa com histórico, localização e ações rápidas.</p>
+                </div>
+            </div>
+            <img src="img/logo.png" alt="logo" class="brand-logo">
+        </header>
+
+        <section class="detail-panel">
+            <div class="detail-card">
+                <div class="left-col">
+                    <div class="image-box">
+                        <img src="img/product-placeholder.png" alt="produto">
+                    </div>
+
+                    <div class="meta-box">
+                        <div class="meta-row"><strong>Código:</strong> PRD-000123</div>
+                        <div class="meta-row"><strong>Fornecedor:</strong> Fornecedor Exemplo</div>
+                        <div class="meta-row"><strong>Unidade:</strong> Unidade</div>
+                        <div class="meta-row"><strong>Quantidade:</strong> 12</div>
+                        <div class="meta-row"><strong>Localização:</strong> Almoxarifado A - P3</div>
+                    </div>
+
+                    <div class="qr-box">
+                        <div class="qr-title">QR / Etiqueta</div>
+                        <div class="qr-image"><img src="img/qrcode-placeholder.png" alt="qr"></div>
+                        <a href="#" class="btn btn-secondary">Imprimir etiqueta</a>
+                    </div>
+                </div>
+
+                <div class="right-col">
+                    <div class="product-header">
+                        <h2>Nome do Produto Exemplo</h2>
+                        <div class="actions">
+                            <a href="editar-prod-estoque.html" class="btn btn-primary">Editar</a>
+                            <a href="excluir-prod-estoque.html" class="btn btn-danger">Excluir</a>
+                            <a href="coordenador/controlar-estoque.html" class="btn btn-secondary">Voltar</a>
+                        </div>
+                    </div>
+
+                    <div class="tabs">
+                        <button class="tab active">Informações</button>
+                        <button class="tab">Movimentações</button>
+                        <button class="tab">Anexos</button>
+                    </div>
+
+                    <div class="tab-panel info-panel">
+                        <h3>Descrição</h3>
+                        <p>Descrição detalhada do produto, especificações técnicas e observações relevantes para o almoxarifado.</p>
+
+                        <h3>Histórico de movimentações</h3>
+                        <table class="history">
+                            <thead>
+                                <tr><th>Data</th><th>Ação</th><th>Quantidade</th><th>Responsável</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>10/05/2026</td><td>Entrada</td><td>+20</td><td>João</td></tr>
+                                <tr><td>12/05/2026</td><td>Saída</td><td>-8</td><td>Maria</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="tab-panel files-panel" style="display:none">
+                        <h3>Anexos</h3>
+                        <p>Nenhum anexo disponível.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="page-footer">
+            <div class="footer-column footer-meta">
+                <span>SACIT — Sistema de Almoxarifado</span>
+                <span>© 2026</span>
+            </div>
+            <div class="footer-column footer-links">
+                <a href="#">Ajuda</a>
+                <a href="#">Termos</a>
+            </div>
+            <div class="footer-column footer-contact">
+                <span>Contato</span>
+                <span>contato@sacit.local</span>
+            </div>
+        </footer>
+    </main>
+</div>
+</body>
+</html>

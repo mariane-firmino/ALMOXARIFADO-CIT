@@ -8,185 +8,195 @@
     <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@400;700;800&family=Inter:wght@600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="page">
-        <aside class="sidebar">
-            <div class="sidebar-header">
-                <div class="avatar-wrapper">
-                    <img src="https://www.figma.com/api/mcp/asset/dce32261-f8c5-45ca-9bed-8f44b9902ac8" alt="Usuário" class="sidebar-avatar">
-                </div>
-                <p class="sidebar-title">Nome</p>
-            </div>
+    <input type="checkbox" id="openSidebarMenu">
 
-            <nav class="sidebar-nav">
-                <a href="inicio.html" class="menu-link active">
-                    <img src="https://www.figma.com/api/mcp/asset/1b6b7bfa-8d9b-425c-9a00-f4603eb14d0d" alt="Início" class="menu-icon">
-                    Início
-                </a>
-                <a href="perfil.html" class="menu-link">
-                    <img src="https://www.figma.com/api/mcp/asset/75f2780b-be68-4ac2-82c6-0c9b3943b5a3" alt="Perfil" class="menu-icon">
-                    Perfil
-                </a>
-                <a href="notificacao-coordenador.html" class="menu-link">
-                    <img src="https://www.figma.com/api/mcp/asset/39bf3900-6e26-44b3-9b36-667a5ff3f7e9" alt="Notificações" class="menu-icon">
-                    Notificações
-                </a>
-                <a href="gerenciar-perfil.html" class="menu-link">
-                    <img src="https://www.figma.com/api/mcp/asset/bb130e22-8db4-4e8f-b67c-71db4809586e" alt="Gerenciar Perfis" class="menu-icon">
-                    Gerenciar Perfis
-                </a>
-                <a href="consultar-produto.html" class="menu-link">
-                    <img src="https://www.figma.com/api/mcp/asset/cbe64200-21e1-44c6-a6e4-0b262a66239b" alt="Consultar Produto" class="menu-icon">
-                    Consultar Produto
-                </a>
-                <a href="analisar-solicitacao.html" class="menu-link">
-                    <img src="https://www.figma.com/api/mcp/asset/2ad94df5-1adc-4c41-8e90-34a0c800d298" alt="Analisar Solicitação" class="menu-icon">
-                    Analisar Solicitação
-                </a>
-                <a href="controlar-estoque.html" class="menu-link">
-                    <img src="https://www.figma.com/api/mcp/asset/171951bf-7856-4e5b-981b-a6492b6a707e" alt="Controlar Estoque" class="menu-icon">
-                    Controlar Estoque
-                </a>
-                <a href="controlar-produto.html" class="menu-link">
-                    <img src="https://www.figma.com/api/mcp/asset/5becb9c6-5ccf-43cf-a06d-8e0b1d1970b1" alt="Controlar Produto" class="menu-icon">
-                    Controlar Produto
-                </a>
-                <a href="consultar-historico.html" class="menu-link">
-                    <img src="https://www.figma.com/api/mcp/asset/2e711ea8-f080-4092-9213-a45dea93659f" alt="Consultar Histórico" class="menu-icon">
-                    Consultar Histórico
-                </a>
-                <a href="sair.html" class="menu-link logout-link">
-                    <img src="https://www.figma.com/api/mcp/asset/67508781-e7c0-4cee-8508-57efea3455dc" alt="Sair" class="menu-icon">
-                    Sair
-                </a>
-            </nav>
-        </aside>
-
-        <main class="main-content">
-            <header class="page-header">
-                <div class="page-title">
-                    <div class="title-row">
-                        <span class="title-flag"></span>
-                        <h1>Início</h1>
+        <label for="openSidebarMenu" class="sidebarIconToggle">
+            <div class="spinner"></div>
+            <div class="spinner"></div>
+            <div class="spinner"></div>
+        </label>
+        
+        <label for="openSidebarMenu" class="overlay"></label>
+        
+            <div class="page">
+                <aside class="sidebar" id="sidebarMenu">
+                    <div class="sidebar-header">
+                        <div class="avatar-wrapper">
+                            <img src="../img/avatar-menu.png" alt="Usuário" class="sidebar-avatar">
+                        </div>
+                        <p class="sidebar-title">Nome</p>
                     </div>
-                    <p class="subtitle">Bem-vindo(a), Nome !</p>
-                </div>
-                <img src="https://www.figma.com/api/mcp/asset/102bc9f7-5aa5-4947-bd52-66362b954455" alt="SACIT Logo" class="brand-logo">
-            </header>
 
-            <section class="dashboard">
-                <div class="dashboard-row top-row">
-                    <article class="card notification-card">
-                        <div class="notification-header">
-                            <div class="icon-box">
-                                <img src="https://www.figma.com/api/mcp/asset/3993ef05-61ae-49a8-bdb0-675bc3cad40e" alt="Notificações" class="card-icon">
-                            </div>
-                            <h2>Novas notificações</h2>
-                        </div>
-                        <p class="metric-large">0</p>
-                        <p class="card-description">Você não possui novas notificações.</p>
-                    </article>
+                    <nav class="sidebar-nav">
+                        <a href="inicio.html" class="menu-link">
+                            <img src="https://www.figma.com/api/mcp/asset/1b6b7bfa-8d9b-425c-9a00-f4603eb14d0d" alt="Início" class="menu-icon">
+                            Início
+                        </a>
+                        <a href="perfil.html" class="menu-link">
+                            <img src="https://www.figma.com/api/mcp/asset/75f2780b-be68-4ac2-82c6-0c9b3943b5a3" alt="Perfil" class="menu-icon">
+                            Perfil
+                        </a>
+                        <a href="notificacao-coordenador.html" class="menu-link">
+                            <img src="https://www.figma.com/api/mcp/asset/39bf3900-6e26-44b3-9b36-667a5ff3f7e9" alt="Notificações" class="menu-icon">
+                            Notificações
+                        </a>
+                        <a href="gerenciar-perfil.html" class="menu-link">
+                            <img src="https://www.figma.com/api/mcp/asset/bb130e22-8db4-4e8f-b67c-71db4809586e" alt="Gerenciar Perfis" class="menu-icon">
+                            Gerenciar Perfis
+                        </a>
+                        <a href="consultar-produto.html" class="menu-link">
+                            <img src="https://www.figma.com/api/mcp/asset/cbe64200-21e1-44c6-a6e4-0b262a66239b" alt="Consultar Produto" class="menu-icon">
+                            Consultar Produto
+                        </a>
+                        <a href="analisar-solicitacao.html" class="menu-link">
+                            <img src="https://www.figma.com/api/mcp/asset/2ad94df5-1adc-4c41-8e90-34a0c800d298" alt="Analisar Solicitação" class="menu-icon">
+                            Analisar Solicitação
+                        </a>
+                        <a href="controlar-estoque.html" class="menu-link">
+                            <img src="https://www.figma.com/api/mcp/asset/171951bf-7856-4e5b-981b-a6492b6a707e" alt="Controlar Estoque" class="menu-icon">
+                            Controlar Estoque
+                        </a>
+                        <a href="controlar-produto.html" class="menu-link">
+                            <img src="https://www.figma.com/api/mcp/asset/5becb9c6-5ccf-43cf-a06d-8e0b1d1970b1" alt="Controlar Produto" class="menu-icon">
+                            Controlar Produto
+                        </a>
+                        <a href="consultar-historico.html" class="menu-link">
+                            <img src="https://www.figma.com/api/mcp/asset/2e711ea8-f080-4092-9213-a45dea93659f" alt="Consultar Histórico" class="menu-icon">
+                            Consultar Histórico
+                        </a>
+                        <a href="sair.html" class="menu-link logout-link">
+                            <img src="https://www.figma.com/api/mcp/asset/67508781-e7c0-4cee-8508-57efea3455dc" alt="Sair" class="menu-icon">
+                            Sair
+                        </a>
+                    </nav>
+                </aside>
 
-                    <article class="card summary-card">
-                        <h2>Resumo das Solicitações</h2>
-                        <div class="summary-grid">
-                            <div class="summary-item">
-                                <img src="https://www.figma.com/api/mcp/asset/3b552d08-90c5-43cc-84a3-9c289a88c31b" alt="Total de Solicitações" class="summary-icon">
-                                <div class="summary-text">
-                                    <p class="summary-label">Total de Solicitações</p>
-                                    <p class="summary-value">0</p>
-                                </div>
+                <main class="main-content">
+                    <header class="page-header">
+                        <div class="page-title">
+                            <div class="title-row">
+                                <span class="title-flag"></span>
+                                <h1>Início</h1>
                             </div>
-                            <div class="summary-item">
-                                <img src="https://www.figma.com/api/mcp/asset/d340f772-bf80-4b9f-8c65-6d35c92cc45d" alt="Solicitações Permitidas" class="summary-icon">
-                                <div class="summary-text">
-                                    <p class="summary-label">Solicitações Permitidas</p>
-                                    <p class="summary-value">0</p>
-                                </div>
-                            </div>
-                            <div class="summary-item">
-                                <img src="https://www.figma.com/api/mcp/asset/99da73a8-3ecc-4807-8050-a3db07755a30" alt="Solicitações Negadas" class="summary-icon">
-                                <div class="summary-text">
-                                    <p class="summary-label">Solicitações Negadas</p>
-                                    <p class="summary-value">0</p>
-                                </div>
-                            </div>
+                            <p class="subtitle">Bem-vindo(a), Nome !</p>
                         </div>
-                    </article>
-                </div>
+                        <img src="https://www.figma.com/api/mcp/asset/102bc9f7-5aa5-4947-bd52-66362b954455" alt="SACIT Logo" class="brand-logo">
+                    </header>
 
-                <div class="dashboard-row bottom-row">
-                    <article class="card activity-card">
-                    <div class="activity-heading">
-                        <div class="icon-box small">
-                            <img src="../img/icon_resumo.png" alt="Resumo das Atividades" class="card-icon">
+                    <section class="dashboard">
+                        <div class="dashboard-row top-row">
+                            <article class="card notification-card">
+                                <div class="notification-header">
+                                    <div class="icon-box">
+                                        <img src="https://www.figma.com/api/mcp/asset/3993ef05-61ae-49a8-bdb0-675bc3cad40e" alt="Notificações" class="card-icon">
+                                    </div>
+                                    <h2>Novas notificações</h2>
+                                </div>
+                                <p class="metric-large">0</p>
+                                <p class="card-description">Você não possui novas notificações.</p>
+                            </article>
+
+                            <article class="card summary-card">
+                                <h2>Resumo das Solicitações</h2>
+                                <div class="summary-grid">
+                                    <div class="summary-item">
+                                        <img src="https://www.figma.com/api/mcp/asset/3b552d08-90c5-43cc-84a3-9c289a88c31b" alt="Total de Solicitações" class="summary-icon">
+                                        <div class="summary-text">
+                                            <p class="summary-label">Total de Solicitações</p>
+                                            <p class="summary-value">0</p>
+                                        </div>
+                                    </div>
+                                    <div class="summary-item">
+                                        <img src="https://www.figma.com/api/mcp/asset/d340f772-bf80-4b9f-8c65-6d35c92cc45d" alt="Solicitações Permitidas" class="summary-icon">
+                                        <div class="summary-text">
+                                            <p class="summary-label">Solicitações Permitidas</p>
+                                            <p class="summary-value">0</p>
+                                        </div>
+                                    </div>
+                                    <div class="summary-item">
+                                        <img src="https://www.figma.com/api/mcp/asset/99da73a8-3ecc-4807-8050-a3db07755a30" alt="Solicitações Negadas" class="summary-icon">
+                                        <div class="summary-text">
+                                            <p class="summary-label">Solicitações Negadas</p>
+                                            <p class="summary-value">0</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
                         </div>
-                        <h2>Resumo das Atividades</h2>
+
+                        <div class="dashboard-row bottom-row">
+                            <article class="card activity-card">
+                            <div class="activity-heading">
+                                <div class="icon-box small">
+                                    <img src="../img/icon_resumo.png" alt="Resumo das Atividades" class="card-icon">
+                                </div>
+                                <h2>Resumo das Atividades</h2>
+                            </div>
+                            <div class="activity-list">
+                                <div class="activity-row"><span>Solicitação em andamento</span><strong>0</strong></div>
+                                    <div class="activity-row"><span>Pendência de devolução</span><strong>0</strong></div>
+                                    <div class="activity-row"><span>Solicitação concluída</span><strong>0</strong></div>
+                                    <div class="activity-row"><span>Atrasos</span><strong>0</strong></div>
+                                </div>
+                            </article>
+
+                            <article class="card metric-card">
+                                <div class="metric-heading">
+                                    <div class="icon-box small">
+                                        <img src="https://www.figma.com/api/mcp/asset/159cce86-d39c-424d-8cc4-7abf371e338b" alt="Total de Perfis" class="card-icon">
+                                    </div>
+                                    <p class="metric-title">Total de Perfis:</p>
+                                </div>
+                                <p class="metric-value">0</p>
+                                <p class="metric-note">Perfis Removidos: 0</p>
+                            </article>
+
+                            <article class="card metric-card stock-card">
+                                <div class="metric-heading">
+                                    <div class="icon-box small">
+                                        <img src="https://www.figma.com/api/mcp/asset/eb96c2b9-00ab-4589-8f9c-a6cede9ce0c9" alt="Situação do Estoque" class="card-icon">
+                                    </div>
+                                    <p class="metric-title">Situação do Estoque</p>
+                                </div>
+                                <p class="stock-status">Completo</p>
+                                <p class="metric-value">0</p>
+                                <p class="metric-note">Produto em Falta: Nome</p>
+                            </article>
+
+                            <article class="card metric-card products-card">
+                                <div class="metric-heading">
+                                    <div class="icon-box small">
+                                        <img src="https://www.figma.com/api/mcp/asset/90bbf512-b17a-4132-8208-ff9cce5f765c" alt="Total de Produtos" class="card-icon">
+                                    </div>
+                                    <p class="metric-title">Total de Produtos</p>
+                                </div>
+                                <p class="metric-value">0</p>
+                                <p class="metric-note">Produtos excluídos 0</p>
+                            </article>
+                        </div>
+                    </section>
+                </main>
+            </div>
+
+                <footer class="footer">
+
+                    <nav class="footer-links">
+                        <a href="inicio.html">Início</a>
+                        <a href="#">Sobre nós</a>
+                        <a href="gerenciar-perfil.html">Gerenciar perfis</a>
+                        <a href="consultar-produto.html">Consultar Produto</a>
+                    </nav>
+
+                    <div class="footer-center">
+                        <img src="../img/ifro-logo.webp" alt="IFRO Logo" class="footer-logo">
                     </div>
-                    <div class="activity-list">
-                        <div class="activity-row"><span>Solicitação em andamento</span><strong>0</strong></div>
-                            <div class="activity-row"><span>Pendência de devolução</span><strong>0</strong></div>
-                            <div class="activity-row"><span>Solicitação concluída</span><strong>0</strong></div>
-                            <div class="activity-row"><span>Atrasos</span><strong>0</strong></div>
-                        </div>
-                    </article>
 
-                    <article class="card metric-card">
-                        <div class="metric-heading">
-                            <div class="icon-box small">
-                                <img src="https://www.figma.com/api/mcp/asset/159cce86-d39c-424d-8cc4-7abf371e338b" alt="Total de Perfis" class="card-icon">
-                            </div>
-                            <p class="metric-title">Total de Perfis:</p>
-                        </div>
-                        <p class="metric-value">0</p>
-                        <p class="metric-note">Perfis Removidos: 0</p>
-                    </article>
+                    <div class="footer-contact">
+                        <p>Contatos:</p>
+                        <p>Telefone: (99) 99999-9999</p>
+                        <p>E-mail: algumacoisa@ifro.edu.br</p>
+                    </div>
 
-                    <article class="card metric-card stock-card">
-                        <div class="metric-heading">
-                            <div class="icon-box small">
-                                <img src="https://www.figma.com/api/mcp/asset/eb96c2b9-00ab-4589-8f9c-a6cede9ce0c9" alt="Situação do Estoque" class="card-icon">
-                            </div>
-                            <p class="metric-title">Situação do Estoque</p>
-                        </div>
-                        <p class="stock-status">Completo</p>
-                        <p class="metric-value">0</p>
-                        <p class="metric-note">Produto em Falta: Nome</p>
-                    </article>
-
-                    <article class="card metric-card products-card">
-                        <div class="metric-heading">
-                            <div class="icon-box small">
-                                <img src="https://www.figma.com/api/mcp/asset/90bbf512-b17a-4132-8208-ff9cce5f765c" alt="Total de Produtos" class="card-icon">
-                            </div>
-                            <p class="metric-title">Total de Produtos</p>
-                        </div>
-                        <p class="metric-value">0</p>
-                        <p class="metric-note">Produtos excluídos 0</p>
-                    </article>
-                </div>
-            </section>
-        </main>
-    </div>
-
-         <footer class="footer">
-
-            <nav class="footer-links">
-                <a href="inicio.html">Início</a>
-                <a href="#">Sobre nós</a>
-                <a href="gerenciar-perfil.html">Gerenciar perfis</a>
-                <a href="consultar-produto.html">Consultar Produto</a>
-            </nav>
-
-            <div class="footer-center">
-                <img src="../img/ifro-logo.webp" alt="IFRO Logo" class="footer-logo">
-            </div>
-
-            <div class="footer-contact">
-                <p>Contatos:</p>
-                <p>Telefone: (99) 99999-9999</p>
-                <p>E-mail: algumacoisa@ifro.edu.br</p>
-            </div>
-
-        </footer>
-</body>
-</html>
+                </footer>
+        </body>
+        </html>

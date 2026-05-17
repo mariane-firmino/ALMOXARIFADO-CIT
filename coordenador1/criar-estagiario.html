@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Estagiário - SACIT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@400;700&family=Inter:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/criar-estagiario.css">
+</head>
+
+<body>
+    <div class="page">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="https://www.figma.com/api/mcp/asset/7c981cc2-82e6-4734-a20e-901608fa9917" alt="Avatar"
+                    class="sidebar-avatar">
+                <div>
+                    <p class="sidebar-title">Nome</p>
+                </div>
+            </div>
+
+            <nav>
+                <a href="inicio.html" class="menu-link">
+                    <span class="icon">
+                        <img src="../img/icone_inicio (1).png" alt="Icone Início" class="menu-icon">
+                    </span>
+                    Início
+                </a>
+                <a href="perfil.html" class="menu-link">
+                    <span class="icon">
+                        <img src="../img/icon_perfil.png" alt="Icone Perfil" class="menu-icon perfil-icon">
+                    </span>
+                    Perfil
+                </a>
+                <a href="notificacao-coordenador.html" class="menu-link">
+                    <span class="icon">
+                        <img src="../img/icone_notificacao.png" alt="Icone Notificações" class="menu-icon">
+                    </span>
+                    Notificações
+                </a>
+                <a href="gerenciar-perfil.html" class="menu-link">
+                    <span class="icon">
+                        <img src="../img/icone_gerenciar_perfis.png" alt="Icone Gerenciar Perfis" class="menu-icon">
+                    </span>
+                    Gerenciar Perfis
+                </a>
+                <a href="consultar-produto.html" class="menu-link">
+                    <span class="icon">
+                        <img src="../img/icon_consultar_produto (1).png" alt="Icone Consultar Produto"
+                            class="menu-icon">
+                    </span>
+                    Consultar Produto
+                </a>
+                <a href="analisar-solicitacao.html" class="menu-link">
+                    <span class="icon">
+                        <img src="../img/icone_analisar_solicitacao.png" alt="Icone Analisar Solicitação"
+                            class="menu-icon">
+                    </span>
+                    Analisar Solicitação
+                </a>
+                <a href="controlar-estoque.html" class="menu-link">
+                    <span class="icon">
+                        <img src="../img/icone_controlar_estoque.png" alt="Icone Controlar Estoque" class="menu-icon">
+                    </span>
+                    Controlar Estoque
+                </a>
+                <a href="controlar-produto.html" class="menu-link">
+                    <span class="icon">
+                        <img src="../img/icone_controlar_produto.png" alt="Icone Controlar Produto" class="menu-icon">
+                    </span>
+                    Controlar Produto
+                </a>
+                <a href="consultar-historico.html" class="menu-link">
+                    <span class="icon">
+                        <img src="../img/icon_historico.png" alt="Icone Consultar Histórico" class="menu-icon">
+                    </span>
+                    Consultar Histórico
+                </a>
+                <a href="sair.html" class="menu-link">
+                    <span class="icon">
+                        <img src="../img/icone_sair.png" alt="Icone Sair" class="menu-icon">
+                    </span>
+                    Sair
+                </a>
+            </nav>
+
+        </aside>
+
+        <main class="content">
+            <header class="page-header">
+                <div class="title-group">
+                    <div class="title-row">
+                        <span class="title-mark"></span>
+                        <h1>Gerenciar Perfis</h1>
+                    </div>
+                    <p class="subtitle">Gerencie os usuários do sistema</p>
+                </div>
+                <img src="../img/logo-sacit.png" alt="SACIT Logo" class="brand-logo">
+            </header>
+
+            <section class="create-card">
+                <div class="card-inner">
+                    <aside class="role-panel">
+                        <a href="criar-servidor.html" class="role-item">Servidor</a>
+                        <a href="criar-estagiario.html" class="role-item active">Estagiário</a>
+                        <a href="criar-coordenador.html" class="role-item">Coordenador</a>
+                    </aside>
+
+                    <div class="form-area">
+                        <div class="form-header-actions">
+                            <a href="gerenciar-perfil.html" class="close-link" title="Fechar">
+                                <img src="../img/fechar.png" alt="Fechar" class="close-icon">
+                            </a>
+                        </div>
+                        <h2>Cadastro de Estagiário</h2>
+                        <form class="create-form">
+                            <div class="field-group">
+                                <label>Nome Completo</label>
+                                <input type="text" placeholder="Nome completo">
+                            </div>
+
+                            <div class="field-group">
+                                <label>E-mail</label>
+                                <input type="email" placeholder="email@exemplo">
+                            </div>
+
+                            <div class="form-row">
+                                <div class="field-group">
+                                    <label>Matrícula</label>
+                                    <input type="text" placeholder="00000000">
+                                </div>
+                                <div class="field-group">
+                                    <label>Nr Celular</label>
+                                    <input type="text" placeholder="(99) 99999-9999">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="field-group">
+                                    <label>Senha</label>
+                                    <input type="password" placeholder="Senha">
+                                </div>
+                                <div class="field-group">
+                                    <label>Confirmar Senha</label>
+                                    <input type="password" placeholder="Confirmar">
+                                </div>
+                            </div>
+
+                            <div class="submit-wrap">
+                                <button class="btn btn-primary" type="submit">Cadastrar Estagiário</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer class="footer">
+
+        <nav class="footer-links">
+            <a href="inicio.html">Início</a>
+            <a href="#">Sobre nós</a>
+            <a href="gerenciar-perfil.html">Gerenciar perfis</a>
+            <a href="consultar-produto.html">Consultar Produto</a>
+        </nav>
+
+        <div class="footer-center">
+            <img src="../img/ifro-logo.webp" alt="IFRO Logo" class="footer-logo">
+        </div>
+
+        <div class="footer-contact">
+            <p>Contatos:</p>
+            <p>Telefone: (99) 99999-9999</p>
+            <p>E-mail: algumacoisa@ifro.edu.br</p>
+        </div>
+
+    </footer>
+</body>
+
+</html>

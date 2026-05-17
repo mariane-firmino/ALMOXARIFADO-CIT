@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Editar Produto - Estoque | SACIT</title>
+    <link rel="stylesheet" href="css/editar-prod-estoque.css">
+</head>
+<body>
+<div class="page">
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <div class="avatar-wrapper">
+                <img src="img/avatar.png" alt="avatar" class="sidebar-avatar">
+            </div>
+            <div>
+                <h3 class="sidebar-title">Coordenador</h3>
+                <p class="sidebar-sub">Área administrativa</p>
+            </div>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a class="menu-link" href="coordenador/inicio.html">Início</a>
+            <a class="menu-link" href="coordenador/controlar-estoque.html">Controlar Estoque</a>
+            <a class="menu-link active" href="coordenador/controlar-produto.html">Controlar Produto</a>
+            <a class="menu-link" href="coordenador/consultar-produto.html">Consultar Produto</a>
+            <a class="menu-link" href="coordenador/sair.html">Sair</a>
+        </nav>
+    </aside>
+
+    <main class="content">
+        <header class="page-header">
+            <div class="header-title">
+                <div class="title-flag"></div>
+                <div>
+                    <h1>Editar produto no estoque</h1>
+                    <p>Atualize as informações de localização, quantidade e status do produto.</p>
+                </div>
+            </div>
+            <img src="img/logo.png" alt="logo" class="brand-logo">
+        </header>
+
+        <section class="edit-panel">
+            <form class="edit-form">
+                <div class="form-grid">
+                    <div class="field">
+                        <label>Produto</label>
+                        <input type="text" value="Nome do Produto Exemplo" readonly>
+                    </div>
+
+                    <div class="field">
+                        <label>Código</label>
+                        <input type="text" value="PRD-000123" readonly>
+                    </div>
+
+                    <div class="field">
+                        <label>Quantidade</label>
+                        <input type="number" min="0" value="12">
+                    </div>
+
+                    <div class="field">
+                        <label>Unidade</label>
+                        <input type="text" value="Unidade">
+                    </div>
+
+                    <div class="field">
+                        <label>Localização</label>
+                        <input type="text" placeholder="Ex.: Almoxarifado A - Prateleira 3">
+                    </div>
+
+                    <div class="field">
+                        <label>Status</label>
+                        <select>
+                            <option>Disponível</option>
+                            <option>Reservado</option>
+                            <option>Em falta</option>
+                        </select>
+                    </div>
+
+                    <div class="field full">
+                        <label>Observações</label>
+                        <textarea rows="3" placeholder="Notas sobre o produto..."></textarea>
+                    </div>
+                </div>
+
+                <div class="media-row">
+                    <div class="preview">
+                        <div class="preview-title">Pré-visualização</div>
+                        <div class="preview-box">
+                            <img src="img/product-placeholder.png" alt="preview"/>
+                        </div>
+                        <div class="preview-actions">
+                            <a href="#" class="btn btn-secondary">Substituir imagem</a>
+                            <a href="#" class="btn btn-secondary">Gerar QR</a>
+                        </div>
+                    </div>
+
+                    <div class="controls">
+                        <div class="control-actions">
+                            <a href="coordenador/controlar-estoque.html" class="btn btn-secondary">Cancelar</a>
+                            <button type="submit" class="btn btn-primary">Salvar alterações</button>
+                        </div>
+
+                        <div class="danger-area">
+                            <h4>Remover do estoque</h4>
+                            <p>Excluir permanentemente este item do estoque. Esta ação não pode ser revertida.</p>
+                            <a href="#" class="btn btn-danger">Excluir item</a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+        <footer class="page-footer">
+            <div class="footer-column footer-meta">
+                <span>SACIT — Sistema de Almoxarifado</span>
+                <span>© 2026</span>
+            </div>
+            <div class="footer-column footer-links">
+                <a href="#">Ajuda</a>
+                <a href="#">Termos</a>
+            </div>
+            <div class="footer-column footer-contact">
+                <span>Contato</span>
+                <span>contato@sacit.local</span>
+            </div>
+        </footer>
+    </main>
+</div>
+</body>
+</html>

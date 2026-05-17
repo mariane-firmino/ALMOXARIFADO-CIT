@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciar Perfis - SACIT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@400;700&family=Inter:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/gerenciar-perfil.css">
+</head>
+<body>
+    <div class="page">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="https://www.figma.com/api/mcp/asset/7c981cc2-82e6-4734-a20e-901608fa9917" alt="Avatar" class="sidebar-avatar">
+                <div>
+                    <p class="sidebar-title">Nome</p>
+                </div>
+            </div>
+
+            <nav>
+                <a href="inicio.html" class="menu-link">
+                    <span class="icon">
+                        <img src="../img/icone_inicio (1).png" alt="Icone Início" class="menu-icon">
+                    </span>
+                    Início
+                </a>
+                <a href="perfil.html" class="menu-link">
+                    <span class="icon">
+                        <img src="../img/icon_perfil.png" alt="Icone Perfil" class="menu-icon perfil-icon">
+                    </span>
+                    Perfil
+                </a>
+                <a href="notificacao-coordenador.html" class="menu-link">
+                    <span class="icon">
+                        <img src="../img/icone_notificacao.png" alt="Icone Notificações" class="menu-icon">
+                    </span>
+                    Notificações
+                </a>
+                <a href="gerenciar-perfil.html" class="menu-link active">
+                    <span class="icon">
+                        <img src="../img/icone_gerenciar_perfis.png" alt="Icone Gerenciar Perfis" class="menu-icon">
+                    </span>
+                    Gerenciar Perfis
+                </a>
+                <a href="consultar-produto.html" class="menu-link">
+                    <span class="icon">
+                        <img src="../img/icon_consultar_produto (1).png" alt="Icone Consultar Produto" class="menu-icon">
+                    </span>
+                    Consultar Produto
+                </a>
+                <a href="analisar-solicitacao.html" class="menu-link">
+                    <span class="icon">
+                        <img src="../img/icone_analisar_solicitacao.png" alt="Icone Analisar Solicitação" class="menu-icon">
+                    </span>
+                    Analisar Solicitação
+                </a>
+                <a href="controlar-estoque.html" class="menu-link">
+                    <span class="icon">
+                        <img src="../img/icone_controlar_estoque.png" alt="Icone Controlar Estoque" class="menu-icon">
+                    </span>
+                    Controlar Estoque
+                </a>
+                <a href="controlar-produto.html" class="menu-link">
+                    <span class="icon">
+                        <img src="../img/icone_controlar_produto.png" alt="Icone Controlar Produto" class="menu-icon">
+                    </span>
+                    Controlar Produto
+                </a>
+                <a href="consultar-historico.html" class="menu-link">
+                    <span class="icon">
+                        <img src="../img/icon_historico.png" alt="Icone Histórico" class="menu-icon">
+                    </span>
+                    Consultar Histórico
+                </a>
+                <a href="sair.html" class="menu-link">
+                    <span class="icon">
+                        <img src="../img/icone_sair.png" alt="Icone Sair" class="menu-icon">
+                    </span>
+                    Sair
+                </a>
+            </nav>
+        </aside>
+
+        <main class="content">
+            <header class="page-header">
+                <div class="title-group">
+                    <div class="title-row">
+                        <span class="title-mark"></span>
+                        <h1>Gerenciar Perfis</h1>
+                    </div>
+                    <p class="subtitle">Administre contas, permissões e credenciais do sistema.</p>
+                </div>
+                <img src="https://www.figma.com/api/mcp/asset/4fb98825-81d2-4bbc-a408-dbdc1b427dd7" alt="SACIT Logo" class="brand-logo" />
+            </header>
+
+            <section class="actions-panel">
+                <div class="summary-card">
+                    <p class="summary-label">Total de usuários</p>
+                    <h2>28</h2>
+                </div>
+                <div class="summary-card">
+                    <p class="summary-label">Perfis ativos</p>
+                    <h2>21</h2>
+                </div>
+                <div class="summary-card">
+                    <p class="summary-label">Perfis removidos</p>
+                    <h2>7</h2>
+                </div>
+                <div class="summary-card">
+                    <p class="summary-label">Novos esta semana</p>
+                    <h2>4</h2>
+                </div>
+            </section>
+
+            <section class="management-panel">
+                <div class="panel-header">
+                    <h2>Lista de Usuários</h2>
+                    <div class="panel-actions">
+                        <div class="search-box">
+                            <input type="search" placeholder="Buscar por nome, email ou função">
+                            <button class="btn-search">Buscar</button>
+                        </div>
+                        <a href="criar-servidor.html" class="btn btn-primary">Adicionar perfil</a>
+                    </div>
+                </div>
+
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>E-mail</th>
+                                <th>Função</th>
+                                <th>Status</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>João Silva</td>
+                                <td>joao.silva@ifro.edu.br</td>
+                                <td>Coordenador</td>
+                                <td><span class="status active">Ativo</span></td>
+                                <td>
+                                    <button class="btn btn-secondary">Editar</button>
+                                    <a href="excluir-perfil.html" class="btn btn-tertiary">Excluir</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Maria Pereira</td>
+                                <td>maria.pereira@ifro.edu.br</td>
+                                <td>Estagiário</td>
+                                <td><span class="status active">Ativo</span></td>
+                                <td>
+                                    <button class="btn btn-secondary">Editar</button>
+                                    <a href="excluir-perfil.html" class="btn btn-tertiary">Excluir</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Carlos Souza</td>
+                                <td>carlos.souza@ifro.edu.br</td>
+                                <td>Servidor</td>
+                                <td><span class="status inactive">Inativo</span></td>
+                                <td>
+                                    <button class="btn btn-secondary">Editar</button>
+                                    <a href="excluir-perfil.html" class="btn btn-tertiary">Excluir</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Ana Ferreira</td>
+                                <td>ana.ferreira@ifro.edu.br</td>
+                                <td>Analista</td>
+                                <td><span class="status active">Ativo</span></td>
+                                <td>
+                                    <button class="btn btn-secondary">Editar</button>
+                                    <a href="excluir-perfil.html" class="btn btn-tertiary">Excluir</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+
+     <footer class="footer">
+
+            <nav class="footer-links">
+                <a href="inicio.html">Início</a>
+                <a href="#">Sobre nós</a>
+                <a href="gerenciar-perfil.html">Gerenciar perfis</a>
+                <a href="consultar-produto.html">Consultar Produto</a>
+            </nav>
+
+            <div class="footer-center">
+                <img src="../img/ifro-logo.webp" alt="IFRO Logo" class="footer-logo">
+            </div>
+
+            <div class="footer-contact">
+                <p>Contatos:</p>
+                <p>Telefone: (99) 99999-9999</p>
+                <p>E-mail: algumacoisa@ifro.edu.br</p>
+            </div>
+
+        </footer>
+</body>
+</html>
