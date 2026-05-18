@@ -1,15 +1,28 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editar Produto - SACIT</title>
     <link rel="stylesheet" href="../css/editar-produto.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@400;700;800&family=Inter:wght@600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@400;700;800&family=Inter:wght@600;700;800&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
+    <input type="checkbox" id="openSidebarMenu">
+
+    <label for="openSidebarMenu" class="sidebarIconToggle">
+        <div class="spinner"></div>
+        <div class="spinner"></div>
+        <div class="spinner"></div>
+    </label>
+
+    <label for="openSidebarMenu" class="overlay"></label>
     <div class="page">
-        <aside class="sidebar">
+        <aside class="sidebar" id="sidebarMenu">
             <div class="sidebar-header">
                 <img src="../img/avatar-menu.png" alt="Avatar" class="sidebar-avatar">
                 <div>
@@ -19,46 +32,69 @@
 
             <nav>
                 <a href="inicio.html" class="menu-link">
-                    <span class="icon"><img src="../img/icone_inicio (1).png" alt="Início" class="menu-icon"></span>
+                    <span class="icon">
+                        <img src="../img/icone_inicio (1).png" alt="Icone Início" class="menu-icon">
+                    </span>
                     Início
                 </a>
                 <a href="perfil.html" class="menu-link">
-                    <span class="icon"><img src="../img/icon_perfil.png" alt="Perfil" class="menu-icon perfil-icon"></span>
+                    <span class="icon">
+                        <img src="../img/icon_perfil.png" alt="Icone Perfil" class="menu-icon perfil-icon">
+                    </span>
                     Perfil
                 </a>
                 <a href="notificacao-coordenador.html" class="menu-link">
-                    <span class="icon"><img src="../img/icone_notificacao.png" alt="Notificações" class="menu-icon"></span>
+                    <span class="icon">
+                        <img src="../img/icone_notificacao.png" alt="Icone Notificações" class="menu-icon">
+                    </span>
                     Notificações
                 </a>
                 <a href="gerenciar-perfil.html" class="menu-link">
-                    <span class="icon"><img src="../img/icone_gerenciar_perfis.png" alt="Gerenciar Perfis" class="menu-icon"></span>
+                    <span class="icon">
+                        <img src="../img/icone_gerenciar_perfis.png" alt="Icone Gerenciar Perfis" class="menu-icon">
+                    </span>
                     Gerenciar Perfis
                 </a>
                 <a href="consultar-produto.html" class="menu-link">
-                    <span class="icon"><img src="../img/icon_consultar_produto (1).png" alt="Consultar Produto" class="menu-icon"></span>
+                    <span class="icon">
+                        <img src="../img/icon_consultar_produto (1).png" alt="Icone Consultar Produto"
+                            class="menu-icon">
+                    </span>
                     Consultar Produto
                 </a>
                 <a href="analisar-solicitacao.html" class="menu-link">
-                    <span class="icon"><img src="../img/icone_analisar_solicitacao.png" alt="Analisar Solicitação" class="menu-icon"></span>
+                    <span class="icon">
+                        <img src="../img/icone_analisar_solicitacao.png" alt="Icone Analisar Solicitação"
+                            class="menu-icon">
+                    </span>
                     Analisar Solicitação
                 </a>
                 <a href="controlar-estoque.html" class="menu-link">
-                    <span class="icon"><img src="../img/icone_controlar_estoque.png" alt="Controlar Estoque" class="menu-icon"></span>
+                    <span class="icon">
+                        <img src="../img/icone_controlar_estoque.png" alt="Icone Controlar Estoque" class="menu-icon">
+                    </span>
                     Controlar Estoque
                 </a>
-                <a href="controlar-produto.html" class="menu-link active">
-                    <span class="icon"><img src="../img/icone_controlar_produto.png" alt="Controlar Produto" class="menu-icon"></span>
+                <a href="controlar-produto.html" class="menu-link">
+                    <span class="icon">
+                        <img src="../img/icone_controlar_produto.png" alt="Icone Controlar Produto" class="menu-icon">
+                    </span>
                     Controlar Produto
                 </a>
                 <a href="consultar-historico.html" class="menu-link">
-                    <span class="icon"><img src="../img/icon_historico.png" alt="Consultar Histórico" class="menu-icon"></span>
+                    <span class="icon">
+                        <img src="../img/icon_historico.png" alt="Icone Consultar Histórico" class="menu-icon">
+                    </span>
                     Consultar Histórico
                 </a>
                 <a href="sair.html" class="menu-link">
-                    <span class="icon"><img src="../img/icone_sair.png" alt="Sair" class="menu-icon"></span>
+                    <span class="icon">
+                        <img src="../img/icone_sair.png" alt="Icone Sair" class="menu-icon">
+                    </span>
                     Sair
                 </a>
             </nav>
+
         </aside>
 
         <main class="content">
@@ -125,7 +161,8 @@
                     </div>
 
                     <label class="field-label" for="description">Descrição</label>
-                    <textarea id="description" rows="5" placeholder="Descrição do produto" class="field-input textarea-field"></textarea>
+                    <textarea id="description" rows="5" placeholder="Descrição do produto"
+                        class="field-input textarea-field"></textarea>
 
                     <div class="actions-row">
                         <a href="excluir-produto.html" class="btn btn-danger">Excluir Produto</a>
@@ -139,6 +176,7 @@
     </div>
 
     <footer class="footer">
+
         <nav class="footer-links">
             <a href="inicio.html">Início</a>
             <a href="#">Sobre nós</a>
@@ -155,6 +193,8 @@
             <p>Telefone: (99) 99999-9999</p>
             <p>E-mail: algumacoisa@ifro.edu.br</p>
         </div>
+
     </footer>
 </body>
+
 </html>

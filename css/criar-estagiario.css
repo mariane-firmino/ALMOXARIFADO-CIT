@@ -102,7 +102,8 @@ a{text-decoration:none;color:inherit}
 }
 
 /* ------------------ Header / Page title ------------------ */
-.page-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:30px}
+.page-header{display:flex;
+    justify-content:space-between;align-items:center;margin-bottom:30px}
 .title-row{display:flex;align-items:center;gap:12px}
 .title-mark{width:6px;height:45px;border-radius:5px;background:var(--primary)}
 h1{margin:0;font-size:40px}
@@ -198,3 +199,272 @@ h1{margin:0;font-size:40px}
     .card-inner{flex-direction:column}
     .create-card{padding:0}
 }
+
+/* ==================================================
+   Versão renovada - criar-estagiario.css
+   Estilo consistente, limpo e responsivo
+   ================================================== */
+
+:root {
+    --bg: #eef6f2;
+    --surface: #ffffff;
+    --muted: #f7fbf9;
+    --accent: #109e8c;
+    --accent-strong: #0a7f70;
+    --border: #e6f4ef;
+    --text: #10261f;
+    --muted-text: #4d6d5e;
+    --danger: #d53f3f;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Inria Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.page {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 270px;
+    background: var(--accent-strong);
+    color: #fff;
+    padding: 28px 18px;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+
+.content {
+    flex: 1;
+    padding: 32px 40px;
+    background: transparent;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 22px;
+}
+
+.title-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.title-mark {
+    width: 6px;
+    height: 56px;
+    border-radius: 6px;
+    background: var(--accent);
+}
+
+h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.subtitle {
+    margin: 6px 0 0;
+    color: var(--muted-text);
+}
+
+.create-card {
+    max-width: 1100px;
+    margin: 18px auto;
+}
+
+.card-inner {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    background: var(--surface);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 18px 40px rgba(16,38,31,0.06);
+}
+
+.role-panel {
+    background: var(--accent);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+}
+
+.role-item {
+    width: 100%;
+    display: block;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 700;
+    color: #fff;
+    background: transparent;
+}
+
+.role-item.active {
+    background: linear-gradient(180deg, var(--accent), var(--accent-strong));
+}
+
+.form-area {
+    padding: 28px;
+    position: relative;
+}
+
+.form-area h2 {
+    margin: 0 0 12px;
+    font-size: 20px;
+}
+
+.create-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.field-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.field-group label {
+    font-weight: 700;
+    color: var(--text);
+}
+
+.field-group input,
+.field-group select,
+.field-group textarea {
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: var(--muted);
+    outline: none;
+}
+
+.field-group input:focus,
+.field-group select:focus,
+.field-group textarea:focus {
+    box-shadow: 0 0 0 6px rgba(16,158,140,0.08);
+    border-color: var(--accent);
+}
+
+.submit-wrap {
+    display: flex;
+    gap: 12px;
+    margin-top: 6px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 16px;
+    border-radius: 12px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: #fff;
+}
+
+.btn-secondary {
+    background: #e9f6f3;
+    color: var(--accent-strong);
+}
+
+.btn-danger {
+    background: var(--danger);
+    color: #fff;
+}
+
+.footer {
+    margin-top: 28px;
+    background: #17443e;
+    color: #fff;
+    border-radius: 12px;
+    padding: 18px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 18px;
+}
+
+.card-image {
+    height: 120px;
+    background: var(--muted);
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    color: var(--muted-text);
+}
+
+.card-footer {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.card-footer .btn-card {
+    display: inline-flex;
+    padding: 8px 12px;
+    border-radius: 10px;
+    font-weight: 800;
+    background: var(--accent);
+    color: #fff;
+}
+
+.card-footer .btn-card.secondary {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.12);
+    color: #fff;
+}
+
+@media (max-width:980px) {
+    .page {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        position: relative;
+        height: auto;
+    }
+
+    .card-inner {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+
