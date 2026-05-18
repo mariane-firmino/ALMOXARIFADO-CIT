@@ -28,6 +28,11 @@ a {
     transform: translateX(0);
 }
 
+#openSidebarMenu:checked ~ .footer{
+    transform: translate(270px);
+    width: calc(100% - 270px);
+}
+
 #openSidebarMenu:checked ~ .page{
     margin-left: 260px;
 }
@@ -96,7 +101,7 @@ a {
     z-index: 20;
 }
 
-.sidebar-header {
+.sidebar-header{
     display: flex;
     align-items: center;
     gap: 15px;
@@ -135,7 +140,6 @@ a {
     font-weight: 700;
     color: #f5fcf9;
     white-space: nowrap;
-    padding-left: 4px;
 }
 .menu-link:hover{
     background: #109e8c;

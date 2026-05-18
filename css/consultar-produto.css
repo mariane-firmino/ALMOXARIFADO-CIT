@@ -133,14 +133,13 @@ a {
     width: calc(100% + 30px);
     margin-left: -20px;
     display: flex;
-    padding: 14px 18px;
+    padding: 4px 18px;
     border-radius: 12px;
     transition: 0.2s ease;
     font-size: 18px;
     font-weight: 700;
     color: #f5fcf9;
     white-space: nowrap;
-    padding-left: 4px;
 }
 .menu-link:hover{
     background: #109e8c;
@@ -155,14 +154,13 @@ a {
     margin-left: -15px;
 }
 
-.menu-icon {
-    width: 28px;
-    height: 28px;
-    object-fit: contain;
-}
-
 .perfil-icon {
     transform: scale(1.3);
+}
+.menu-icon{
+    width: 51px;
+    height: 51px;
+    object-fit: contain;
 }
 
 .logout-link {

@@ -1,256 +1,285 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Controlar Produto - SACIT</title>
     <link rel="stylesheet" href="../css/controlar-produto.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@400;700;800&family=Inter:wght@600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@400;700;800&family=Inter:wght@600;700;800&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
-   <input type="checkbox" id="openSidebarMenu">
+    <input type="checkbox" id="openSidebarMenu">
 
-        <label for="openSidebarMenu" class="sidebarIconToggle">
-            <div class="spinner"></div>
-            <div class="spinner"></div>
-            <div class="spinner"></div>
-        </label>
-        
-        <label for="openSidebarMenu" class="overlay"></label>
+    <label for="openSidebarMenu" class="sidebarIconToggle">
+        <div class="spinner"></div>
+        <div class="spinner"></div>
+        <div class="spinner"></div>
+    </label>
 
-            <div class="page">
-                <aside class="sidebar" id="sidebarMenu">
-                    <div class="sidebar-header">
-                        <div class="avatar-wrapper">
-                            <img src="../img/avatar-menu.png" alt="Usuário" class="sidebar-avatar">
-                        </div>
-                        <p class="sidebar-title">Nome</p>
-                    </div>
+    <label for="openSidebarMenu" class="overlay"></label>
 
-                    <nav class="sidebar-nav">
-                        <a href="inicio.html" class="menu-link">
-                            <img src="https://www.figma.com/api/mcp/asset/1b6b7bfa-8d9b-425c-9a00-f4603eb14d0d" alt="Início" class="menu-icon">
-                            Início
-                        </a>
-                        <a href="perfil.html" class="menu-link">
-                            <img src="https://www.figma.com/api/mcp/asset/75f2780b-be68-4ac2-82c6-0c9b3943b5a3" alt="Perfil" class="menu-icon">
-                            Perfil
-                        </a>
-                        <a href="notificacao-coordenador.html" class="menu-link">
-                            <img src="https://www.figma.com/api/mcp/asset/39bf3900-6e26-44b3-9b36-667a5ff3f7e9" alt="Notificações" class="menu-icon">
-                            Notificações
-                        </a>
-                        <a href="gerenciar-perfil.html" class="menu-link">
-                            <img src="https://www.figma.com/api/mcp/asset/bb130e22-8db4-4e8f-b67c-71db4809586e" alt="Gerenciar Perfis" class="menu-icon">
-                            Gerenciar Perfis
-                        </a>
-                        <a href="consultar-produto.html" class="menu-link">
-                            <img src="https://www.figma.com/api/mcp/asset/cbe64200-21e1-44c6-a6e4-0b262a66239b" alt="Consultar Produto" class="menu-icon">
-                            Consultar Produto
-                        </a>
-                        <a href="analisar-solicitacao.html" class="menu-link">
-                            <img src="https://www.figma.com/api/mcp/asset/2ad94df5-1adc-4c41-8e90-34a0c800d298" alt="Analisar Solicitação" class="menu-icon">
-                            Analisar Solicitação
-                        </a>
-                        <a href="controlar-estoque.html" class="menu-link">
-                            <img src="https://www.figma.com/api/mcp/asset/171951bf-7856-4e5b-981b-a6492b6a707e" alt="Controlar Estoque" class="menu-icon">
-                            Controlar Estoque
-                        </a>
-                        <a href="controlar-produto.html" class="menu-link active">
-                            <img src="https://www.figma.com/api/mcp/asset/5becb9c6-5ccf-43cf-a06d-8e0b1d1970b1" alt="Controlar Produto" class="menu-icon">
-                            Controlar Produto
-                        </a>
-                        <a href="consultar-historico.html" class="menu-link">
-                            <img src="https://www.figma.com/api/mcp/asset/2e711ea8-f080-4092-9213-a45dea93659f" alt="Consultar Histórico" class="menu-icon">
-                            Consultar Histórico
-                        </a>
-                        <a href="sair.html" class="menu-link logout-link">
-                            <img src="https://www.figma.com/api/mcp/asset/67508781-e7c0-4cee-8508-57efea3455dc" alt="Sair" class="menu-icon">
-                            Sair
-                        </a>
-                    </nav>
-                </aside>
-
-                <main class="main-content">
-                    <header class="page-header">
-                        <div class="page-title">
-                            <div class="title-row">
-                                <span class="title-flag"></span>
-                                <h1>Controlar Produto</h1>
-                            </div>
-                            <p class="subtitle">Gerencie produtos com facilidade e atualize informações em tempo real.</p>
-                        </div>
-                        <img src="https://www.figma.com/api/mcp/asset/102bc9f7-5aa5-4947-bd52-66362b954455" alt="SACIT Logo" class="brand-logo">
-                    </header>
-
-                    <section class="actions-bar">
-                        <a class="btn-primary" href="cadastrar-produto.html">+ Novo Produto</a>
-
-                        <div class="search-box">
-                            <img src="../img/lupa.png" alt="Pesquisar" class="search-icon">
-                            <input type="text" placeholder="Buscar produto" class="search-input">
-                        </div>
-
-                        <div class="filter-group">
-                            <label for="category" class="filter-label">Categoria</label>
-                            <select id="category" class="filter-select">
-                                <option>Todas as categorias</option>
-                            </select>
-                        </div>
-
-                        <div class="filter-group">
-                            <label for="status" class="filter-label">Status</label>
-                            <select id="status" class="filter-select">
-                                <option>Todos os status</option>
-                            </select>
-                        </div>
-                    </section>
-
-                    <section class="cards-section">
-                        <div class="cards-grid">
-                            <article class="product-card">
-                                <div class="card-header">
-                                    <div>
-                                        <p class="card-label">Nome do Prod</p>
-                                        <h2 class="product-name">Baterias</h2>
-                                    </div>
-                                    <span class="status-pill status-ok">Disponível</span>
-                                </div>
-                                <div class="card-image">
-                                    <span>Imagem do produto</span>
-                                </div>
-                                <p class="card-detail"><strong>Categoria:</strong> Eletrônicos</p>
-                                <p class="card-detail"><strong>Quantidade:</strong> 1.175 unidades</p>
-                                <div class="card-footer">
-                                    <a href="editar-produto.html" class="btn-card">Editar</a>
-                                    <a href="excluir-produto.html" class="btn-card secondary">Excluir</a>
-                                </div>
-                            </article>
-
-                            <article class="product-card">
-                                <div class="card-header">
-                                    <div>
-                                        <p class="card-label">Nome do Prod</p>
-                                        <h2 class="product-name">Cabo HDMI</h2>
-                                    </div>
-                                    <span class="status-pill status-ok">Disponível</span>
-                                </div>
-                                <div class="card-image">
-                                    <span>Imagem do produto</span>
-                                </div>
-                                <p class="card-detail"><strong>Categoria:</strong> Acessórios</p>
-                                <p class="card-detail"><strong>Quantidade:</strong> 842 unidades</p>
-                                <div class="card-footer">
-                                    <a href="editar-produto.html" class="btn-card">Editar</a>
-                                    <a href="excluir-produto.html" class="btn-card secondary">Excluir</a>
-                                </div>
-                            </article>
-
-                            <article class="product-card">
-                                <div class="card-header">
-                                    <div>
-                                        <p class="card-label">Nome do Prod</p>
-                                        <h2 class="product-name">Pilhas AA</h2>
-                                    </div>
-                                    <span class="status-pill status-critical">Crítico</span>
-                                </div>
-                                <div class="card-image">
-                                    <span>Imagem do produto</span>
-                                </div>
-                                <p class="card-detail"><strong>Categoria:</strong> Materiais</p>
-                                <p class="card-detail"><strong>Quantidade:</strong> 18 unidades</p>
-                                <div class="card-footer">
-                                    <a href="editar-produto.html" class="btn-card">Editar</a>
-                                    <a href="excluir-produto.html" class="btn-card secondary">Excluir</a>
-                                </div>
-                            </article>
-
-                            <article class="product-card">
-                                <div class="card-header">
-                                    <div>
-                                        <p class="card-label">Nome do Prod</p>
-                                        <h2 class="product-name">Toner</h2>
-                                    </div>
-                                    <span class="status-pill status-ok">Disponível</span>
-                                </div>
-                                <div class="card-image">
-                                    <span>Imagem do produto</span>
-                                </div>
-                                <p class="card-detail"><strong>Categoria:</strong> Impressão</p>
-                                <p class="card-detail"><strong>Quantidade:</strong> 420 unidades</p>
-                                <div class="card-footer">
-                                    <a href="editar-produto.html" class="btn-card">Editar</a>
-                                    <a href="excluir-produto.html" class="btn-card secondary">Excluir</a>
-                                </div>
-                            </article>
-
-                            <article class="product-card">
-                                <div class="card-header">
-                                    <div>
-                                        <p class="card-label">Nome do Prod</p>
-                                        <h2 class="product-name">Mouse Óptico</h2>
-                                    </div>
-                                    <span class="status-pill status-ok">Disponível</span>
-                                </div>
-                                <div class="card-image">
-                                    <span>Imagem do produto</span>
-                                </div>
-                                <p class="card-detail"><strong>Categoria:</strong> Informática</p>
-                                <p class="card-detail"><strong>Quantidade:</strong> 317 unidades</p>
-                                <div class="card-footer">
-                                    <a href="editar-produto.html" class="btn-card">Editar</a>
-                                    <a href="excluir-produto.html" class="btn-card secondary">Excluir</a>
-                                </div>
-                            </article>
-
-                            <article class="product-card">
-                                <div class="card-header">
-                                    <div>
-                                        <p class="card-label">Nome do Prod</p>
-                                        <h2 class="product-name">Teclado</h2>
-                                    </div>
-                                    <span class="status-pill status-ok">Disponível</span>
-                                </div>
-                                <div class="card-image">
-                                    <span>Imagem do produto</span>
-                                </div>
-                                <p class="card-detail"><strong>Categoria:</strong> Informática</p>
-                                <p class="card-detail"><strong>Quantidade:</strong> 620 unidades</p>
-                                <div class="card-footer">
-                                    <a href="editar-produto.html" class="btn-card">Editar</a>
-                                    <a href="excluir-produto.html" class="btn-card secondary">Excluir</a>
-                                </div>
-                            </article>
-                        </div>
-
-                        <div class="pagination pagination-right">
-                            <span class="pagination-info">1 / 3</span>
-                            <button class="pagination-btn"><span>&lt;</span></button>
-                            <button class="pagination-btn"><span>&gt;</span></button>
-                        </div>
-                    </section>
-                </main>
+    <div class="page">
+        <aside class="sidebar" id="sidebarMenu">
+            <div class="sidebar-header">
+                <img src="../img/avatar-menu.png" alt="Avatar" class="sidebar-avatar">
+                <div>
+                    <p class="sidebar-title">Nome</p>
+                </div>
             </div>
 
-            <footer class="footer">
+            <nav>
+                <a href="inicio.html" class="menu-link">
+                    <span class="icon">
+                        <img src="../img/icone_inicio (1).png" alt="Icone Início" class="menu-icon">
+                    </span>
+                    Início
+                </a>
+                <a href="perfil.html" class="menu-link">
+                    <span class="icon">
+                        <img src="../img/icon_perfil.png" alt="Icone Perfil" class="menu-icon perfil-icon">
+                    </span>
+                    Perfil
+                </a>
+                <a href="notificacao-coordenador.html" class="menu-link">
+                    <span class="icon">
+                        <img src="../img/icone_notificacao.png" alt="Icone Notificações" class="menu-icon">
+                    </span>
+                    Notificações
+                </a>
+                <a href="gerenciar-perfil.html" class="menu-link">
+                    <span class="icon">
+                        <img src="../img/icone_gerenciar_perfis.png" alt="Icone Gerenciar Perfis" class="menu-icon">
+                    </span>
+                    Gerenciar Perfis
+                </a>
+                <a href="consultar-produto.html" class="menu-link">
+                    <span class="icon">
+                        <img src="../img/icon_consultar_produto (1).png" alt="Icone Consultar Produto"
+                            class="menu-icon">
+                    </span>
+                    Consultar Produto
+                </a>
+                <a href="analisar-solicitacao.html" class="menu-link">
+                    <span class="icon">
+                        <img src="../img/icone_analisar_solicitacao.png" alt="Icone Analisar Solicitação"
+                            class="menu-icon">
+                    </span>
+                    Analisar Solicitação
+                </a>
+                <a href="controlar-estoque.html" class="menu-link">
+                    <span class="icon">
+                        <img src="../img/icone_controlar_estoque.png" alt="Icone Controlar Estoque" class="menu-icon">
+                    </span>
+                    Controlar Estoque
+                </a>
+                <a href="controlar-produto.html" class="menu-link">
+                    <span class="icon">
+                        <img src="../img/icone_controlar_produto.png" alt="Icone Controlar Produto" class="menu-icon">
+                    </span>
+                    Controlar Produto
+                </a>
+                <a href="consultar-historico.html" class="menu-link">
+                    <span class="icon">
+                        <img src="../img/icon_historico.png" alt="Icone Consultar Histórico" class="menu-icon">
+                    </span>
+                    Consultar Histórico
+                </a>
+                <a href="sair.html" class="menu-link">
+                    <span class="icon">
+                        <img src="../img/icone_sair.png" alt="Icone Sair" class="menu-icon">
+                    </span>
+                    Sair
+                </a>
+            </nav>
 
-                    <nav class="footer-links">
-                        <a href="inicio.html">Início</a>
-                        <a href="#">Sobre nós</a>
-                        <a href="gerenciar-perfil.html">Gerenciar perfis</a>
-                        <a href="consultar-produto.html">Consultar Produto</a>
-                    </nav>
+        </aside>
 
-                    <div class="footer-center">
-                        <img src="../img/ifro-logo.webp" alt="IFRO Logo" class="footer-logo">
+        <main class="main-content">
+            <header class="page-header">
+                <div class="page-title">
+                    <div class="title-row">
+                        <span class="title-flag"></span>
+                        <h1>Controlar Produto</h1>
                     </div>
+                    <p class="subtitle">Gerencie produtos com facilidade e atualize informações em tempo real.</p>
+                </div>
+                <img src="../img/logo-sacit.png" alt="SACIT Logo"
+                    class="brand-logo">
+            </header>
 
-                    <div class="footer-contact">
-                        <p>Contatos:</p>
-                        <p>Telefone: (99) 99999-9999</p>
-                        <p>E-mail: algumacoisa@ifro.edu.br</p>
-                    </div>
+            <section class="actions-bar">
+                <a class="btn-primary" href="cadastrar-produto.html">+ Novo Produto</a>
 
-                </footer>
+                <div class="search-box">
+                    <img src="../img/lupa.png" alt="Pesquisar" class="search-icon">
+                    <input type="text" placeholder="Buscar produto" class="search-input">
+                </div>
+
+                <div class="filter-group">
+                    <label for="category" class="filter-label">Categoria</label>
+                    <select id="category" class="filter-select">
+                        <option>Todas as categorias</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="status" class="filter-label">Status</label>
+                    <select id="status" class="filter-select">
+                        <option>Todos os status</option>
+                    </select>
+                </div>
+            </section>
+
+            <section class="cards-section">
+                <div class="cards-grid">
+                    <article class="product-card">
+                        <div class="card-header">
+                            <div>
+                                <p class="card-label">Nome do Prod</p>
+                                <h2 class="product-name">Baterias</h2>
+                            </div>
+                            <span class="status-pill status-ok">Disponível</span>
+                        </div>
+                        <div class="card-image">
+                            <span>Imagem do produto</span>
+                        </div>
+                        <p class="card-detail"><strong>Categoria:</strong> Eletrônicos</p>
+                        <p class="card-detail"><strong>Quantidade:</strong> 1.175 unidades</p>
+                        <div class="card-footer">
+                            <a href="editar-produto.html" class="btn-card">Editar</a>
+                            <a href="excluir-produto.html" class="btn-card secondary">Excluir</a>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="card-header">
+                            <div>
+                                <p class="card-label">Nome do Prod</p>
+                                <h2 class="product-name">Cabo HDMI</h2>
+                            </div>
+                            <span class="status-pill status-ok">Disponível</span>
+                        </div>
+                        <div class="card-image">
+                            <span>Imagem do produto</span>
+                        </div>
+                        <p class="card-detail"><strong>Categoria:</strong> Acessórios</p>
+                        <p class="card-detail"><strong>Quantidade:</strong> 842 unidades</p>
+                        <div class="card-footer">
+                            <a href="editar-produto.html" class="btn-card">Editar</a>
+                            <a href="excluir-produto.html" class="btn-card secondary">Excluir</a>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="card-header">
+                            <div>
+                                <p class="card-label">Nome do Prod</p>
+                                <h2 class="product-name">Pilhas AA</h2>
+                            </div>
+                            <span class="status-pill status-critical">Crítico</span>
+                        </div>
+                        <div class="card-image">
+                            <span>Imagem do produto</span>
+                        </div>
+                        <p class="card-detail"><strong>Categoria:</strong> Materiais</p>
+                        <p class="card-detail"><strong>Quantidade:</strong> 18 unidades</p>
+                        <div class="card-footer">
+                            <a href="editar-produto.html" class="btn-card">Editar</a>
+                            <a href="excluir-produto.html" class="btn-card secondary">Excluir</a>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="card-header">
+                            <div>
+                                <p class="card-label">Nome do Prod</p>
+                                <h2 class="product-name">Toner</h2>
+                            </div>
+                            <span class="status-pill status-ok">Disponível</span>
+                        </div>
+                        <div class="card-image">
+                            <span>Imagem do produto</span>
+                        </div>
+                        <p class="card-detail"><strong>Categoria:</strong> Impressão</p>
+                        <p class="card-detail"><strong>Quantidade:</strong> 420 unidades</p>
+                        <div class="card-footer">
+                            <a href="editar-produto.html" class="btn-card">Editar</a>
+                            <a href="excluir-produto.html" class="btn-card secondary">Excluir</a>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="card-header">
+                            <div>
+                                <p class="card-label">Nome do Prod</p>
+                                <h2 class="product-name">Mouse Óptico</h2>
+                            </div>
+                            <span class="status-pill status-ok">Disponível</span>
+                        </div>
+                        <div class="card-image">
+                            <span>Imagem do produto</span>
+                        </div>
+                        <p class="card-detail"><strong>Categoria:</strong> Informática</p>
+                        <p class="card-detail"><strong>Quantidade:</strong> 317 unidades</p>
+                        <div class="card-footer">
+                            <a href="editar-produto.html" class="btn-card">Editar</a>
+                            <a href="excluir-produto.html" class="btn-card secondary">Excluir</a>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="card-header">
+                            <div>
+                                <p class="card-label">Nome do Prod</p>
+                                <h2 class="product-name">Teclado</h2>
+                            </div>
+                            <span class="status-pill status-ok">Disponível</span>
+                        </div>
+                        <div class="card-image">
+                            <span>Imagem do produto</span>
+                        </div>
+                        <p class="card-detail"><strong>Categoria:</strong> Informática</p>
+                        <p class="card-detail"><strong>Quantidade:</strong> 620 unidades</p>
+                        <div class="card-footer">
+                            <a href="editar-produto.html" class="btn-card">Editar</a>
+                            <a href="excluir-produto.html" class="btn-card secondary">Excluir</a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="pagination pagination-right">
+                    <span class="pagination-info">1 / 3</span>
+                    <button class="pagination-btn"><span>&lt;</span></button>
+                    <button class="pagination-btn"><span>&gt;</span></button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer class="footer">
+
+        <nav class="footer-links">
+            <a href="inicio.html">Início</a>
+            <a href="sobreNos.html">Sobre nós</a>
+            <a href="gerenciar-perfil.html">Gerenciar perfis</a>
+            <a href="consultar-produto.html">Consultar Produto</a>
+        </nav>
+
+        <div class="footer-center">
+            <img src="../img/ifro-logo.webp" alt="IFRO Logo" class="footer-logo">
+        </div>
+
+        <div class="footer-contact">
+            <p>Contatos:</p>
+            <p>Telefone: (99) 99999-9999</p>
+            <p>E-mail: algumacoisa@ifro.edu.br</p>
+        </div>
+
+    </footer>
 </body>
+
 </html>
