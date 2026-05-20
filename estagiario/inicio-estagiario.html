@@ -1,63 +1,63 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Início - Estagiário - SACIT</title>
     <link rel="stylesheet" href="css/inicio-estagiario.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@400;700;800&family=Inter:wght@600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@400;700;800&family=Inter:wght@600;700;800&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
+    <input type="checkbox" id="openSidebarMenu">
+
+    <label for="openSidebarMenu" class="sidebarIconToggle">
+        <div class="spinner"></div>
+        <div class="spinner"></div>
+        <div class="spinner"></div>
+    </label>
+
+    <label for="openSidebarMenu" class="overlay"></label>
+
     <div class="page">
-        <aside class="sidebar">
+        <aside class="sidebar" id="sidebarMenu">
             <div class="sidebar-header">
-                <img src="../img/avatar.png" alt="Avatar" class="sidebar-avatar">
+                <img src="../img/avatar-menu.png" alt="Avatar" class="sidebar-avatar">
                 <div>
-                    <p class="sidebar-title">Estagiário</p>
+                    <p class="sidebar-title">Nome</p>
                 </div>
             </div>
 
-            <nav>
-                <a href="inicio-estagiario.html" class="menu-link active">
-                    <span class="icon">
-                        <img src="../img/icone_inicio (1).png" alt="Icone Início" class="menu-icon">
-                    </span>
+            <nav class="sidebar-nav">
+                <a href="inicio-estagiario.html" class="menu-link">
+                    <img src="../img/icone_inicio (1).png" alt="Início" class="menu-icon">
                     Início
                 </a>
                 <a href="perfil-estagiario.html" class="menu-link">
-                    <span class="icon">
-                        <img src="../img/icone_perfil.png" alt="Icone Perfil" class="menu-icon">
-                    </span>
+                    <img src="../img/icon_perfil.png" alt="Perfil" class="menu-icon perfil-icon">
                     Perfil
                 </a>
                 <a href="notificacao-estagiario.html" class="menu-link">
-                    <span class="icon">
-                        <img src="../img/icone_notificacao.png" alt="Icone Notificações" class="menu-icon">
-                    </span>
+                    <img src="../img/icone_notificacao.png" alt="Notificações" class="menu-icon">
                     Notificações
                 </a>
                 <a href="consultar-prod-estagiario.html" class="menu-link">
-                    <span class="icon">
-                        <img src="../img/icon_consultar_produto (1).png" alt="Icone Consultar Produto" class="menu-icon">
-                    </span>
+                    <img src="../img/icon_consultar_produto (1).png" alt="Consultar Produto" class="menu-icon">
                     Consultar Produto
                 </a>
-                <a href="#" class="menu-link">
-                    <span class="icon">
-                        <img src="../img/icone_controlar_produto.png" alt="Icone Controlar Produto" class="menu-icon">
-                    </span>
-                    Controlar Produto
-                </a>
                 <a href="controlar-est-estagiario.html" class="menu-link">
-                    <span class="icon">
-                        <img src="../img/icone_controlar_estoque.png" alt="Icone Controlar Estoque" class="menu-icon">
-                    </span>
+                    <img src="../img/icone_controlar_estoque.png" alt="Controlar Estoque" class="menu-icon">
                     Controlar Estoque
                 </a>
-                <a href="../index.html" class="menu-link">
-                    <span class="icon">
-                        <img src="../img/icone_sair.png" alt="Icone Sair" class="menu-icon">
-                    </span>
+                <a href="controlar-prod-estagiario.html" class="menu-link">
+                    <img src="../img/icone_controlar_produto.png" alt="Controlar Produto" class="menu-icon">
+                    Controlar Produto
+                </a>
+                <a href="sair.html" class="menu-link logout-link">
+                    <img src="../img/icone_sair.png" alt="Sair" class="menu-icon">
                     Sair
                 </a>
             </nav>
@@ -147,10 +147,9 @@
 
     <footer class="footer">
         <nav class="footer-links">
-            <a href="#">Início</a>
-            <a href="#">Sobre nós</a>
-            <a href="#">Gerenciar perfis</a>
-            <a href="#">Consultar Produto</a>
+            <a href="inicio-estagiario.html">Início</a>
+            <a href="/coordenador/sobreNos.html">Sobre nós</a>
+            <a href="consultar-prod-estagiario.html">Consultar Produto</a>
         </nav>
 
         <div class="footer-center">
@@ -164,4 +163,5 @@
         </div>
     </footer>
 </body>
+
 </html>
