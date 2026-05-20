@@ -12,8 +12,7 @@
 </head>
 
 <body>
-    <div class="page">
-        <input type="checkbox" id="openSidebarMenu">
+    <input type="checkbox" id="openSidebarMenu">
 
         <label for="openSidebarMenu" class="sidebarIconToggle">
             <div class="spinner"></div>
@@ -22,80 +21,45 @@
         </label>
         
         <label for="openSidebarMenu" class="overlay"></label>
-        <aside class="sidebar">
+    <div class="page">
+        <aside class="sidebar" id="sidebarMenu">
             <div class="sidebar-header">
-                <img src="../img/avatar-menu.png" alt="Avatar"
-                    class="sidebar-avatar">
+                <img src="../img/avatar-menu.png" alt="Avatar" class="sidebar-avatar">
                 <div>
                     <p class="sidebar-title">Nome</p>
                 </div>
             </div>
 
-            <nav>
-                <a href="inicio.html" class="menu-link">
-                    <span class="icon">
-                        <img src="../img/icone_inicio (1).png" alt="Icone Início" class="menu-icon">
-                    </span>
+            <nav class="sidebar-nav">
+                <a href="inicio-estagiario.html" class="menu-link">
+                    <img src="../img/icone_inicio (1).png" alt="Início" class="menu-icon">
                     Início
                 </a>
-                <a href="perfil.html" class="menu-link">
-                    <span class="icon">
-                        <img src="../img/icon_perfil.png" alt="Icone Perfil" class="menu-icon perfil-icon">
-                    </span>
+                <a href="perfil-estagiario.html" class="menu-link">
+                    <img src="../img/icon_perfil.png" alt="Perfil" class="menu-icon perfil-icon">
                     Perfil
                 </a>
-                <a href="notificacao-coordenador.html" class="menu-link">
-                    <span class="icon">
-                        <img src="../img/icone_notificacao.png" alt="Icone Notificações" class="menu-icon">
-                    </span>
+                <a href="notificacao-estagiario.html" class="menu-link">
+                    <img src="../img/icone_notificacao.png" alt="Notificações" class="menu-icon">
                     Notificações
                 </a>
-                <a href="gerenciar-perfil.html" class="menu-link">
-                    <span class="icon">
-                        <img src="../img/icone_gerenciar_perfis.png" alt="Icone Gerenciar Perfis" class="menu-icon">
-                    </span>
-                    Gerenciar Perfis
-                </a>
                 <a href="consultar-produto.html" class="menu-link">
-                    <span class="icon">
-                        <img src="../img/icon_consultar_produto (1).png" alt="Icone Consultar Produto"
-                            class="menu-icon">
-                    </span>
+                    <img src="../img/icon_consultar_produto (1).png" alt="Consultar Produto" class="menu-icon">
                     Consultar Produto
                 </a>
-                <a href="analisar-solicitacao.html" class="menu-link">
-                    <span class="icon">
-                        <img src="../img/icone_analisar_solicitacao.png" alt="Icone Analisar Solicitação"
-                            class="menu-icon">
-                    </span>
-                    Analisar Solicitação
-                </a>
                 <a href="controlar-estoque.html" class="menu-link">
-                    <span class="icon">
-                        <img src="../img/icone_controlar_estoque.png" alt="Icone Controlar Estoque" class="menu-icon">
-                    </span>
+                    <img src="../img/icone_controlar_estoque.png" alt="Controlar Estoque" class="menu-icon">
                     Controlar Estoque
                 </a>
                 <a href="controlar-produto.html" class="menu-link">
-                    <span class="icon">
-                        <img src="../img/icone_controlar_produto.png" alt="Icone Controlar Produto" class="menu-icon">
-                    </span>
+                    <img src="../img/icone_controlar_produto.png" alt="Controlar Produto" class="menu-icon">
                     Controlar Produto
                 </a>
-                <a href="consultar-historico.html" class="menu-link">
-                    <span class="icon">
-                        <img src="../img/icon_historico.png" alt="Icone Consultar Histórico" class="menu-icon">
-                    </span>
-                    Consultar Histórico
-                </a>
-                <a href="sair.html" class="menu-link">
-                    <span class="icon">
-                        <img src="../img/icone_sair.png" alt="Icone Sair" class="menu-icon">
-                    </span>
+                <a href="sair.html" class="menu-link logout-link">
+                    <img src="../img/icone_sair.png" alt="Sair" class="menu-icon">
                     Sair
                 </a>
             </nav>
-
         </aside>
 
         <main class="content">
@@ -166,12 +130,10 @@
         </main>
     </div>
     <footer class="footer">
-
         <nav class="footer-links">
-            <a href="inicio.html">Início</a>
-            <a href="sobreNos.html">Sobre nós</a>
-            <a href="gerenciar-perfil.html">Gerenciar perfis</a>
-            <a href="consultar-produto.html">Consultar Produto</a>
+            <a href="inicio-estagiario.html">Início</a>
+            <a href="/coordenador/sobreNos.html">Sobre nós</a>
+            <a href="consultar-prod-estagiario.html">Consultar Produto</a>
         </nav>
 
         <div class="footer-center">
@@ -183,7 +145,6 @@
             <p>Telefone: (99) 99999-9999</p>
             <p>E-mail: algumacoisa@ifro.edu.br</p>
         </div>
-
     </footer>
 </body>
 

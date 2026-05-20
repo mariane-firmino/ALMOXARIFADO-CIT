@@ -1,103 +1,106 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consultar Produto - Estagiário - SACIT</title>
-    <link rel="stylesheet" href="css/consultar-prod-estagiario.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@400;700;800&family=Inter:wght@600;700;800&display=swap" rel="stylesheet">
+    <title>Consultar Produto - SACIT</title>
+    <link rel="stylesheet" href="css/consultar-produto.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@400;700;800&family=Inter:wght@600;700;800&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
+    <input type="checkbox" id="openSidebarMenu">
+
+    <label for="openSidebarMenu" class="sidebarIconToggle">
+        <div class="spinner"></div>
+        <div class="spinner"></div>
+        <div class="spinner"></div>
+    </label>
+
+    <label for="openSidebarMenu" class="overlay"></label>
+
     <div class="page">
-        <aside class="sidebar">
+        <aside class="sidebar" id="sidebarMenu">
             <div class="sidebar-header">
-                <img src="../img/avatar.png" alt="Avatar" class="sidebar-avatar">
+                <img src="../img/avatar-menu.png" alt="Avatar" class="sidebar-avatar">
                 <div>
-                    <p class="sidebar-title">Estagiário</p>
+                    <p class="sidebar-title">Nome</p>
                 </div>
             </div>
 
-            <nav>
+            <nav class="sidebar-nav">
                 <a href="inicio-estagiario.html" class="menu-link">
-                    <span class="icon">
-                        <img src="../img/icone_inicio (1).png" alt="Icone Início" class="menu-icon">
-                    </span>
+                    <img src="../img/icone_inicio (1).png" alt="Início" class="menu-icon">
                     Início
                 </a>
                 <a href="perfil-estagiario.html" class="menu-link">
-                    <span class="icon">
-                        <img src="../img/icone_perfil.png" alt="Icone Perfil" class="menu-icon">
-                    </span>
+                    <img src="../img/icon_perfil.png" alt="Perfil" class="menu-icon perfil-icon">
                     Perfil
                 </a>
                 <a href="notificacao-estagiario.html" class="menu-link">
-                    <span class="icon">
-                        <img src="../img/icone_notificacao.png" alt="Icone Notificações" class="menu-icon">
-                    </span>
+                    <img src="../img/icone_notificacao.png" alt="Notificações" class="menu-icon">
                     Notificações
                 </a>
-                <a href="consultar-prod-estagiario.html" class="menu-link active">
-                    <span class="icon">
-                        <img src="../img/icon_consultar_produto (1).png" alt="Icone Consultar Produto" class="menu-icon">
-                    </span>
+                <a href="consultar-produto.html" class="menu-link">
+                    <img src="../img/icon_consultar_produto (1).png" alt="Consultar Produto" class="menu-icon">
                     Consultar Produto
                 </a>
-                <a href="#" class="menu-link">
-                    <span class="icon">
-                        <img src="../img/icone_controlar_produto.png" alt="Icone Controlar Produto" class="menu-icon">
-                    </span>
-                    Controlar Produto
-                </a>
-                <a href="#" class="menu-link">
-                    <span class="icon">
-                        <img src="../img/icone_controlar_estoque.png" alt="Icone Controlar Estoque" class="menu-icon">
-                    </span>
+                <a href="controlar-estoque.html" class="menu-link">
+                    <img src="../img/icone_controlar_estoque.png" alt="Controlar Estoque" class="menu-icon">
                     Controlar Estoque
                 </a>
-                <a href="../index.html" class="menu-link">
-                    <span class="icon">
-                        <img src="../img/icone_sair.png" alt="Icone Sair" class="menu-icon">
-                    </span>
+                <a href="controlar-produto.html" class="menu-link">
+                    <img src="../img/icone_controlar_produto.png" alt="Controlar Produto" class="menu-icon">
+                    Controlar Produto
+                </a>
+                <a href="sair.html" class="menu-link logout-link">
+                    <img src="../img/icone_sair.png" alt="Sair" class="menu-icon">
                     Sair
                 </a>
             </nav>
         </aside>
 
-        <main class="content">
+        <main class="main-content">
             <header class="page-header">
-                <div class="title-group">
+                <div class="page-title">
                     <div class="title-row">
-                        <span class="title-mark"></span>
+                        <span class="title-flag"></span>
                         <h1>Consultar Produto</h1>
                     </div>
                     <p class="subtitle">Visualize e pesquise produtos disponíveis no sistema.</p>
                 </div>
-                <img src="../img/ifro-logo.webp" alt="IFRO Logo" class="brand-logo">
+                <img src="../img/logo-sacit.png" alt="SACIT Logo"
+                    class="brand-logo">
             </header>
 
-            <section class="stats-grid">
-                <div class="stat-card">
-                    <span class="stat-label">Produtos</span>
-                    <p class="stat-value">1.024</p>
-                    <p class="stat-note">Cadastrados</p>
-                </div>
-                <div class="stat-card">
-                    <span class="stat-label">Em estoque</span>
-                    <p class="stat-value">856</p>
-                    <p class="stat-note">Disponíveis</p>
-                </div>
-                <div class="stat-card warning-card">
-                    <span class="stat-label">Baixo estoque</span>
-                    <p class="stat-value">23</p>
-                    <p class="stat-note">Atenção necessária</p>
-                </div>
+            <section class="hero-cards">
+                <article class="hero-card">
+                    <p class="hero-label">Produtos</p>
+                    <p class="hero-value">1.024</p>
+                    <p class="hero-note">Cadastrados</p>
+                </article>
+                <article class="hero-card">
+                    <p class="hero-label">Em estoque</p>
+                    <p class="hero-value">856</p>
+                    <p class="hero-note">Disponíveis</p>
+                </article>
+                <article class="hero-card warning-card">
+                    <p class="hero-label">Baixo estoque</p>
+                    <p class="hero-value">23</p>
+                    <p class="hero-note">Atenção necessária</p>
+                </article>
             </section>
 
             <section class="filters-section">
-                <div class="filter-group search-group">
+                <div class="filter-group search-field">
                     <label for="search" class="filter-label">Buscar produto</label>
-                    <div class="search-container">
-                        <input type="text" id="search" placeholder="Digite nome ou código do produto" class="search-input">
+                    <div class="search-box">
+                        <img src="../img/lupa.png" alt="Pesquisar" class="search-icon">
+                        <input type="text" id="search" placeholder="Digite nome ou código do produto"
+                            class="search-input">
                     </div>
                 </div>
                 <div class="filter-group">
@@ -139,7 +142,7 @@
                             <td>Material de Escritório</td>
                             <td>150</td>
                             <td><span class="status available">Disponível</span></td>
-                            <td><button class="action-btn">Ver Detalhes</button></td>
+                            <td><a href="detalhar-produto.html" class="action-btn">Ver Detalhes</a></td>
                         </tr>
                         <tr>
                             <td>PROD002</td>
@@ -147,7 +150,7 @@
                             <td>Material de Escritório</td>
                             <td>5</td>
                             <td><span class="status low">Baixo Estoque</span></td>
-                            <td><button class="action-btn">Ver Detalhes</button></td>
+                            <td><a href="detalhar-produto.html" class="action-btn">Ver Detalhes</a></td>
                         </tr>
                         <tr>
                             <td>PROD003</td>
@@ -155,7 +158,7 @@
                             <td>Produtos de Limpeza</td>
                             <td>0</td>
                             <td><span class="status unavailable">Indisponível</span></td>
-                            <td><button class="action-btn">Ver Detalhes</button></td>
+                            <td><a href="detalhar-produto.html" class="action-btn">Ver Detalhes</a></td>
                         </tr>
                         <!-- Adicionar mais linhas conforme necessário -->
                     </tbody>
@@ -166,10 +169,9 @@
 
     <footer class="footer">
         <nav class="footer-links">
-            <a href="#">Início</a>
-            <a href="#">Sobre nós</a>
-            <a href="#">Gerenciar perfis</a>
-            <a href="#">Consultar Produto</a>
+            <a href="inicio-estagiario.html">Início</a>
+            <a href="/coordenador/sobreNos.html">Sobre nós</a>
+            <a href="consultar-prod-estagiario.html">Consultar Produto</a>
         </nav>
 
         <div class="footer-center">
@@ -183,4 +185,5 @@
         </div>
     </footer>
 </body>
+
 </html>

@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Início - Estagiário - SACIT</title>
-    <link rel="stylesheet" href="css/inicio-estagiario.css">
+    <title>Editar Produto - SACIT</title>
+    <link rel="stylesheet" href="css/editar-produto.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@400;700;800&family=Inter:wght@600;700;800&display=swap"
         rel="stylesheet">
@@ -21,7 +21,6 @@
     </label>
 
     <label for="openSidebarMenu" class="overlay"></label>
-
     <div class="page">
         <aside class="sidebar" id="sidebarMenu">
             <div class="sidebar-header">
@@ -65,82 +64,78 @@
 
         <main class="content">
             <header class="page-header">
-                <div class="title-group">
-                    <div class="title-row">
-                        <span class="title-mark"></span>
-                        <h1>Início</h1>
+                <div class="header-title">
+                    <div class="title-flag"></div>
+                    <div>
+                        <h1>Controlar Produto</h1>
+                        <p>Gerencie os produtos do sistema</p>
                     </div>
-                    <p class="subtitle">Bem-vindo(a), Nome !</p>
                 </div>
-                <img src="../img/ifro-logo.webp" alt="IFRO Logo" class="brand-logo">
+                <img src="../img/logo-sacit.png" alt="SACIT" class="brand-logo">
             </header>
 
-            <section class="stats-grid">
-                <div class="stat-card">
-                    <span class="stat-label">Novas Notificações</span>
-                    <p class="stat-value">0</p>
+            <section class="edit-card">
+                <div class="card-top">
+                    <h2>Editar Produto</h2>
+                    <a href="controlar-produto.html" class="close-btn" aria-label="Fechar">
+                        <img src="../img/fechar.png" alt="Fechar">
+                    </a>
                 </div>
-                <div class="stat-card">
-                    <span class="stat-label">Solicitações Pendentes</span>
-                    <p class="stat-value">0</p>
-                </div>
-                <div class="stat-card">
-                    <span class="stat-label">Solicitações Aprovadas</span>
-                    <p class="stat-value">0</p>
-                </div>
-            </section>
 
-            <section class="content-grid">
-                <div class="request-panel">
-                    <div class="section-header">
-                        <h2>Minhas Solicitações</h2>
-                    </div>
-                    <div class="request-list">
-                        <div class="request-item pending">
-                            <div>
-                                <h3>Solicitação de Material</h3>
-                                <p class="request-code">ID: SOL-001</p>
-                            </div>
-                            <span class="request-status">Pendente</span>
-                        </div>
-                        <div class="request-item approved">
-                            <div>
-                                <h3>Material Recebido</h3>
-                                <p class="request-code">ID: SOL-002</p>
-                            </div>
-                            <span class="request-status">Aprovado</span>
-                        </div>
-                        <div class="request-item rejected">
-                            <div>
-                                <h3>Solicitação Cancelada</h3>
-                                <p class="request-code">ID: SOL-003</p>
-                            </div>
-                            <span class="request-status">Cancelado</span>
-                        </div>
+                <div class="upload-block">
+                    <div class="upload-placeholder">
+                        <img src="../img/adicionar-img.png" alt="Adicionar imagem" class="upload-icon">
                     </div>
                 </div>
 
-                <div class="request-summary">
-                    <h2>Resumo de Atividades</h2>
-                    <div class="activity-list">
-                        <div class="activity-item">
-                            <span class="activity-label">Solicitações Realizadas</span>
-                            <strong class="activity-value">0</strong>
+                <form class="product-form">
+                    <label class="field-label" for="product-name">Nome</label>
+                    <input id="product-name" type="text" placeholder="Nome do produto" class="field-input">
+
+                    <div class="field-row">
+                        <div class="field-group">
+                            <label class="field-label" for="category">Categoria</label>
+                            <select id="category" class="field-input select-field">
+                                <option>Eletrônico</option>
+                                <option>Materiais</option>
+                                <option>Informática</option>
+                            </select>
                         </div>
-                        <div class="activity-item">
-                            <span class="activity-label">Materiais Recebidos</span>
-                            <strong class="activity-value">0</strong>
-                        </div>
-                        <div class="activity-item">
-                            <span class="activity-label">Pendências</span>
-                            <strong class="activity-value">0</strong>
-                        </div>
-                        <div class="activity-item">
-                            <span class="activity-label">Canceladas</span>
-                            <strong class="activity-value">0</strong>
+                        <div class="field-group">
+                            <label class="field-label" for="location">Localização</label>
+                            <select id="location" class="field-input select-field">
+                                <option>Armário X</option>
+                                <option>Almoxarifado</option>
+                                <option>Laboratório</option>
+                            </select>
                         </div>
                     </div>
-                </div>
+
+                    <div class="field-row">
+                        <div class="field-group">
+                            <label class="field-label" for="quantity">Quantidade</label>
+                            <input id="quantity" type="number" placeholder="00" class="field-input">
+                        </div>
+                        <div class="field-group">
+                            <label class="field-label" for="status">Status</label>
+                            <select id="status" class="field-input select-field">
+                                <option>Indisponível</option>
+                                <option>Disponível</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <label class="field-label" for="description">Descrição</label>
+                    <textarea id="description" rows="5" placeholder="Descrição do produto"
+                        class="field-input textarea-field"></textarea>
+
+                    <div class="actions-row">
+                        <a href="excluir-produto.html" class="btn btn-danger">Excluir Produto</a>
+                        <button type="button" class="btn btn-secondary">Gerar QRcode</button>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Cadastrar Produto</button>
+                </form>
             </section>
         </main>
     </div>

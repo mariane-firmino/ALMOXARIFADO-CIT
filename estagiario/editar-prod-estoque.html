@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Editar Produto - Estoque | SACIT</title>
+    <link rel="stylesheet" href="css/editar-prod-estoque.css">
+</head>
+
+<body>
+    <input type="checkbox" id="openSidebarMenu">
+
+    <label for="openSidebarMenu" class="sidebarIconToggle">
+        <div class="spinner"></div>
+        <div class="spinner"></div>
+        <div class="spinner"></div>
+    </label>
+
+    <label for="openSidebarMenu" class="overlay"></label>
+    <div class="page">
+        <aside class="sidebar" id="sidebarMenu">
+            <div class="sidebar-header">
+                <img src="../img/avatar-menu.png" alt="Avatar" class="sidebar-avatar">
+                <div>
+                    <p class="sidebar-title">Nome</p>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="inicio-estagiario.html" class="menu-link">
+                    <img src="../img/icone_inicio (1).png" alt="Início" class="menu-icon">
+                    Início
+                </a>
+                <a href="perfil-estagiario.html" class="menu-link">
+                    <img src="../img/icon_perfil.png" alt="Perfil" class="menu-icon perfil-icon">
+                    Perfil
+                </a>
+                <a href="notificacao-estagiario.html" class="menu-link">
+                    <img src="../img/icone_notificacao.png" alt="Notificações" class="menu-icon">
+                    Notificações
+                </a>
+                <a href="consultar-produto.html" class="menu-link">
+                    <img src="../img/icon_consultar_produto (1).png" alt="Consultar Produto" class="menu-icon">
+                    Consultar Produto
+                </a>
+                <a href="controlar-estoque.html" class="menu-link">
+                    <img src="../img/icone_controlar_estoque.png" alt="Controlar Estoque" class="menu-icon">
+                    Controlar Estoque
+                </a>
+                <a href="controlar-produto.html" class="menu-link">
+                    <img src="../img/icone_controlar_produto.png" alt="Controlar Produto" class="menu-icon">
+                    Controlar Produto
+                </a>
+                <a href="sair.html" class="menu-link logout-link">
+                    <img src="../img/icone_sair.png" alt="Sair" class="menu-icon">
+                    Sair
+                </a>
+            </nav>
+        </aside>
+
+        <main class="content">
+            <header class="page-header">
+                <div class="header-title">
+                    <div class="title-flag"></div>
+                    <div>
+                        <h1>Editar produto no estoque</h1>
+                        <p>Atualize as informações de localização, quantidade e status do produto.</p>
+                    </div>
+                </div>
+                <img src="../img/logo-sacit.png" alt="logo" class="brand-logo">
+            </header>
+
+            <section class="edit-panel">
+                <form class="edit-form">
+                    <div class="form-grid">
+                        <div class="field">
+                            <label>Produto</label>
+                            <input type="text" value="Nome do Produto Exemplo" readonly>
+                        </div>
+
+                        <div class="field">
+                            <label>Código</label>
+                            <input type="text" value="PRD-000123" readonly>
+                        </div>
+
+                        <div class="field">
+                            <label>Quantidade</label>
+                            <input type="number" min="0" value="12">
+                        </div>
+
+                        <div class="field">
+                            <label>Unidade</label>
+                            <input type="text" value="Unidade">
+                        </div>
+
+                        <div class="field">
+                            <label>Localização</label>
+                            <input type="text" placeholder="Ex.: Almoxarifado A - Prateleira 3">
+                        </div>
+
+                        <div class="field">
+                            <label>Status</label>
+                            <select>
+                                <option>Disponível</option>
+                                <option>Reservado</option>
+                                <option>Em falta</option>
+                            </select>
+                        </div>
+
+                        <div class="field full">
+                            <label>Observações</label>
+                            <textarea rows="3" placeholder="Notas sobre o produto..."></textarea>
+                        </div>
+                    </div>
+
+                    <div class="media-row">
+                        <div class="preview">
+                            <div class="preview-title">Pré-visualização</div>
+                            <div class="preview-box">
+                                <img src="../img/adicionar-img.png" alt="preview" />
+                            </div>
+                            <div class="preview-actions">
+                                <a href="#" class="btn btn-secondary">Substituir imagem</a>
+                                <a href="#" class="btn btn-secondary">Gerar QR</a>
+                            </div>
+                        </div>
+
+                        <div class="controls">
+                            <div class="control-actions">
+                                <a href="controlar-estoque.html" class="btn btn-secondary">Cancelar</a>
+                                <button type="submit" class="btn btn-primary">Salvar alterações</button>
+                            </div>
+
+                            <div class="danger-area">
+                                <h4>Remover do estoque</h4>
+                                <p>Excluir permanentemente este item do estoque. Esta ação não pode ser revertida.</p>
+                                <a href="excluir-prod-estoque.html" class="btn btn-danger">Excluir item</a>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </main>
+    </div>
+    <footer class="footer">
+        <nav class="footer-links">
+            <a href="inicio-estagiario.html">Início</a>
+            <a href="/coordenador/sobreNos.html">Sobre nós</a>
+            <a href="consultar-prod-estagiario.html">Consultar Produto</a>
+        </nav>
+
+        <div class="footer-center">
+            <img src="../img/ifro-logo.webp" alt="IFRO Logo" class="footer-logo">
+        </div>
+
+        <div class="footer-contact">
+            <p>Contatos:</p>
+            <p>Telefone: (99) 99999-9999</p>
+            <p>E-mail: algumacoisa@ifro.edu.br</p>
+        </div>
+    </footer>
+</body>
+
+</html>

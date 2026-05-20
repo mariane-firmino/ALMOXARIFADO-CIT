@@ -1,84 +1,86 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Controlar Produto - Estagiário - SACIT</title>
-    <link rel="stylesheet" href="css/controlar-prod-estagiario.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@400;700;800&family=Inter:wght@600;700;800&display=swap" rel="stylesheet">
+    <title>Controlar Produto - SACIT</title>
+    <link rel="stylesheet" href="css/controlar-produto.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@400;700;800&family=Inter:wght@600;700;800&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
+    <input type="checkbox" id="openSidebarMenu">
+
+    <label for="openSidebarMenu" class="sidebarIconToggle">
+        <div class="spinner"></div>
+        <div class="spinner"></div>
+        <div class="spinner"></div>
+    </label>
+
+    <label for="openSidebarMenu" class="overlay"></label>
+
     <div class="page">
-        <aside class="sidebar">
+        <aside class="sidebar" id="sidebarMenu">
             <div class="sidebar-header">
-                <img src="../img/avatar.png" alt="Avatar" class="sidebar-avatar">
+                <img src="../img/avatar-menu.png" alt="Avatar" class="sidebar-avatar">
                 <div>
-                    <p class="sidebar-title">Estagiário</p>
+                    <p class="sidebar-title">Nome</p>
                 </div>
             </div>
 
-            <nav>
+            <nav class="sidebar-nav">
                 <a href="inicio-estagiario.html" class="menu-link">
-                    <span class="icon">
-                        <img src="../img/icone_inicio (1).png" alt="Icone Início" class="menu-icon">
-                    </span>
+                    <img src="../img/icone_inicio (1).png" alt="Início" class="menu-icon">
                     Início
                 </a>
                 <a href="perfil-estagiario.html" class="menu-link">
-                    <span class="icon">
-                        <img src="../img/icone_perfil.png" alt="Icone Perfil" class="menu-icon">
-                    </span>
+                    <img src="../img/icon_perfil.png" alt="Perfil" class="menu-icon perfil-icon">
                     Perfil
                 </a>
                 <a href="notificacao-estagiario.html" class="menu-link">
-                    <span class="icon">
-                        <img src="../img/icone_notificacao.png" alt="Icone Notificações" class="menu-icon">
-                    </span>
+                    <img src="../img/icone_notificacao.png" alt="Notificações" class="menu-icon">
                     Notificações
                 </a>
-                <a href="consultar-prod-estagiario.html" class="menu-link">
-                    <span class="icon">
-                        <img src="../img/icon_consultar_produto (1).png" alt="Icone Consultar Produto" class="menu-icon">
-                    </span>
+                <a href="consultar-produto.html" class="menu-link">
+                    <img src="../img/icon_consultar_produto (1).png" alt="Consultar Produto" class="menu-icon">
                     Consultar Produto
                 </a>
-                <a href="controlar-prod-estagiario.html" class="menu-link active">
-                    <span class="icon">
-                        <img src="../img/icone_controlar_produto.png" alt="Icone Controlar Produto" class="menu-icon">
-                    </span>
-                    Controlar Produto
-                </a>
-                <a href="controlar-est-estagiario.html" class="menu-link">
-                    <span class="icon">
-                        <img src="../img/icone_controlar_estoque.png" alt="Icone Controlar Estoque" class="menu-icon">
-                    </span>
+                <a href="controlar-estoque.html" class="menu-link">
+                    <img src="../img/icone_controlar_estoque.png" alt="Controlar Estoque" class="menu-icon">
                     Controlar Estoque
                 </a>
-                <a href="../index.html" class="menu-link">
-                    <span class="icon">
-                        <img src="../img/icone_sair.png" alt="Icone Sair" class="menu-icon">
-                    </span>
+                <a href="controlar-produto.html" class="menu-link">
+                    <img src="../img/icone_controlar_produto.png" alt="Controlar Produto" class="menu-icon">
+                    Controlar Produto
+                </a>
+                <a href="sair.html" class="menu-link logout-link">
+                    <img src="../img/icone_sair.png" alt="Sair" class="menu-icon">
                     Sair
                 </a>
             </nav>
         </aside>
 
-        <main class="content">
+        <main class="main-content">
             <header class="page-header">
-                <div class="title-group">
+                <div class="page-title">
                     <div class="title-row">
-                        <span class="title-mark"></span>
+                        <span class="title-flag"></span>
                         <h1>Controlar Produto</h1>
                     </div>
                     <p class="subtitle">Gerencie produtos com facilidade e atualize informações em tempo real.</p>
                 </div>
-                <img src="../img/ifro-logo.webp" alt="IFRO Logo" class="brand-logo">
+                <img src="../img/logo-sacit.png" alt="SACIT Logo"
+                    class="brand-logo">
             </header>
 
             <section class="actions-bar">
-                <button class="btn-primary">+ Novo Produto</button>
+                <a class="btn-primary" href="cadastrar-produto.html">+ Novo Produto</a>
 
                 <div class="search-box">
+                    <img src="../img/lupa.png" alt="Pesquisar" class="search-icon">
                     <input type="text" placeholder="Buscar produto" class="search-input">
                 </div>
 
@@ -86,9 +88,6 @@
                     <label for="category" class="filter-label">Categoria</label>
                     <select id="category" class="filter-select">
                         <option>Todas as categorias</option>
-                        <option>Eletrônicos</option>
-                        <option>Materiais</option>
-                        <option>Impressão</option>
                     </select>
                 </div>
 
@@ -96,9 +95,6 @@
                     <label for="status" class="filter-label">Status</label>
                     <select id="status" class="filter-select">
                         <option>Todos os status</option>
-                        <option>Disponível</option>
-                        <option>Em falta</option>
-                        <option>Crítico</option>
                     </select>
                 </div>
             </section>
@@ -119,8 +115,8 @@
                         <p class="card-detail"><strong>Categoria:</strong> Eletrônicos</p>
                         <p class="card-detail"><strong>Quantidade:</strong> 1.175 unidades</p>
                         <div class="card-footer">
-                            <button class="btn-card">Editar</button>
-                            <button class="btn-card secondary">Excluir</button>
+                            <a href="editar-produto.html" class="btn-card">Editar</a>
+                            <a href="excluir-produto.html" class="btn-card secondary">Excluir</a>
                         </div>
                     </article>
 
@@ -138,8 +134,8 @@
                         <p class="card-detail"><strong>Categoria:</strong> Acessórios</p>
                         <p class="card-detail"><strong>Quantidade:</strong> 842 unidades</p>
                         <div class="card-footer">
-                            <button class="btn-card">Editar</button>
-                            <button class="btn-card secondary">Excluir</button>
+                            <a href="editar-produto.html" class="btn-card">Editar</a>
+                            <a href="excluir-produto.html" class="btn-card secondary">Excluir</a>
                         </div>
                     </article>
 
@@ -157,8 +153,8 @@
                         <p class="card-detail"><strong>Categoria:</strong> Materiais</p>
                         <p class="card-detail"><strong>Quantidade:</strong> 18 unidades</p>
                         <div class="card-footer">
-                            <button class="btn-card">Editar</button>
-                            <button class="btn-card secondary">Excluir</button>
+                            <a href="editar-produto.html" class="btn-card">Editar</a>
+                            <a href="excluir-produto.html" class="btn-card secondary">Excluir</a>
                         </div>
                     </article>
 
@@ -176,8 +172,8 @@
                         <p class="card-detail"><strong>Categoria:</strong> Impressão</p>
                         <p class="card-detail"><strong>Quantidade:</strong> 420 unidades</p>
                         <div class="card-footer">
-                            <button class="btn-card">Editar</button>
-                            <button class="btn-card secondary">Excluir</button>
+                            <a href="editar-produto.html" class="btn-card">Editar</a>
+                            <a href="excluir-produto.html" class="btn-card secondary">Excluir</a>
                         </div>
                     </article>
 
@@ -195,8 +191,8 @@
                         <p class="card-detail"><strong>Categoria:</strong> Informática</p>
                         <p class="card-detail"><strong>Quantidade:</strong> 317 unidades</p>
                         <div class="card-footer">
-                            <button class="btn-card">Editar</button>
-                            <button class="btn-card secondary">Excluir</button>
+                            <a href="editar-produto.html" class="btn-card">Editar</a>
+                            <a href="excluir-produto.html" class="btn-card secondary">Excluir</a>
                         </div>
                     </article>
 
@@ -214,8 +210,8 @@
                         <p class="card-detail"><strong>Categoria:</strong> Informática</p>
                         <p class="card-detail"><strong>Quantidade:</strong> 620 unidades</p>
                         <div class="card-footer">
-                            <button class="btn-card">Editar</button>
-                            <button class="btn-card secondary">Excluir</button>
+                            <a href="editar-produto.html" class="btn-card">Editar</a>
+                            <a href="excluir-produto.html" class="btn-card secondary">Excluir</a>
                         </div>
                     </article>
                 </div>
@@ -231,10 +227,9 @@
 
     <footer class="footer">
         <nav class="footer-links">
-            <a href="#">Início</a>
-            <a href="#">Sobre nós</a>
-            <a href="#">Gerenciar perfis</a>
-            <a href="#">Consultar Produto</a>
+            <a href="inicio-estagiario.html">Início</a>
+            <a href="/coordenador/sobreNos.html">Sobre nós</a>
+            <a href="consultar-prod-estagiario.html">Consultar Produto</a>
         </nav>
 
         <div class="footer-center">
@@ -248,4 +243,5 @@
         </div>
     </footer>
 </body>
+
 </html>

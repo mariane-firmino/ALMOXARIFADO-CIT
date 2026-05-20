@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notificações - Estagiário - SACIT</title>
+    <title>Alterar Senha - SACIT</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@400;700&family=Inter:wght@500;600;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="css/notificacao-estagiario.css">
+    <link rel="stylesheet" href="css/alterar-senha.css">
 </head>
 
 <body>
@@ -23,6 +23,7 @@
     </label>
 
     <label for="openSidebarMenu" class="overlay"></label>
+
     <div class="page">
         <aside class="sidebar" id="sidebarMenu">
             <div class="sidebar-header">
@@ -66,74 +67,60 @@
 
         <main class="content">
             <header class="page-header">
-                <div class="page-title">
+                <div class="title-group">
                     <div class="title-row">
                         <span class="title-mark"></span>
-                        <div>
-                            <h1>Notificações</h1>
-                            <p class="subtitle">Acompanhe suas notificações</p>
-                        </div>
+                        <h1>Meu Perfil</h1>
                     </div>
+                    <p class="subtitle">Bem-vindo(a), Nome !</p>
                 </div>
-                <img src="../img/logo-sacit.png" alt="SACIT Logo"
-                    class="brand-logo">
+                <img src="../img/logo-sacit.png" alt="SACIT Logo" class="brand-logo" />
             </header>
 
-            <section class="notifications-panel">
-                <div class="panel-header">
-                    <div class="tabs-group">
-                        <button class="tab active">Notificações</button>
-                        <button class="tab">Arquivadas</button>
-                    </div>
-                    <div class="panel-actions">
-                        <input type="search" placeholder="Buscar notificações" class="search-input">
-                        <button class="btn-filter">Filtro</button>
-                    </div>
+            <section class="password-card">
+                <div class="card-heading">
+                    <h2>Meus Dados - Alterar Senha</h2>
+                    <div class="section-line"></div>
                 </div>
 
-                <div class="notifications-list">
-                    <article class="notification-item warning">
-                        <div class="notification-icon">
-                            <span class="icon-badge">!</span>
+                <form class="password-form">
+                    <div class="password-group">
+                        <label for="current-password">Digite a senha atual:</label>
+                        <div class="password-input-wrapper">
+                            <input id="current-password" class="password-input" type="password" placeholder="">
+                            <button type="button" class="password-toggle" data-target="current-password"
+                                title="Mostrar/Ocultar senha">
+                                <img src="../img/olhoAberto.png" alt="Mostrar senha" class="eye-icon">
+                            </button>
                         </div>
-                        <div class="notification-content">
-                            <h3>Estoque crítico</h3>
-                            <p>O item Toner Preto está abaixo do estoque mínimo.</p>
-                        </div>
-                        <div class="notification-meta">
-                            <span class="notification-time">Há 32 minutos</span>
-                            <button class="btn-action">⋮</button>
-                        </div>
-                    </article>
+                    </div>
 
-                    <article class="notification-item info">
-                        <div class="notification-icon">
-                            <span class="icon-badge">i</span>
+                    <div class="password-group">
+                        <label for="new-password">Digite a nova senha:</label>
+                        <div class="password-input-wrapper">
+                            <input id="new-password" class="password-input" type="password" placeholder="">
+                            <button type="button" class="password-toggle" data-target="new-password"
+                                title="Mostrar/Ocultar senha">
+                                <img src="../img/olhoAberto.png" alt="Mostrar senha" class="eye-icon">
+                            </button>
                         </div>
-                        <div class="notification-content">
-                            <h3>Relatório disponível</h3>
-                            <p>O relatório semanal de movimentação já está disponível para consulta.</p>
-                        </div>
-                        <div class="notification-meta">
-                            <span class="notification-time">Há 1 hora</span>
-                            <button class="btn-action">⋮</button>
-                        </div>
-                    </article>
+                    </div>
 
-                    <article class="notification-item secondary">
-                        <div class="notification-icon">
-                            <span class="icon-badge">★</span>
+                    <div class="password-group">
+                        <label for="confirm-password">Repita a nova senha:</label>
+                        <div class="password-input-wrapper">
+                            <input id="confirm-password" class="password-input" type="password" placeholder="">
+                            <button type="button" class="password-toggle" data-target="confirm-password"
+                                title="Mostrar/Ocultar senha">
+                                <img src="../img/olhoAberto.png" alt="Mostrar senha" class="eye-icon">
+                            </button>
                         </div>
-                        <div class="notification-content">
-                            <h3>Atualização concluída</h3>
-                            <p>O sistema foi atualizado e já está disponível para uso.</p>
-                        </div>
-                        <div class="notification-meta">
-                            <span class="notification-time">1 dia atrás</span>
-                            <button class="btn-action">⋮</button>
-                        </div>
-                    </article>
-                </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+                    </div>
+                </form>
             </section>
         </main>
     </div>
@@ -155,6 +142,21 @@
             <p>E-mail: algumacoisa@ifro.edu.br</p>
         </div>
     </footer>
+
+    <script>
+        document.querySelectorAll('.password-toggle').forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = button.getAttribute('data-target');
+                const input = document.getElementById(targetId);
+                const icon = button.querySelector('img');
+                const isPassword = input.type === 'password';
+                input.type = isPassword ? 'text' : 'password';
+                icon.src = isPassword ? '../img/olhoFechado.png' : '../img/olhoAberto.png';
+                icon.alt = isPassword ? 'Ocultar senha' : 'Mostrar senha';
+            });
+        });
+    </script>
 </body>
 
 </html>
