@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe Estagiário - SACIT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@400;700&family=Inter:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/detalhe-estagiario.css">
+</head>
+
+<body>
+    <input type="checkbox" id="openSidebarMenu">
+
+    <label for="openSidebarMenu" class="sidebarIconToggle">
+        <div class="spinner"></div>
+        <div class="spinner"></div>
+        <div class="spinner"></div>
+    </label>
+
+    <label for="openSidebarMenu" class="overlay"></label>
+    <div class="page">
+        <aside class="sidebar" id="sidebarMenu">
+            <div class="sidebar-header">
+                <img src="../img/avatar-menu.png" alt="Avatar" class="sidebar-avatar">
+                <div>
+                    <p class="sidebar-title">Nome</p>
+                </div>
+            </div>
+
+            <nav>
+                <a href="inicio.html" class="menu-link">
+                    <span class="icon"><img src="../img/icone_inicio (1).png" alt="Início" class="menu-icon"></span>
+                    Início
+                </a>
+                <a href="perfil.html" class="menu-link">
+                    <span class="icon"><img src="../img/icon_perfil.png" alt="Perfil" class="menu-icon perfil-icon"></span>
+                    Perfil
+                </a>
+                <a href="notificacao-coordenador.html" class="menu-link">
+                    <span class="icon"><img src="../img/icone_notificacao.png" alt="Notificações" class="menu-icon"></span>
+                    Notificações
+                </a>
+                <a href="gerenciar-perfil.html" class="menu-link">
+                    <span class="icon"><img src="../img/icone_gerenciar_perfis.png" alt="Gerenciar Perfis" class="menu-icon"></span>
+                    Gerenciar Perfis
+                </a>
+                <a href="consultar-produto.html" class="menu-link">
+                    <span class="icon"><img src="../img/icon_consultar_produto (1).png" alt="Consultar Produto" class="menu-icon"></span>
+                    Consultar Produto
+                </a>
+                <a href="analisar-solicitacao.html" class="menu-link">
+                    <span class="icon"><img src="../img/icone_analisar_solicitacao.png" alt="Analisar Solicitação" class="menu-icon"></span>
+                    Analisar Solicitação
+                </a>
+                <a href="controlar-estoque.html" class="menu-link">
+                    <span class="icon"><img src="../img/icone_controlar_estoque.png" alt="Controlar Estoque" class="menu-icon"></span>
+                    Controlar Estoque
+                </a>
+                <a href="controlar-produto.html" class="menu-link">
+                    <span class="icon"><img src="../img/icone_controlar_produto.png" alt="Controlar Produto" class="menu-icon"></span>
+                    Controlar Produto
+                </a>
+                <a href="consultar-historico.html" class="menu-link">
+                    <span class="icon"><img src="../img/icon_historico.png" alt="Consultar Histórico" class="menu-icon"></span>
+                    Consultar Histórico
+                </a>
+                <a href="sair.html" class="menu-link">
+                    <span class="icon"><img src="../img/icone_sair.png" alt="Sair" class="menu-icon"></span>
+                    Sair
+                </a>
+            </nav>
+        </aside>
+
+        <main class="content">
+            <header class="page-header">
+                <div class="header-title">
+                    <div class="title-flag"></div>
+                    <div>
+                        <h1>Detalhe Estagiário</h1>
+                        <p>Visualize as informações completas e o histórico de atividades do estagiário.</p>
+                    </div>
+                </div>
+                <img src="../img/logo-sacit.png" alt="SACIT Logo" class="brand-logo">
+            </header>
+
+            <section class="detail-panel">
+                <div class="detail-card">
+                    <div class="left-col">
+                        <div class="profile-card">
+                            <img src="../img/avatar-menu.png" alt="Foto do estagiário">
+                            <h2>Mariana Souza</h2>
+                            <p>Estagiária de Almoxarifado</p>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-row"><span>Matricula</span><strong>EST-2026-014</strong></div>
+                            <div class="info-row"><span>E-mail</span><strong>mariana.souza@exemplo.com</strong></div>
+                            <div class="info-row"><span>Telefone</span><strong>(99) 99999-9999</strong></div>
+                            <div class="info-row"><span>Supervisor</span><strong>João Silva</strong></div>
+                            <div class="info-row"><span>Status</span><strong>Ativo</strong></div>
+                        </div>
+                    </div>
+
+                    <div class="right-col">
+                        <div class="detail-header">
+                            <div>
+                                <span class="badge badge-primary">Alocado</span>
+                                <h2>Sobre o estágio</h2>
+                            </div>
+                            <div class="detail-buttons">
+                                <a href="gerenciar-perfil.html" class="btn btn-secondary">Voltar</a>
+                                <button class="btn btn-primary">Editar dados</button>
+                            </div>
+                        </div>
+
+                        <div class="detail-section">
+                            <h3>Informações gerais</h3>
+                            <p>Mariana é responsável pelo controle de entrada de materiais, auxiliar na conferência de requisições e apoiar a equipe no acompanhamento do estoque.</p>
+                        </div>
+
+                        <div class="grid-rows">
+                            <div class="row-card">
+                                <span>Início do estágio</span>
+                                <strong>01/03/2026</strong>
+                            </div>
+                            <div class="row-card">
+                                <span>Carga horária</span>
+                                <strong>20h semanais</strong>
+                            </div>
+                            <div class="row-card">
+                                <span>Último acesso</span>
+                                <strong>Ontem às 16:12</strong>
+                            </div>
+                        </div>
+
+                        <div class="detail-section">
+                            <h3>Observações</h3>
+                            <p>Precisar de atenção especial às requisições de toner e acompanhar as solicitações com prioridade alta.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <nav class="footer-links">
+            <a href="inicio.html">Início</a>
+            <a href="sobreNos.html">Sobre nós</a>
+            <a href="gerenciar-perfil.html">Gerenciar perfis</a>
+            <a href="consultar-produto.html">Consultar Produto</a>
+        </nav>
+
+        <div class="footer-center">
+            <img src="../img/ifro-logo.webp" alt="IFRO Logo" class="footer-logo">
+        </div>
+
+        <div class="footer-contact">
+            <p>Contatos:</p>
+            <p>Telefone: (99) 99999-9999</p>
+            <p>E-mail: algumacoisa@ifro.edu.br</p>
+        </div>
+    </footer>
+</body>
+
+</html>

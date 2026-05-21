@@ -4,13 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notificações - Estagiário - SACIT</title>
+    <title>Detalhe Notificação - Estagiário</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@400;700&family=Inter:wght@500;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@400;700&family=Inter:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/notificacao-estagiario.css">
+    <link rel="stylesheet" href="css/detalhe-notificacao.css">
 </head>
 
 <body>
@@ -70,70 +69,65 @@
                     <div class="title-row">
                         <span class="title-mark"></span>
                         <div>
-                            <h1>Notificações</h1>
-                            <p class="subtitle">Acompanhe suas notificações</p>
+                            <h1>Detalhe da Notificação</h1>
+                            <p class="subtitle">Visualize todos os detalhes da notificação enviada.</p>
                         </div>
                     </div>
                 </div>
-                <img src="../img/logo-sacit.png" alt="SACIT Logo"
-                    class="brand-logo">
+                <img src="../img/logo-sacit.png" alt="SACIT Logo" class="brand-logo">
             </header>
 
-            <section class="notifications-panel">
-                <div class="panel-header">
-                    <div class="tabs-group">
-                        <button class="tab active">Notificações</button>
-                        <button class="tab">Arquivadas</button>
+            <section class="notifications-panel detalhe-notificacao-panel">
+                <div class="panel-header panel-header-detail">
+                    <div>
+                        <span class="detail-badge">Notificação</span>
+                        <h2 class="detail-title">Estoque crítico de Toner Preto</h2>
                     </div>
-                    <div class="panel-actions">
-                        <input type="search" placeholder="Buscar notificações" class="search-input">
-                        <button class="btn-filter">Filtro</button>
+                    <div class="detail-labels">
+                        <span class="label status-warning">Urgente</span>
+                        <span class="label status-info">Estágio</span>
                     </div>
                 </div>
 
-                <div class="notifications-list">
-                    <article class="notification-item warning">
-                        <div class="notification-icon">
-                            <span class="icon-badge">!</span>
+                <article class="detail-card">
+                    <div class="detail-card-header">
+                        <div>
+                            <p class="detail-meta-label">Publicado em</p>
+                            <p class="detail-meta-value">20 de maio de 2026 • 14:32</p>
                         </div>
-                        <div class="notification-content">
-                            <h3>Estoque crítico</h3>
-                            <p>O item Toner Preto está abaixo do estoque mínimo.</p>
-                        </div>
-                        <div class="notification-meta">
-                            <span class="notification-time">Há 32 minutos</span>
-                            <a href="detalhe-notificacao.html" class="btn-action" title="Opções">⋮</a>
-                        </div>
-                    </article>
+                        <a href="#" class="btn-action" title="Mais opções">⋮</a>
+                    </div>
 
-                    <article class="notification-item info">
-                        <div class="notification-icon">
-                            <span class="icon-badge">i</span>
-                        </div>
-                        <div class="notification-content">
-                            <h3>Relatório disponível</h3>
-                            <p>O relatório semanal de movimentação já está disponível para consulta.</p>
-                        </div>
-                        <div class="notification-meta">
-                            <span class="notification-time">Há 1 hora</span>
-                            <a href="detalhe-notificacao.html" class="btn-action" title="Opções">⋮</a>
-                        </div>
-                    </article>
+                    <div class="detail-content">
+                        <p>O item <strong>Toner Preto</strong> está abaixo do nível mínimo de estoque. É necessário verificar o departamento de compras para reposição imediata e garantir que não haja interrupção no atendimento das solicitações.</p>
+                        <p>Recomenda-se:</p>
+                        <ul>
+                            <li>Verificar disponibilidade de fornecedor;</li>
+                            <li>Atualizar o estoque no sistema após chegada;</li>
+                            <li>Notificar o coordenador assim que o pedido for realizado.</li>
+                        </ul>
+                    </div>
 
-                    <article class="notification-item secondary">
-                        <div class="notification-icon">
-                            <span class="icon-badge">★</span>
+                    <div class="detail-footer">
+                        <div class="detail-info-card">
+                            <span>Origem</span>
+                            <strong>Sistema de Solicitações</strong>
                         </div>
-                        <div class="notification-content">
-                            <h3>Atualização concluída</h3>
-                            <p>O sistema foi atualizado e já está disponível para uso.</p>
+                        <div class="detail-info-card">
+                            <span>Prioridade</span>
+                            <strong>Alta</strong>
                         </div>
-                        <div class="notification-meta">
-                            <span class="notification-time">1 dia atrás</span>
-                            <a href="detalhe-notificacao.html" class="btn-action" title="Opções">⋮</a>
+                        <div class="detail-info-card">
+                            <span>Responsável</span>
+                            <strong>Estagiário</strong>
                         </div>
-                    </article>
-                </div>
+                    </div>
+
+                    <div class="detail-actions">
+                        <button class="btn-primary" onclick="location.href='notificacao-estagiario.html'">Voltar</button>
+                        <button class="btn-secondary">Marcar como lida</button>
+                    </div>
+                </article>
             </section>
         </main>
     </div>
@@ -141,7 +135,7 @@
     <footer class="footer">
         <nav class="footer-links">
             <a href="inicio-estagiario.html">Início</a>
-            <a href="/coordenador/sobreNos.html">Sobre nós</a>
+            <a href="../coordenador/sobreNos.html">Sobre nós</a>
             <a href="consultar-prod-estagiario.html">Consultar Produto</a>
         </nav>
 
