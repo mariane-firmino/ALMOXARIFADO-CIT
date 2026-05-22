@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acompanhar Status - Servidor - SACIT</title>
+    <link rel="stylesheet" href="css/acompanhar-status.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@400;700;800&family=Inter:wght@600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <input type="checkbox" id="openSidebarMenu">
+
+    <label for="openSidebarMenu" class="sidebarIconToggle">
+        <div class="spinner"></div>
+        <div class="spinner"></div>
+        <div class="spinner"></div>
+    </label>
+
+    <label for="openSidebarMenu" class="overlay"></label>
+
+    <div class="page">
+        <aside class="sidebar" id="sidebarMenu">
+            <div class="sidebar-header">
+                <img src="../img/avatar-menu.png" alt="Avatar" class="sidebar-avatar">
+                <div>
+                    <p class="sidebar-title">Nome</p>
+                </div>
+            </div>
+
+            <nav>
+                <a href="inicio-servidor.html" class="menu-link">
+                    <span class="icon">
+                        <img src="../img/icone_inicio (1).png" alt="Icone Início" class="menu-icon">
+                    </span>
+                    Início
+                </a>
+                <a href="perfil-servidor.html" class="menu-link">
+                    <span class="icon">
+                        <img src="../img/icon_perfil.png" alt="Icone Perfil" class="menu-icon perfil-icon">
+                    </span>
+                    Perfil
+                </a>
+                <a href="notificacao-servidor.html" class="menu-link">
+                    <span class="icon">
+                        <img src="../img/icone_notificacao.png" alt="Icone Notificações" class="menu-icon">
+                    </span>
+                    Notificações
+                </a>
+                <a href="solicitacao-servidor.html" class="menu-link">
+                    <span class="icon">
+                        <img src="../img/icone_analisar_solicitacao.png" alt="Icone Solicitação" class="menu-icon">
+                    </span>
+                    Minhas Solicitações
+                </a>
+                <a href="consultar-produto.html" class="menu-link">
+                    <span class="icon">
+                        <img src="../img/icon_consultar_produto (1).png" alt="Icone Consultar Produto"
+                            class="menu-icon">
+                    </span>
+                    Consultar Produto
+                </a>
+                <a href="consultar-historico.html" class="menu-link">
+                    <span class="icon">
+                        <img src="../img/icon_historico.png" alt="Icone Consultar Histórico" class="menu-icon">
+                    </span>
+                    Consultar Histórico
+                </a>
+                <a href="acompanhar-status.html" class="menu-link">
+                    <span class="icon">
+                        <img src="../img/icon_status.png" alt="Icone Acompanhar Status" class="menu-icon">
+                    </span>
+                    Acompanhar Status
+                </a>
+                <a href="sair.html" class="menu-link">
+                    <span class="icon">
+                        <img src="../img/icone_sair.png" alt="Icone Sair" class="menu-icon">
+                    </span>
+                    Sair
+                </a>
+            </nav>
+        </aside>
+
+        <main class="content">
+            <header class="page-header">
+                <div class="page-title">
+                    <div class="title-row">
+                        <span class="title-mark"></span>
+                        <div>
+                            <h1>Acompanhar Status</h1>
+                            <p class="subtitle">Veja o andamento das solicitações em tempo real e acompanhe cada etapa.</p>
+                        </div>
+                    </div>
+                </div>
+                <img src="../img/logo-sacit.png" alt="SACIT Logo" class="brand-logo">
+            </header>
+
+            <section class="stats-grid">
+                <article class="stat-card">
+                    <span class="stat-label">Em andamento</span>
+                    <strong class="stat-value">5</strong>
+                </article>
+                <article class="stat-card accent">
+                    <span class="stat-label">Aprovadas</span>
+                    <strong class="stat-value">12</strong>
+                </article>
+                <article class="stat-card">
+                    <span class="stat-label">Rejeitadas</span>
+                    <strong class="stat-value">2</strong>
+                </article>
+            </section>
+
+            <section class="tracker-section">
+                <div class="tracker-panel">
+                    <div class="section-header">
+                        <h2>Solicitações recentes</h2>
+                        <div class="search-group">
+                            <input type="search" placeholder="Buscar por código ou produto" aria-label="Buscar solicitações">
+                        </div>
+                    </div>
+
+                    <div class="tracker-list">
+                        <article class="tracker-item in-progress">
+                            <div>
+                                <p class="tracker-code">#S-0158</p>
+                                <h3>Cartuchos de tinta</h3>
+                                <p>Solicitado em 11/05/2026</p>
+                            </div>
+                            <div class="tracker-right">
+                                <span class="status-badge in-progress">Em andamento</span>
+                                <div class="progress-line">
+                                    <span class="step completed"></span>
+                                    <span class="step completed"></span>
+                                    <span class="step current"></span>
+                                    <span class="step"></span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="tracker-item approved">
+                            <div>
+                                <p class="tracker-code">#S-0149</p>
+                                <h3>Papel A4</h3>
+                                <p>Solicitado em 04/05/2026</p>
+                            </div>
+                            <div class="tracker-right">
+                                <span class="status-badge approved">Aprovado</span>
+                                <div class="progress-line">
+                                    <span class="step completed"></span>
+                                    <span class="step completed"></span>
+                                    <span class="step completed"></span>
+                                    <span class="step completed"></span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="tracker-item rejected">
+                            <div>
+                                <p class="tracker-code">#S-0135</p>
+                                <h3>Mouse sem fio</h3>
+                                <p>Solicitado em 27/04/2026</p>
+                            </div>
+                            <div class="tracker-right">
+                                <span class="status-badge rejected">Rejeitado</span>
+                                <div class="progress-line">
+                                    <span class="step completed"></span>
+                                    <span class="step"></span>
+                                    <span class="step"></span>
+                                    <span class="step"></span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <aside class="summary-panel">
+                    <div class="summary-card">
+                        <h2>Legenda de status</h2>
+                        <p>Use o painel para identificar rapidamente como está cada solicitação.</p>
+
+                        <div class="legend-row">
+                            <span class="legend-dot pending"></span>
+                            <span>Solicitado</span>
+                        </div>
+                        <div class="legend-row">
+                            <span class="legend-dot in-progress"></span>
+                            <span>Em análise</span>
+                        </div>
+                        <div class="legend-row">
+                            <span class="legend-dot approved"></span>
+                            <span>Aprovado</span>
+                        </div>
+                        <div class="legend-row">
+                            <span class="legend-dot rejected"></span>
+                            <span>Rejeitado</span>
+                        </div>
+                    </div>
+                </aside>
+            </section>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <nav class="footer-links">
+            <a href="inicio-servidor.html">Início</a>
+            <a href="/coordenador/sobreNos.html">Sobre nós</a>
+            <a href="consultar-produto.html">Consultar Produto</a>
+        </nav>
+
+        <div class="footer-center">
+            <img src="../img/ifro-logo.webp" alt="IFRO Logo" class="footer-logo">
+        </div>
+
+        <div class="footer-contact">
+            <p>Contatos:</p>
+            <p>Telefone: (99) 99999-9999</p>
+            <p>E-mail: algumacoisa@ifro.edu.br</p>
+        </div>
+    </footer>
+</body>
+
+</html>
