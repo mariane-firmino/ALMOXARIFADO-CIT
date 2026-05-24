@@ -106,117 +106,144 @@
                         <span class="title-mark"></span>
                         <h1>Notificações</h1>
                     </div>
-                    <p class="subtitle">Você tem 3 notificações não lidas</p>
+                    <p class="subtitle">Acompanhe suas notificações</p>
                 </div>
                 <img src="../img/logo-sacit.png" alt="SACIT Logo" class="brand-logo" />
             </header>
 
             <section class="notifications-container">
-                <div class="notifications-list">
-                    <!-- Notification 1 -->
-                    <div class="notification-item unread">
-                        <div class="notification-icon">
-                            <img src="../img/avatar-menu.png" alt="Avatar">
-                            <span class="status-badge online"></span>
-                        </div>
-                        <div class="notification-content">
-                            <h3>Produto atualizado</h3>
-                            <p>O produto "Teclado Mecânico" teve seu estoque atualizado por João Silva</p>
-                            <span class="notification-time">2 minutos atrás</span>
-                        </div>
-                        <div class="notification-action">
-                            <button class="btn-mark-read" title="Marcar como lido"></button>
-                        </div>
+                <div class="notifications-toolbar">
+
+                    <button class="filter-btn active">Todas</button>
+                    <button class="filter-btn">Não lidas</button>
+                    <button class="filter-btn">Lidas</button>
+
+                    <div class="search-box">
+                        <img src="../img/lupa.png" alt="Icone Buscar" class="search-icon">
+                        <input type="text" placeholder="Buscar notificações...">
                     </div>
 
-                    <!-- Notification 2 -->
-                    <div class="notification-item unread">
-                        <div class="notification-icon">
-                            <img src="../img/avatar-menu.png" alt="Avatar">
-                            <span class="status-badge online"></span>
-                        </div>
-                        <div class="notification-content">
-                            <h3>Solicitação pendente</h3>
-                            <p>Uma nova solicitação de materiais foi enviada e aguarda sua aprovação</p>
-                            <span class="notification-time">1 hora atrás</span>
-                        </div>
-                        <div class="notification-action">
-                            <button class="btn-mark-read" title="Marcar como lido"></button>
-                        </div>
+                    <div class="date-box">
+                        <input type="date">
                     </div>
 
-                    <!-- Notification 3 -->
-                    <div class="notification-item unread">
-                        <div class="notification-icon">
-                            <img src="../img/avatar-menu.png" alt="Avatar">
-                            <span class="status-badge online"></span>
-                        </div>
-                        <div class="notification-content">
-                            <h3>Estoque baixo</h3>
-                            <p>O item "Mouse Logitech" atingiu o limite mínimo de estoque (5 unidades)</p>
-                            <span class="notification-time">3 horas atrás</span>
-                        </div>
-                        <div class="notification-action">
-                            <button class="btn-mark-read" title="Marcar como lido"></button>
-                        </div>
-                    </div>
+                    <button class="filter-box">
+                        <img src="../img/icon_filtro.png" alt="Icone Filtrar" class="filter-icon">
+                        Filtrar
+                    </button>
 
-                    <!-- Notification 4 (Read) -->
-                    <div class="notification-item read">
-                        <div class="notification-icon">
-                            <img src="../img/avatar-menu.png" alt="Avatar">
-                            <span class="status-badge offline"></span>
-                        </div>
-                        <div class="notification-content">
-                            <h3>Relatório gerado</h3>
-                            <p>O relatório mensal de estoque foi gerado com sucesso</p>
-                            <span class="notification-time">1 dia atrás</span>
-                        </div>
-                        <div class="notification-action">
-                            <button class="btn-mark-unread" title="Marcar como não lido"></button>
-                        </div>
-                    </div>
-
-                    <!-- Notification 5 (Read) -->
-                    <div class="notification-item read">
-                        <div class="notification-icon">
-                            <img src="../img/avatar-menu.png" alt="Avatar">
-                            <span class="status-badge offline"></span>
-                        </div>
-                        <div class="notification-content">
-                            <h3>Usuário adicionado</h3>
-                            <p>Um novo estagiário foi adicionado ao sistema</p>
-                            <span class="notification-time">2 dias atrás</span>
-                        </div>
-                        <div class="notification-action">
-                            <button class="btn-mark-unread" title="Marcar como não lido"></button>
-                        </div>
-                    </div>
                 </div>
-            </section>
-        </main>
-    </div>
+                    <div class="notifications-list">
 
-    <footer class="footer">
+                        <div class="notification-item unread">
+                            <div class="notification-icon icon-green">
+                                <img class= "icon-aprovado" src="../img/icon_verificado.png" alt="Icone de verificado">
+                                <span class="status-badge online"></span>
+                            </div>
+                            <div class="notification-content">
+                                <h3>Solicitação aprovada</h3>
+                                <p>A solicitação xxxxxx foi aprovada por você.<br>Solicitante: Nome.</br></p>
+                                <span class="notification-time">Há x dias</span>
+                            </div>
+                            <div class="notification-action">
+                                <button class="menu-dots">⋯</button>
 
-        <nav class="footer-links">
-            <a href="inicio.html">Início</a>
-            <a href="sobreNos.html">Sobre nós</a>
-            <a href="gerenciar-perfil.html">Gerenciar perfis</a>
-            <a href="consultar-produto.html">Consultar Produto</a>
-        </nav>
+                                <div class="dropdown-menu">
+                                    <button>Ver detalhes</button>
+                                    <button>Marcar como lida</button>
+                                    <button class="delete-btn">Excluir</button>
+                                </div>
+                            </div>
+                        </div>
 
-        <div class="footer-center">
-            <img src="../img/ifro-logo.webp" alt="IFRO Logo" class="footer-logo">
+                        <div class="notification-item unread">
+                            <div class="notification-icon icon-yellow">
+                                <img class= "icon-estoque" src="../img/icon_estoque_baixo.png" alt="Icone de estoque baixo">
+                                <span class="status-badge online"></span>
+                            </div>
+                            <div class="notification-content">
+                                <h3>Estoque baixo</h3>
+                                <p>O produto xxxxxx atingiu o estoque mínimo.<br>Estoque atual: x unidades.</br></p>
+                                <span class="notification-time">Há x dias</span>
+                            </div>
+                            <div class="notification-action">
+                                <button class="menu-dots">⋯</button>
+
+                                <div class="dropdown-menu">
+                                    <button>Ver detalhes</button>
+                                    <button>Marcar como lida</button>
+                                    <button class="delete-btn">Excluir</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="notification-item unread">
+                            <div class="notification-icon icon-red">
+                                <img class="icon-sem-estoque" src="../img/x.png" alt="Icone de sem estoque">
+                                <span class="status-badge online"></span>
+                            </div>
+                            <div class="notification-content">
+                                <h3>Produtos sem estoque</h3>
+                                <p>O produto xxxxxx está sem estoque.</br> unidade disponível.</br></p>
+                                <span class="notification-time">Há x dias</span>
+                            </div>
+                            <div class="notification-action">
+                                <button class="menu-dots">⋯</button>
+
+                                <div class="dropdown-menu">
+                                    <button>Ver detalhes</button>
+                                    <button>Marcar como lida</button>
+                                    <button class="delete-btn">Excluir</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="notification-item unread">
+                            <div class="notification-icon icon-blue">
+                                <img class="icon-usuario" src="../img/icon_usuario_novo.png" alt="Icone de novo usuário">
+                                <span class="status-badge offline"></span>
+                            </div>
+                            <div class="notification-content">
+                                <h3>Novo usuário cadastrado</h3>
+                                <p>O xxxxxxx foi cadastrado no sistema.<br>Perfil: x.</br></p>
+                                <span class="notification-time">Há x dias</span>
+                            </div>
+                            <div class="notification-action">
+                                <button class="menu-dots">⋯</button>
+
+                                <div class="dropdown-menu">
+                                    <button>Ver detalhes</button>
+                                    <button>Marcar como lida</button>
+                                    <button class="delete-btn">Excluir</button>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
         </div>
 
-        <div class="footer-contact">
-            <p>Contatos:</p>
-            <p>Telefone: (99) 99999-9999</p>
-            <p>E-mail: algumacoisa@ifro.edu.br</p>
-        </div>
+        <footer class="footer">
 
-    </footer>
+            <nav class="footer-links">
+                <a href="inicio.html">Início</a>
+                <a href="sobreNos.html">Sobre nós</a>
+                <a href="gerenciar-perfil.html">Gerenciar perfis</a>
+                <a href="consultar-produto.html">Consultar Produto</a>
+            </nav>
+
+            <div class="footer-center">
+                <img src="../img/ifro-logo.webp" alt="IFRO Logo" class="footer-logo">
+            </div>
+
+            <div class="footer-contact">
+                <p>Contatos:</p>
+                <p>Telefone: (99) 99999-9999</p>
+                <p>E-mail: algumacoisa@ifro.edu.br</p>
+            </div>
+
+        </footer>
 </body>
 
 </html>

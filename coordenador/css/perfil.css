@@ -29,7 +29,7 @@ a{
 }
 
 #openSidebarMenu:checked ~ .footer{
-    transform: translate(270px);
+    transform: translateX(270px);
     width: calc(100% - 270px);
 }
 
@@ -78,7 +78,7 @@ a{
 
 .page{
     display: block;
-    transition: 0.3s ease;
+    transition: margin-left 0.3s ease;
 }
 
 .main-content{
@@ -130,8 +130,8 @@ a{
 .menu-link {
     align-items: center;
     gap: 14px;
-    width: calc(100% + 30px);
-    margin-left: -20px;
+    width: calc(100% + 20px);
+    margin-left: -10px;
     display: flex;
     padding: 4px 18px;
     border-radius: 12px;
@@ -140,26 +140,26 @@ a{
     font-weight: 700;
     color: #f5fcf9;
     white-space: nowrap;
+    padding-left: 1px;
+    justify-content: flex-start;
 }
+
 .menu-link:hover{
     background: #109e8c;
 }
 
-.icon{
+.icon {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    background: transparent;
-    min-width: 35px;
-    margin-left: -15px;
+    justify-content: center;
 }
 
 .perfil-icon {
     transform: scale(1.3);
 }
-.menu-icon{
-    width: 51px;
-    height: 51px;
+.menu-icon {
+    width: 45px;
+    height: 45px;
     object-fit: contain;
 }
 
@@ -270,22 +270,10 @@ h1{
     color: white;
 }
 
-.btn-primary:hover{
-    background: #109e8c;
-    transform: translateY(-4px);
-    box-shadow: 0 8px 18px rgba(0,0,0,0.2);
-}
-
 .btn-secondary{
     background: white;
     border: 1px solid #ccc;
     color: #109e8c;
-}
-
-.btn-secondary:hover{
-    color: #109e8c;
-    transform: translateY(-4px);
-    box-shadow: 0 8px 18px rgba(0,0,0,0.2);
 }
 
 .info-grid{
@@ -338,20 +326,21 @@ h1{
     align-items: center;
 }
 
-.footer-links{
+.footer-links {
     display: flex;
     flex-direction: column;
-
     align-items: center;
-
     justify-self: start;
-
     text-align: center;
-
     gap: 8px;
 }
 
-.footer-center{
+.footer-links a {
+    color: white;
+    font-weight: 600;
+}
+
+.footer-center {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -360,14 +349,14 @@ h1{
     gap: 10px;
 }
 
-.footer-logo{
+.footer-logo {
     max-width: 180px;
     width: auto;
     height: auto;
     display: block;
 }
 
-.footer-contact{
+.footer-contact {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -375,7 +364,8 @@ h1{
     text-align: center;
     gap: 2px;
 }
-.footer-contact p{
+
+.footer-contact p {
     margin: 0;
     line-height: 2;
 }
