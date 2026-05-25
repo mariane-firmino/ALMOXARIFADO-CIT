@@ -493,7 +493,7 @@ h1{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     position: relative;
-    z-index: 50;
+    z-index: 10;
     transition: 0.25s ease;
     will-change: transform;
     align-items: center;
@@ -543,29 +543,29 @@ h1{
     line-height: 2;
 }
 
+@media (max-width: 1300px){
+    .sidebar{          
+        width: 40%;          
+    }          
+
+    #openSidebarMenu:checked ~ .footer{          
+        transform: translateX(0);          
+        width: 100%;          
+    }          
+
+    #openSidebarMenu:checked ~ .page{          
+        margin-left: 0;          
+    } 
+}     
+
 @media(max-width: 1000px){
 
     .page{
         grid-template-columns: 220px 1fr;
     }
 
-    .sidebar{
-        width: 220px;
-        padding: 20px 10px;
-    }
-
-    .menu-link{
-        font-size: 14px;
-        gap: 10px;
-    }
-
-    .menu-icon{
-        width: 34px;
-        height: 34px;
-    }
-
     .content{
-        padding: 20px;
+        padding: 50px;
     }
 
     .brand-logo{
@@ -588,36 +588,54 @@ h1{
         height: 40px;
     }
 }
+@media(max-width: 800px){
+    .search-box{
+        width: 100%;
+    }
+    .date-box,
+    .filter-box{
+        width: 48%;
+    }
+    .filter-btn{
+        width: 31%;
+    }
+    
+}
 
 @media(max-width: 600px){
 
-    .page{
-        grid-template-columns: 85px 1fr;
+    .brand-logo {
+        width: 80px;          
     }
 
-    .sidebar{
-        width: 85px;
-        padding: 15px 6px;
-    }
+    .footer {          
+        display: flex;
+        flex-direction: column;          
+        text-align: center;          
+        gap: 30px;          
+    }         
 
-    .sidebar-title{
-        display: none;
-    }
+    .sidebar{          
+        width: 90%;          
+    }          
 
-    .menu-link{
-        justify-content: center;
-        padding: 10px 0;
-        font-size: 0;
-    }
+    #openSidebarMenu:checked ~ .footer{          
+        transform: translateX(0);          
+        width: 100%;          
+    }          
 
-    .menu-icon{
-        width: 28px;
-        height: 28px;
-    }
+    #openSidebarMenu:checked ~ .page{          
+        margin-left: 0;          
+    }          
 
-    .content{
-        padding: 12px;
-    }
+    .sidebarIconToggle{          
+        left: 10px;          
+        top: 10px;          
+    }          
+
+    .content {          
+        padding: 60px 16px 80px;          
+    } 
 
     .page-header{
         flex-direction: row;
@@ -636,32 +654,32 @@ h1{
     .brand-logo{
         width: 85px;
     }
-
-    .notification-item{
-        padding: 12px;
-        gap: 10px;
+    .search-box{
+        width: 100%;
     }
-
-    .notification-icon img{
-        width: 36px;
-        height: 36px;
+    .date-box,
+    .filter-box{
+        width: 48%;
     }
-
-    .notification-content h3{
-        font-size: 14px;
-    }
-
-    .notification-content p{
-        font-size: 12px;
-    }
-
-    .notification-time{
-        font-size: 11px;
+    .filter-btn{
+        width: 31%;
     }
 
     .footer{
         grid-template-columns: 1fr;
         gap: 20px;
         text-align: center;
+    }
+}
+@media(max-width: 400px){
+    .search-box{
+        width: 100%;
+    }
+    .date-box,
+    .filter-box{
+        width: 46%;
+    }
+    .filter-btn{
+        width: 30%;
     }
 }

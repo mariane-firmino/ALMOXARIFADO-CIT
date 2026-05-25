@@ -234,9 +234,7 @@ h1 {
 }            
           
 .notification-card{          
-    min-height: 190px;  
-    width: 295px;
-    max-width: 295px;        
+    min-height: 190px;         
 }          
           
 .notification-header{          
@@ -494,17 +492,15 @@ h1 {
     line-height: 1.6;          
 }          
           
-/* RESPONSIVO */          
-          
+/* RESPONSIVO */  
 @media (max-width: 1200px){          
           
     .top-row,          
     .bottom-row{          
-        grid-template-columns: 1fr;          
+        grid-template-columns: 1fr 1fr;         
     }          
           
-    .summary-grid{          
-        grid-template-columns: 1fr;          
+    .summary-grid{                   
         gap: 20px;          
     }          
           
@@ -515,7 +511,7 @@ h1 {
     .notification-card .card-description,          
     .activity-row span,          
     .metric-title,          
-    .activity-heading h2{          
+    .activity-heading h2{           
         white-space: normal;          
     } 
     
@@ -523,9 +519,43 @@ h1 {
     max-width: 180px;          
     } 
 
+}   
+@media (max-width: 1300px){
+    .sidebar{          
+        width: 40%;          
+    }          
+
+    #openSidebarMenu:checked ~ .footer{          
+        transform: translateX(0);          
+        width: 100%;          
+    }          
+
+    #openSidebarMenu:checked ~ .page{          
+        margin-left: 0;          
+    } 
+}     
+          
+@media (max-width: 800px){          
+    .brand-logo {
+        width: 100px;          
+    }
+    .top-row,          
+    .bottom-row{          
+        grid-template-columns: 1fr;          
+    }          
+          
+    .summary-grid{          
+        grid-template-columns: 1fr;          
+        gap: 20px;          
+    }          
+
 }
 
 @media (max-width: 600px){ 
+    .brand-logo {
+        width: 80px;          
+    }
+
     .footer {          
         display: flex;
         flex-direction: column;          
@@ -534,7 +564,7 @@ h1 {
     }         
 
     .sidebar{          
-        width: 100%;          
+        width: 90%;          
     }          
 
     #openSidebarMenu:checked ~ .footer{          
@@ -552,8 +582,9 @@ h1 {
     }          
 
     .main-content {          
-        padding: 24px 16px 80px;          
-    }          
+        padding: 60px 16px 80px;          
+    }     
+    
 
 }
 
