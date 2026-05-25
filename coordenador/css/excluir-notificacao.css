@@ -174,7 +174,7 @@ a {
 }
 
 .content {
-    padding: 40px 48px 24px;
+    padding: 40px 48px 120px;
     background: #f8fcfb;
     display: flex;
     flex-direction: column;
@@ -225,29 +225,12 @@ h1 {
 .confirm-card {
     background: white;
     border-radius: 16px;
-    padding: 48px 40px 40px;
+    padding: 40px 40px 40px;
     box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
     max-width: 680px;
-    width: 100%;
     margin: 0 auto;
     text-align: center;
     position: relative;
-}
-
-.icon-circle {
-    width: 96px;
-    height: 96px;
-    border-radius: 50%;
-    background: #ffdad8;
-    display: grid;
-    place-items: center;
-    margin: 0 auto 28px;
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
-}
-
-.delete-icon {
-    width: 48px;
-    height: 48px;
 }
 
 .confirm-card h2 {
@@ -309,53 +292,35 @@ h1 {
     padding: 24px 15px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    position: relative;
-    z-index: 50;
-    transition: 0.25s ease;
-    will-change: transform;
     align-items: center;
 }
 
-.footer-links {
+.footer-links{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-self: start;
-    text-align: center;
     gap: 8px;
 }
 
-.footer-links a {
-    color: white;
-    font-weight: 600;
-}
-
-.footer-center {
+.footer-center{
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    text-align: center;
-    gap: 10px;
 }
 
-.footer-logo {
+.footer-logo{
     max-width: 180px;
-    width: auto;
-    height: auto;
-    display: block;
 }
 
-.footer-contact {
+.footer-contact{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-self: end;
-    text-align: center;
     gap: 2px;
 }
 
-.footer-contact p {
+.footer-contact p{
     margin: 0;
     line-height: 2;
 }

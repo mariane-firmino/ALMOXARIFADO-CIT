@@ -99,41 +99,104 @@
                                 <span class="title-mark"></span>
                                 <h1>Gerenciar Perfis</h1>
                             </div>
-                            <p class="subtitle">Administre contas, permissões e credenciais do sistema.</p>
+                            <p class="subtitle">Gerencie os usuários do sistema.</p>
                         </div>
                         <img src="../img/logo-sacit.png" alt="SACIT Logo" class="brand-logo" />
                     </header>
 
                     <section class="actions-panel">
+
                         <div class="summary-card">
-                            <p class="summary-label">Total de usuários</p>
-                            <h2>28</h2>
+                            <div class="summary-top">
+                                <div class="summary-icon green">
+                                    <img src="../img/icon_perfil (2).png" alt="Total de perfis" class="summary-img total-icon">
+                                </div>
+                                <p class="summary-label">Total de Perfis</p>
+                            </div>
+
+                            <h2>15</h2>
+                            <span class="summary-text">Usuários cadastrados</span>
                         </div>
+
                         <div class="summary-card">
-                            <p class="summary-label">Perfis ativos</p>
-                            <h2>21</h2>
+                            <div class="summary-top">
+                                <div class="summary-icon blue">
+                                    <img src="../img/icon_usuario_novo.png" alt="Perfis ativos" class="summary-img active-icon">
+                                </div>
+                                <p class="summary-label">Perfis Ativos</p>
+                            </div>
+
+                            <h2>10</h2>
+                            <span class="summary-text">Usuários ativos</span>
                         </div>
+
                         <div class="summary-card">
-                            <p class="summary-label">Perfis removidos</p>
-                            <h2>7</h2>
+                            <div class="summary-top">
+                                <div class="summary-icon yellow">
+                                    <img src="../img/icon_perfil_inativo.png" alt="Perfis inativos" class="summary-img inactive-icon">
+                                </div>
+                                <p class="summary-label">Perfis Inativos</p>
+                            </div>
+
+                            <h2>03</h2>
+                            <span class="summary-text">Usuários inativos</span>
                         </div>
+
                         <div class="summary-card">
-                            <p class="summary-label">Novos esta semana</p>
-                            <h2>4</h2>
+                            <div class="summary-top">
+                                <div class="summary-icon red">
+                                    <img src="../img/icon_lixeira.png" alt="Perfis Removidos" class="summary-img removed-icon">
+                                </div>
+                                <p class="summary-label">Perfis Removidos</p>
+                            </div>
+
+                            <h2>02</h2>
+                            <span class="summary-text">Usuários removidos</span>
                         </div>
+
                     </section>
 
                     <section class="management-panel">
-                        <div class="panel-header">
-                            <h2>Lista de Usuários</h2>
-                            <div class="panel-actions">
-                                <div class="search-box">
-                                    <input type="search" placeholder="Buscar por nome, email ou função">
-                                    <button class="btn-search">Buscar</button>
-                                </div>
-                                <a href="criar-servidor.html" class="btn btn-primary">Adicionar perfil</a>
+
+                        <h2 class="table-title">Lista de Usuários</h2>
+
+                        <div class="panel-actions">
+
+                            <div class="search-box">
+
+                                <span class="search-icon">
+                                    <img src="../img/lupa.png" alt="Buscar" class="search-img">
+                                </span>
+
+                                <input
+                                    type="search" placeholder="Buscar por nome, e-mail ou função..."
+                                >
                             </div>
+
+                                <div class="select-wrapper">
+                                    <select class="filter-select">
+                                        <option>Todos os perfis</option>
+                                        <option>Coordenador</option>
+                                        <option>Estagiário</option>
+                                        <option>Servidor</option>
+                                    </select>
+                                </div>
+
+                            <select class="filter-select">
+                                <option>Status</option>
+                                <option>Ativo</option>
+                                <option>Inativo</option>
+                                <option>Removido</option>
+                            </select>
+                                
+
+                            <a href="criar-servidor.html" class="btn btn-primary">
+                                + Novo perfil
+                            </a>
+
                         </div>
+
+                        <div class="table-wrapper">
 
                         <div class="table-wrapper">
                             <table>
@@ -143,42 +206,42 @@
                                         <th>E-mail</th>
                                         <th>Função</th>
                                         <th>Status</th>
-                                        <th>Ações</th>
+                                        <th>Ação</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>João Silva</td>
-                                        <td>joao.silva@ifro.edu.br</td>
-                                        <td>Coordenador</td>
+                                        <td>Nome</td>
+                                        <td>nome@ifro.edu.br</td>
+                                        <td>Nome</td>
                                         <td><span class="status active">Ativo</span></td>
                                         <td>
                                             <a href="excluir-perfil.html" class="btn btn-tertiary">Excluir</a>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td>Maria Pereira</td>
-                                        <td>maria.pereira@ifro.edu.br</td>
-                                        <td>Estagiário</td>
+                                        <td>Nome</td>
+                                        <td>nome@ifro.edu.br</td>
+                                        <td>Nome</td>
                                         <td><span class="status active">Ativo</span></td>
                                         <td>
                                             <a href="excluir-perfil.html" class="btn btn-tertiary">Excluir</a>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td>Carlos Souza</td>
-                                        <td>carlos.souza@ifro.edu.br</td>
-                                        <td>Servidor</td>
+                                        <td>Nome</td>
+                                        <td>nome@ifro.edu.br</td>
+                                        <td>Nome</td>
+                                        <td><span class="status removed">Removido</span></td>
+                                        <td>
+                                            <a href="excluir-perfil.html" class="btn btn-tertiary">Excluir</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Nome</td>
+                                        <td>nome@ifro.edu.br</td>
+                                        <td>Nome</td>
                                         <td><span class="status inactive">Inativo</span></td>
-                                        <td>
-                                            <a href="excluir-perfil.html" class="btn btn-tertiary">Excluir</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Ana Ferreira</td>
-                                        <td>ana.ferreira@ifro.edu.br</td>
-                                        <td>Analista</td>
-                                        <td><span class="status active">Ativo</span></td>
                                         <td>
                                             <a href="excluir-perfil.html" class="btn btn-tertiary">Excluir</a>
                                         </td>
