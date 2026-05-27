@@ -366,6 +366,31 @@ h1 {
     box-shadow: 0 0 0 3px rgba(16, 158, 140, 0.12);
 }
 
+/* Make select match the appearance of text inputs */
+.field-content select {
+    width: 100%;
+    border: 1px solid #d9d9d9;
+    border-radius: 10px;
+    padding: 12px 14px;
+    font-size: 16px;
+    color: #14221f;
+    background: #ffffff;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: linear-gradient(45deg, transparent 50%, #6b7280 50%),
+                      linear-gradient(135deg, #6b7280 50%, transparent 50%);
+    background-position: calc(100% - 18px) calc(1em + 2px), calc(100% - 13px) calc(1em + 2px);
+    background-size: 6px 6px, 6px 6px;
+    background-repeat: no-repeat;
+}
+
+.field-content select:focus {
+    outline: none;
+    border-color: #109e8c;
+    box-shadow: 0 0 0 3px rgba(16, 158, 140, 0.12);
+}
+
 .footer{
     background: #17443e;
     color: white;
