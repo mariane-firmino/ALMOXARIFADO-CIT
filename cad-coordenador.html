@@ -13,25 +13,25 @@
             <div class="register-left">
                 <h1 class="register-title">Cadastro de Coordenador</h1>
 
-                <form class="register-form">
+                <form class="register-form" action="php/cad-coordenador.php">
                     <div class="form-group">
                         <label class="form-label">Nome Completo</label>
-                        <input type="text" class="form-input" placeholder="Nome Completo">
+                        <input type="text" class="form-input" name="nome" placeholder="Nome Completo">
                     </div>
 
                     <div class="form-group">
                         <label class="form-label">E-mail</label>
-                        <input type="email" class="form-input" placeholder="digiteseuemail@exemplo.com">
+                        <input type="email" class="form-input" name="email" placeholder="digiteseuemail@exemplo.com">
                     </div>
 
                     <div class="form-row">
                         <div class="form-group half">
                             <label class="form-label">SIAP</label>
-                            <input type="text" class="form-input" placeholder="00000000">
+                            <input type="text" class="form-input" name="siap" placeholder="00000000">
                         </div>
                         <div class="form-group half">
                             <label class="form-label">Setor</label>
-                            <select class="form-input">
+                            <select class="form-input" name="setor">
                                 <option value="">Selecione o setor</option>
                                 <option value="Administrativo">Administrativo</option>
                                 <option value="Financeiro">Financeiro</option>
@@ -43,17 +43,17 @@
 
                     <div class="form-group">
                         <label class="form-label">Nr Celular</label>
-                        <input type="tel" class="form-input" placeholder="(99) 9999-9999">
+                        <input type="tel" class="form-input" name="celular" placeholder="(99) 9999-9999">
                     </div>
 
                     <div class="form-row">
                         <div class="form-group half">
                             <label class="form-label">Senha</label>
-                            <input type="password" class="form-input" placeholder="Digite sua senha">
+                            <input type="password" class="form-input" name="senha1" placeholder="Digite sua senha">
                         </div>
                         <div class="form-group half">
                             <label class="form-label">Confirmar Senha</label>
-                            <input type="password" class="form-input" placeholder="Confirme sua senha">
+                            <input type="password" class="form-input" name="senha2" placeholder="Confirme sua senha">
                         </div>
                     </div>
 

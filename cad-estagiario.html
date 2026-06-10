@@ -13,25 +13,25 @@
             <div class="register-left">
                 <h1 class="register-title">Cadastro de Estagiário</h1>
 
-                <form class="register-form">
+                <form class="register-form" action="php/cad-estagiario.php" method="post">
                     <div class="form-group">
                         <label class="form-label">Nome Completo</label>
-                        <input type="text" class="form-input" placeholder="Nome Completo">
+                        <input type="text" class="form-input" name="nome" placeholder="Nome Completo">
                     </div>
 
                     <div class="form-group">
                         <label class="form-label">E-mail Institucional</label>
-                        <input type="email" class="form-input" placeholder="seuemail@instituicao.edu.br">
+                        <input type="email" class="form-input" name="email" placeholder="seuemail@instituicao.edu.br">
                     </div>
 
                     <div class="form-row">
                         <div class="form-group half">
                             <label class="form-label">Matrícula</label>
-                            <input type="text" class="form-input" placeholder="00000000">
+                            <input type="text" class="form-input" name="matricula" placeholder="00000000">
                         </div>
                         <div class="form-group half">
                             <label class="form-label">Curso</label>
-                            <select class="form-input">
+                            <select class="form-input" name="curso">
                                 <option value="">Selecione o curso</option>
                                 <option value="Informática">Informática</option>
                                 <option value="Biotecnologia">Biotecnologia</option>
@@ -42,7 +42,7 @@
                     <div class="form-row">
                         <div class="form-group half">
                             <label class="form-label">Ano</label>
-                            <select class="form-input">
+                            <select class="form-input" name="ano">
                                 <option value="">Selecione o ano</option>
                                 <option value="1º Ano">1º Ano</option>
                                 <option value="2º Ano">2º Ano</option>
@@ -51,18 +51,18 @@
                         </div>
                         <div class="form-group half">
                             <label class="form-label">Telefone</label>
-                            <input type="tel" class="form-input" placeholder="(99) 99999-9999">
+                            <input type="tel" class="form-input" name="telefone" placeholder="(99) 99999-9999">
                         </div>
                     </div>
 
                     <div class="form-row">
                         <div class="form-group half">
                             <label class="form-label">Senha</label>
-                            <input type="password" class="form-input" placeholder="Digite sua senha">
+                            <input type="password" class="form-input" name="senha1" placeholder="Digite sua senha">
                         </div>
                         <div class="form-group half">
                             <label class="form-label">Confirmar Senha</label>
-                            <input type="password" class="form-input" placeholder="Confirme sua senha">
+                            <input type="password" class="form-input" name="senha2" placeholder="Confirme sua senha">
                         </div>
                     </div>
 
