@@ -23,11 +23,13 @@ class Usuario
 
     public function armazenar($dados)
     {
-        $this->db->query("INSERT INTO usuarios(nome, email, senha) VALUES (:nome, :email, :senha)");
+        $this->db->query("INSERT INTO usuario(usua_nome, usua_siap, usua_email, usua_senha) VALUES (:nome, :siap, :email, :senha)");
 
-        $this->db->bind("nome", $dados['nome']);
-        $this->db->bind("email", $dados['email']);
-        $this->db->bind("senha", $dados['senha']);
+        $this->db->bind("usua_nome", $dados['nome']);
+        $this->db->bind("usua_siap", $dados['siap']);
+        $this->db->bind("usua_email", $dados['email']);
+        $this->db->bind("usua_celular", $dados['celular']);
+        $this->db->bind("usua_senha", $dados['senha']);
 
         if ($this->db->executa()) :
             return true;

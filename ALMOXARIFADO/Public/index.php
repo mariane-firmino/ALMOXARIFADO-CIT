@@ -15,6 +15,11 @@ $db = new Database;
     <link rel="stylesheet" type="text/css" href="<?=URL?>/public/css/estilo.css"/>
     <link rel="stylesheet" type="text/css" href="<?=URL?>/public/css/index.css"/>
     <link rel="stylesheet" type="text/css" href="<?=URL?>/public/css/footer.css"/>
+    <link rel="stylesheet" type="text/css" href="<?=URL?>/public/css/header.css"/>
+    <link rel="stylesheet" type="text/css" href="<?=URL?>/public/css/sobrenos.css"/>
+    <link rel="stylesheet" type="text/css" href="<?=URL?>/public/css/esqueciSenha.css"/>
+    <link rel="stylesheet" type="text/css" href="<?=URL?>/public/css/cadastro.css"/>
+    <link rel="stylesheet" type="text/css" href="<?=URL?>/public/css/cad-coordenador.css"/>
     
 </head>
 <body>

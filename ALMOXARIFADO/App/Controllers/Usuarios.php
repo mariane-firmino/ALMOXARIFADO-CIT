@@ -2,6 +2,7 @@
 
 class Usuarios extends Controller
 {
+    private $usuarioModel;
 
     public function __construct()
     {
@@ -16,6 +17,9 @@ class Usuarios extends Controller
             $dados = [
                 'nome' => trim($formulario['nome']),
                 'email' => trim($formulario['email']),
+                'siap' => trim($formulario['siap']),
+                'setor' => trim($formulario['setor']),
+                'celular' => trim($formulario['celular']),
                 'senha' => trim($formulario['senha']),
                 'confirma_senha' => trim($formulario['confirma_senha']),
             ];
@@ -28,6 +32,17 @@ class Usuarios extends Controller
 
                 if (empty($formulario['email'])) :
                     $dados['email_erro'] = 'Preencha o campo e-mail';
+                endif;
+
+                  if (empty($formulario['siap'])) :
+                    $dados['siap_erro'] = 'Preencha o campo SIAP';
+                endif;
+                  if (empty($formulario['setor'])) :
+                    $dados['setor_erro'] = 'Preencha o campo setor';
+                endif;
+
+                 if (empty($formulario['celular'])) :
+                    $dados['celular_erro'] = 'Preencha o campo celular';
                 endif;
 
                 if (empty($formulario['senha'])) :
@@ -66,10 +81,16 @@ class Usuarios extends Controller
             $dados = [
                 'nome' => '',
                 'email' => '',
+                'siap' => '',
+                'setor' => '',
+                'celular' => '',
                 'senha' => '',
                 'confirma_senha' => '',
                 'nome_erro' => '',
                 'email_erro' => '',
+                'siap_erro' => '',
+                'setor_erro' => '',
+                'celular_erro' => '',
                 'senha_erro' => '',
                 'confirma_senha_erro' => '',
             ];

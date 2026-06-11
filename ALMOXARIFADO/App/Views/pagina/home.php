@@ -36,7 +36,7 @@
             <!-- Lado direito - Logo -->
             <div class="login-right">
                 <div class="logo-container">
-                    <img alt="SACIT Logo" class="logo-image" src="img/logo-sacit.png">
+                    <img alt="SACIT Logo" class="logo-image" src="<?=URL?>/public/img/logo-sacit.png">
                 </div>
             </div>
         </div>

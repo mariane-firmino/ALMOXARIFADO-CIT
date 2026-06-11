@@ -1,0 +1,77 @@
+    <div class="register-container">
+        <div class="register-wrapper">
+            <!-- Lado esquerdo - Formulário de cadastro -->
+            <div class="register-left">
+                <h1 class="register-title">Cadastro de Coordenador</h1>
+
+                <form class="register-form" action="<?=URL?>/php/cad-coordenador.php">
+                    <div class="form-group">
+                        <label class="form-label">Nome Completo</label>
+                        <input type="text" class="form-input" name="nome" placeholder="Nome Completo">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">E-mail</label>
+                        <input type="email" class="form-input" name="email" placeholder="digiteseuemail@exemplo.com">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group half">
+                            <label class="form-label">SIAP</label>
+                            <input type="text" class="form-input" name="siap" placeholder="00000000">
+                        </div>
+                        <div class="form-group half">
+                            <label class="form-label">Setor</label>
+                            <select class="form-input" name="setor">
+                                <option value="">Selecione o setor</option>
+                                <option value="Administrativo">Administrativo</option>
+                                <option value="Financeiro">Financeiro</option>
+                                <option value="Tecnologia">Tecnologia</option>
+                                <option value="Operacional">Operacional</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Nr Celular</label>
+                        <input type="tel" class="form-input" name="celular" placeholder="(99) 9999-9999">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group half">
+                            <label class="form-label">Senha</label>
+                            <input type="password" class="form-input" name="senha1" placeholder="Digite sua senha">
+                        </div>
+                        <div class="form-group half">
+                            <label class="form-label">Confirmar Senha</label>
+                            <input type="password" class="form-input" name="senha2" placeholder="Confirme sua senha">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        <span class="submit-text">Enviar</span>
+                    </button>
+
+                    <div class="footer-links">
+                        <div class="link-row">
+                            <span class="link-text">Já tem login?</span>
+                            <a href="index.html" class="link-blue">Login</a>
+                        </div>
+                        <div class="link-row">
+                            <span class="link-text">Voltar para</span>
+                            <a href="cadastro.html" class="link-blue">Tipos de Cadastro</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Lado direito - Logo -->
+            <div class="register-right">
+                <div class="logo-container">
+                    <img alt="SACIT Logo"
+                         class="logo-image"
+                         src="<?=URL?>/public/img/logo-sacit.png">
+                </div>
+            </div>
+        </div>
+    </div>

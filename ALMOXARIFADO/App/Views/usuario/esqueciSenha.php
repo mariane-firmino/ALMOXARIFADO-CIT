@@ -1,0 +1,30 @@
+<div class="forgot-container">
+    <div class="forgot-wrapper">
+        <div class="forgot-left">
+            <h1 class="forgot-title">Esqueci minha senha</h1>
+            <p class="forgot-description">Informe seu e-mail institucional para receber o link de redefinição de senha.</p>
+
+            <div class="form-group">
+                <label class="form-label" for="email">E-mail institucional</label>
+                <input id="email" type="email" class="form-input" placeholder="seuemail@dominio.com" autocomplete="email">
+            </div>
+
+            <button class="submit-btn" type="button">
+                <span class="submit-text">Enviar</span>
+            </button>
+
+            <div class="footer-links">
+                <div class="link-row">
+                    <span class="link-text">Lembrou a senha?</span>
+                    <a href="<?=URL?>/login" class="link-blue">Voltar ao login</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="forgot-right">
+            <div class="logo-container">
+                <img alt="SACIT Logo" class="logo-image" src="<?=URL?>/public/img/logo-sacit.png">
+            </div>
+        </div>
+    </div>
+</div>

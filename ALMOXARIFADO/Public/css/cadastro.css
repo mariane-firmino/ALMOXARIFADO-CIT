@@ -1,7 +1,7 @@
 /* Importar Fontes Google */
 @import url('https://fonts.googleapis.com/css2?family=Inria+Sans:wght@400;700&family=Inria+Serif:wght@400&display=swap');
 
-/* Reset CSS e Estilos Base */
+/* base da página */
 * {
     margin: 0;
     padding: 0;
@@ -14,9 +14,13 @@ html, body {
     font-family: 'Inria Sans', sans-serif;
 }
 
+/* Evita que a página role, mantendo o foco no conteúdo principal */
+body {
+    overflow: hidden;
+}
 
-/* Conteiner Principal de Login */
-.login-container {
+/* Estilos da Página de Cadastro */
+.register-container {
     background-color: #0a7f70;
     width: 100%;
     min-height: 100vh;
@@ -24,47 +28,105 @@ html, body {
     align-items: center;
     justify-content: center;
     position: relative;
-    padding: 15px;
+    padding: 20px;
 }
 
-.login-wrapper {
+.register-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 100%;
-    max-width: 960px;
+    max-width: 1036px;
     height: auto;
-    min-height: 600px;
+    min-height: 648px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
     border-radius: 8px;
     overflow: hidden;
 }
 
-/* Lado Esquerdo - Formulário */
-.login-left {
+/* Lado Esquerdo - Formulário de Cadastro */
+.register-left {
     background-color: #075248;
-    padding: 50px 35px;
+    padding: 60px 40px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
 }
 
-.login-title {
+.register-title {
     font-family: 'Inria Serif', serif;
     font-size: clamp(32px, 5vw, 48px);
     color: white;
-    margin-bottom: clamp(30px, 5vw, 60px);
+    margin-bottom: clamp(60px, 10vw, 120px);
     font-weight: 400;
     text-align: center;
 }
 
-/* Grupo de Formulário */
+/* Contêiner de Opções de Cadastro */
+.register-options {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(20px, 3vw, 30px);
+    width: 100%;
+    max-width: 400px;
+}
+
+.register-btn {
+    background-color: white;
+    height: clamp(40px, 6vw, 55px);
+    border: none;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    font-weight: 600;
+    padding: clamp(8px, 1.5vw, 15px);
+    text-decoration: none;
+    color: #000;
+}
+
+.register-btn:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.register-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.register-btn-text {
+    font-family: 'Inria Sans', sans-serif;
+    font-size: clamp(18px, 2.8vw, 24px);
+    color: #000;
+    font-weight: 700;
+}
+
+/* Formulário de Cadastro */
+.register-form {
+    width: 100%;
+    max-width: 500px;
+}
+
+.form-row {
+    display: flex;
+    gap: clamp(15px, 2vw, 20px);
+    width: 100%;
+}
+
 .form-group {
-    margin-bottom: clamp(15px, 2vw, 25px);
+    margin-bottom: clamp(20px, 3vw, 30px);
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 400px;
+}
+
+.form-group.half {
+    width: calc(50% - clamp(7.5px, 1vw, 10px));
 }
 
 .form-label {
@@ -111,7 +173,7 @@ html, body {
     margin-bottom: clamp(30px, 5vw, 40px);
     transition: background-color 0.3s ease, transform 0.2s ease;
     width: 100%;
-    max-width: 400px;
+    max-width: 450px;
 }
 
 .submit-btn:hover {
@@ -137,7 +199,7 @@ html, body {
     flex-direction: column;
     gap: clamp(8px, 1.5vw, 12px);
     width: 100%;
-    max-width: 400px;
+    max-width: 450px;
     align-items: center;
 }
 
@@ -169,7 +231,7 @@ html, body {
 }
 
 /* Lado Direito - Logo */
-.login-right {
+.register-right {
     background-color: rgba(255, 255, 255, 0.9);
     display: flex;
     align-items: center;
@@ -195,43 +257,43 @@ html, body {
     pointer-events: none;
 }
 
-/* Design Responsivo */
+/* Design Responsivo do Cadastro */
 
 /* Tablet e desktop pequeno */
 @media (max-width: 1024px) {
-    .login-wrapper {
+    .register-wrapper {
         max-width: 100%;
-        min-height: 560px;
+        min-height: 600px;
     }
     
-    .login-left {
-        padding: clamp(35px, 5vw, 45px);
+    .register-left {
+        padding: clamp(40px, 5vw, 50px);
     }
     
-    .login-right {
-        min-height: 480px;
+    .register-right {
+        min-height: 500px;
     }
 }
 
 /* Celular grande a tablet pequeno */
 @media (max-width: 768px) {
-    .login-container {
+    .register-container {
         padding: 15px;
         min-height: 100vh;
     }
     
-    .login-wrapper {
+    .register-wrapper {
         grid-template-columns: 1fr;
         min-height: auto;
         max-height: none;
     }
     
-    .login-left {
+    .register-left {
         padding: clamp(30px, 5vw, 40px);
         min-height: auto;
     }
     
-    .login-right {
+    .register-right {
         min-height: 300px;
         max-height: 400px;
     }
@@ -240,48 +302,51 @@ html, body {
         max-width: 300px;
         max-height: 300px;
     }
+    
+    .register-options {
+        max-width: 100%;
+    }
+    
+    .form-row {
+        flex-direction: column;
+    }
+    
+    .form-group.half {
+        width: 100%;
+    }
 }
 
 /* Celulares */
 @media (max-width: 480px) {
-    .login-container {
+    .register-container {
         padding: 10px;
         min-height: 100vh;
     }
     
-    .login-wrapper {
+    .register-wrapper {
         border-radius: 6px;
         min-height: auto;
     }
     
-    .login-left {
+    .register-left {
         padding: clamp(20px, 4vw, 30px);
     }
     
-    .login-title {
-        margin-bottom: clamp(20px, 4vw, 35px);
+    .register-title {
+        margin-bottom: clamp(40px, 8vw, 60px);
     }
     
-    .form-group {
-        margin-bottom: clamp(12px, 2vw, 18px);
+    .register-options {
+        gap: clamp(15px, 2.5vw, 20px);
+        max-width: 100%;
     }
     
-    .form-label {
-        font-size: clamp(14px, 2.2vw, 18px);
+    .register-btn {
+        height: clamp(36px, 5vw, 48px);
     }
     
-    .form-input {
-        height: clamp(30px, 4.5vw, 36px);
-    }
-    
-    .submit-btn {
-        margin-top: clamp(15px, 3vw, 25px);
-        margin-bottom: clamp(20px, 4vw, 30px);
-    }
-    
-    .link-row {
-        font-size: clamp(12px, 1.8vw, 14px);
-        gap: 3px;
+    .register-btn-text {
+        font-size: clamp(16px, 2.2vw, 20px);
     }
     
     .logo-container {
@@ -289,39 +354,50 @@ html, body {
         max-height: 250px;
     }
     
-    .login-right {
+    .register-right {
         min-height: 250px;
         max-height: 350px;
         padding: clamp(15px, 3vw, 25px);
+    }
+    
+    .form-row {
+        flex-direction: column;
+    }
+    
+    .form-group.half {
+        width: 100%;
     }
 }
 
 /* Celulares extra pequenos */
 @media (max-width: 360px) {
-    .login-left {
+    .register-left {
         padding: 15px;
     }
     
-    .login-title {
+    .register-title {
         font-size: clamp(24px, 4.5vw, 32px);
-        margin-bottom: clamp(15px, 3vw, 25px);
+        margin-bottom: clamp(30px, 6vw, 40px);
     }
     
-    .form-label {
+    .register-options {
+        gap: clamp(12px, 2vw, 18px);
+    }
+    
+    .register-btn-text {
         font-size: 14px;
-        margin-bottom: 6px;
-    }
-    
-    .submit-text {
-        font-size: 14px;
-    }
-    
-    .link-row {
-        font-size: 12px;
     }
     
     .logo-container {
         max-width: 200px;
         max-height: 200px;
+    }
+    
+    .form-row {
+        flex-direction: column;
+    }
+    
+    .form-group.half {
+        width: 100%;
     }
 }
