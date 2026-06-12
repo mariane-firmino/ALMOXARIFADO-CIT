@@ -20,6 +20,8 @@ $db = new Database;
     <link rel="stylesheet" type="text/css" href="<?=URL?>/public/css/esqueciSenha.css"/>
     <link rel="stylesheet" type="text/css" href="<?=URL?>/public/css/cadastro.css"/>
     <link rel="stylesheet" type="text/css" href="<?=URL?>/public/css/cad-coordenador.css"/>
+    <link rel="stylesheet" type="text/css" href="<?=URL?>/public/css/inicio.css"/>
+    <link rel="stylesheet" type="text/css" href="<?=URL?>/public/css/alterarSenha.css"/>
     
 </head>
 <body>

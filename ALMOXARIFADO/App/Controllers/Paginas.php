@@ -26,13 +26,29 @@ class Paginas extends Controller
     ];
     $this->view('usuario/cadastro', $dados);
   }
-    public function cadCoordenador()
+  public function cadCoordenador()
   {
     $dados = [
       'titulo' => 'Cadastro',
       'descricao' => 'Página de cadastro de usuários'
     ];
     $this->view('usuario/cadCoordenador', $dados);
+  }
+  public function cadServidor()
+  {
+    $dados = [
+      'titulo' => 'Cadastro',
+      'descricao' => 'Página de cadastro de usuários'
+    ];
+    $this->view('usuario/cadServidor', $dados);
+  }
+  public function cadEstagiario()
+  {
+    $dados = [
+      'titulo' => 'Cadastro',
+      'descricao' => 'Página de cadastro de usuários'
+    ];
+    $this->view('usuario/cadEstagiario', $dados);
   }
 
   public function esqueciSenha()
@@ -42,5 +58,21 @@ class Paginas extends Controller
       'descricao' => 'Página para recuperação de senha'
     ];
     $this->view('usuario/esqueciSenha', $dados);
+  }
+  public function alterarSenha()
+  {
+    $dados = [
+      'titulo' => 'Alterar Senha',
+      'descricao' => 'Página para alteração de senha'
+    ];
+    $this->view('usuario/alterarSenha', $dados);
+  }
+  public function inicioCoor()
+  {
+    $dados = [
+      'titulo' => 'Início',
+      'descricao' => 'Página inicial para coordenadores'
+    ];
+    $this->view('pagina/inicioCoor', $dados);
   }
 } //fim da classe Paginas

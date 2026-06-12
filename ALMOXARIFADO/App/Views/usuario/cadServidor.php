@@ -2,26 +2,27 @@
     <div class="register-wrapper">
         <!-- Lado esquerdo - Formulário de cadastro -->
         <div class="register-left">
-            <h1 class="register-title">Cadastro de Coordenador</h1>            
-            <form class="register-form" action="<?= URL ?>/php/cad-coordenador.php">
+            <h1 class="register-title">Cadastro de Servidor</h1>
+
+            <form class="register-form" action="php/cad-servidor.php" method="post">
                 <div class="form-group">
                     <label class="form-label">Nome Completo</label>
-                    <input type="text" class="form-input" name="nome" placeholder="Nome Completo">
+                    <input type="text" name="nomeUsuario" class="form-input" placeholder="Nome Completo" required>
                 </div>
 
                 <div class="form-group">
-                    <label class="form-label">E-mail</label>
-                    <input type="email" class="form-input" name="email" placeholder="digiteseuemail@exemplo.com">
+                    <label class="form-label">E-mail Institucional</label>
+                    <input type="email" name="emailUsuario" class="form-input" placeholder="seuemail@instituicao.edu.br" required>
                 </div>
 
                 <div class="form-row">
                     <div class="form-group half">
-                        <label class="form-label">SIAP</label>
-                        <input type="text" class="form-input" name="siap" placeholder="00000000">
+                        <label class="form-label">SIAPE</label>
+                        <input type="text" name="siapUsuario" class="form-input" placeholder="0000000" required>
                     </div>
                     <div class="form-group half">
                         <label class="form-label">Setor</label>
-                        <select class="form-input" name="setor">
+                        <select class="form-input" name="setorServidor">
                             <option value="">Selecione o setor</option>
                             <option value="Administrativo">Administrativo</option>
                             <option value="Financeiro">Financeiro</option>
@@ -32,29 +33,29 @@
                 </div>
 
                 <div class="form-group">
-                    <label class="form-label">Nr Celular</label>
-                    <input type="tel" class="form-input" name="celular" placeholder="(99) 9999-9999">
+                    <label class="form-label">Telefone</label>
+                    <input type="tel" name="telefoneUsuario" class="form-input" placeholder="(99) 99999-9999" required>
                 </div>
 
                 <div class="form-row">
                     <div class="form-group half">
                         <label class="form-label">Senha</label>
-                        <input type="password" class="form-input" name="senha1" placeholder="Digite sua senha">
+                        <input type="password" name="senha1" class="form-input" placeholder="Digite sua senha" required>
                     </div>
                     <div class="form-group half">
                         <label class="form-label">Confirmar Senha</label>
-                        <input type="password" class="form-input" name="senha2" placeholder="Confirme sua senha">
+                        <input type="password" name="senha2" class="form-input" placeholder="Confirme sua senha" required>
                     </div>
                 </div>
 
                 <button type="submit" class="submit-btn">
-                    <span class="submit-text">Enviar</span>
+                    <span class="submit-text">Cadastrar</span>
                 </button>
 
                 <div class="footer-links">
                     <div class="link-row">
-                        <span class="link-text">Já tem login?</span>
-                        <a href="index.html" class="link-blue">Login</a>
+                        <span class="link-text">Já tem conta?</span>
+                        <a href="index.html" class="link-blue">Fazer Login</a>
                     </div>
                     <div class="link-row">
                         <span class="link-text">Voltar para</span>
@@ -67,7 +68,9 @@
         <!-- Lado direito - Logo -->
         <div class="register-right">
             <div class="logo-container">
-                <img alt="SACIT Logo" class="logo-image" src="<?= URL ?>/public/img/logo-sacit.png">
+                <img alt="SACIT Logo"
+                    class="logo-image"
+                    src="<?=URL?>/public/img/logo-sacit.png">
             </div>
         </div>
     </div>

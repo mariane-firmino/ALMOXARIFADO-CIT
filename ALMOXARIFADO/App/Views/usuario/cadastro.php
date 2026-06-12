@@ -4,17 +4,19 @@
         <div class="register-left">
             <h1 class="register-title">Cadastro</h1>
 
+            <form action="<?= URL ?>/usuario/cadastrar" method="POST" class="register-form">
             <div class="register-options">
-                <a class="register-btn" href="<?=URL?>/php/cad-servidor.php">
+                <a class="register-btn" href="<?= URL ?>/usuario/cadServidor">
                     <span class="register-btn-text">Servidor</span>
                 </a>
-                <a class="register-btn" href="<?=URL?>/php/cad-coordenador.php">
+                <a class="register-btn" href="<?= URL ?>/usuario/cadCoordenador">
                     <span class="register-btn-text">Coordenador</span>
                 </a>
-                <a class="register-btn" href="<?=URL?>/php/cad-estagiario.php">
+                <a class="register-btn" href="<?= URL ?>/usuario/cadEstagiario">
                     <span class="register-btn-text">Estagiário</span>
                 </a>
             </div>
+            </form>
         </div>
 
         <!-- Lado direito - Logo -->

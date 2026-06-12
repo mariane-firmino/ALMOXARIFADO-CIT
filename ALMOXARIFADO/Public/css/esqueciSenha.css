@@ -1,23 +1,7 @@
 /* Importar Fontes Google */
 @import url('https://fonts.googleapis.com/css2?family=Inria+Sans:wght@400;700&family=Inria+Serif:wght@400&display=swap');
 
-/* Reset básico */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-html, body {
-    width: 100%;
-    min-height: 100%;
-    font-family: 'Inria Sans', sans-serif;
-}
-
-body {
-    overflow: auto;
-    background-color: #0a7f70;
-}
 
 .forgot-container {
     width: 100%;
