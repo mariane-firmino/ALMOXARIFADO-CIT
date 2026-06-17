@@ -6,13 +6,13 @@
 
             <form action="<?= URL ?>/usuario/cadastrar" method="POST" class="register-form">
             <div class="register-options">
-                <a class="register-btn" href="<?= URL ?>/usuario/cadServidor">
+                <a class="register-btn" href="<?= URL ?>/usuarios/cadServidor">
                     <span class="register-btn-text">Servidor</span>
                 </a>
-                <a class="register-btn" href="<?= URL ?>/usuario/cadCoordenador">
+                <a class="register-btn" href="<?= URL ?>/usuarios/cadCoordenador">
                     <span class="register-btn-text">Coordenador</span>
                 </a>
-                <a class="register-btn" href="<?= URL ?>/usuario/cadEstagiario">
+                <a class="register-btn" href="<?= URL ?>/usuarios/cadEstagiario">
                     <span class="register-btn-text">Estagiário</span>
                 </a>
             </div>

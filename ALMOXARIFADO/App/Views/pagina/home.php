@@ -28,7 +28,7 @@
                     </div>
                     <div class="link-row">
                         <span class="link-text">Ainda não é cadastrado?</span>
-                        <a href="cadastro.html" class="link-blue">Cadastre-se</a>
+                        <a href="<?=URL?>/usuarios/cadastrar" class="link-blue">Cadastre-se</a>
                     </div>
                 </div>
             </div>

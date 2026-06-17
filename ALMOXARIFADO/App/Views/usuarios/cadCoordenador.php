@@ -3,7 +3,7 @@
         <!-- Lado esquerdo - Formulário de cadastro -->
         <div class="register-left">
             <h1 class="register-title">Cadastro de Coordenador</h1>            
-            <form class="register-form" action="<?= URL ?>/php/cad-coordenador.php">
+            <form class="register-form" action="<?= URL ?>/usuarios/cadCoordenador" method="POST">
                 <div class="form-group">
                     <label class="form-label">Nome Completo</label>
                     <input type="text" class="form-input" name="nome" placeholder="Nome Completo">
@@ -23,10 +23,8 @@
                         <label class="form-label">Setor</label>
                         <select class="form-input" name="setor">
                             <option value="">Selecione o setor</option>
-                            <option value="Administrativo">Administrativo</option>
-                            <option value="Financeiro">Financeiro</option>
-                            <option value="Tecnologia">Tecnologia</option>
-                            <option value="Operacional">Operacional</option>
+                            <option value="Administrativo">CIT</option>
+                            <option value="Financeiro">DAPE</option>
                         </select>
                     </div>
                 </div>
@@ -39,11 +37,11 @@
                 <div class="form-row">
                     <div class="form-group half">
                         <label class="form-label">Senha</label>
-                        <input type="password" class="form-input" name="senha1" placeholder="Digite sua senha">
+                        <input type="password" class="form-input" name="senha" placeholder="Digite sua senha">
                     </div>
                     <div class="form-group half">
                         <label class="form-label">Confirmar Senha</label>
-                        <input type="password" class="form-input" name="senha2" placeholder="Confirme sua senha">
+                        <input type="password" class="form-input" name="confirma_senha" placeholder="Confirme sua senha">
                     </div>
                 </div>
 

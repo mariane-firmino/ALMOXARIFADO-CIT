@@ -11,8 +11,21 @@ class Usuarios extends Controller
 
     public function cadastrar()
     {
+        
+        $dados = [
+            'titulo' => 'Cadastro',
+            'descricao' => 'Página de cadastro de usuários'
+        ];
+        
 
-        $formulario = filter_input_array(INPUT_POST, FILTER_SANITIZE_SPECIAL_CHARS);
+
+        $this->view('usuarios/cadastrar', $dados);
+    }
+
+
+    public function cadCoordenador()
+  {
+    $formulario = filter_input_array(INPUT_POST, FILTER_SANITIZE_SPECIAL_CHARS);
         if (isset($formulario)) :
             $dados = [
                 'nome' => trim($formulario['nome']),
@@ -96,10 +109,24 @@ class Usuarios extends Controller
             ];
 
         endif;
-
-
-        $this->view('usuarios/cadastrar', $dados);
-    }
+    $this->view('usuarios/cadCoordenador', $dados);
+  }
+  public function cadServidor()
+  {
+    $dados = [
+      'titulo' => 'Cadastro',
+      'descricao' => 'Página de cadastro de usuários'
+    ];
+    $this->view('usuarios/cadServidor', $dados);
+  }
+  public function cadEstagiario()
+  {
+    $dados = [
+      'titulo' => 'Cadastro',
+      'descricao' => 'Página de cadastro de usuários'
+    ];
+    $this->view('usuarios/cadEstagiario', $dados);
+  }
 
     public function login()
     {
@@ -171,4 +198,31 @@ class Usuarios extends Controller
 
         URL::redirecionar('usuarios/login');
     }
+
+    
+
+  public function esqueciSenha()
+  {
+    $dados = [
+      'titulo' => 'Esqueci minha senha',
+      'descricao' => 'Página para recuperação de senha'
+    ];
+    $this->view('usuario/esqueciSenha', $dados);
+  }
+  public function alterarSenha()
+  {
+    $dados = [
+      'titulo' => 'Alterar Senha',
+      'descricao' => 'Página para alteração de senha'
+    ];
+    $this->view('usuario/alterarSenha', $dados);
+  }
+  public function inicioCoor()
+  {
+    $dados = [
+      'titulo' => 'Início',
+      'descricao' => 'Página inicial para coordenadores'
+    ];
+    $this->view('pagina/inicioCoor', $dados);
+  }
 }
