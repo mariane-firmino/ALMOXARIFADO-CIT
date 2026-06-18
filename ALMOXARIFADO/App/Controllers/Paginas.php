@@ -18,5 +18,12 @@ class Paginas extends Controller
     ];
     $this->view('pagina/sobre', $dados);
   }
-    
+  public function inicioCoor()
+  {
+    $dados = [
+      'titulo' => 'Início',
+      'descricao' => 'Página inicial para coordenadores'
+    ];
+    $this->view('pagina/inicioCoor', $dados);
+  }
 } //fim da classe Paginas

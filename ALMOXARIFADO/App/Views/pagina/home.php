@@ -1,4 +1,4 @@
-<form action="" method="post">
+<form action="<?= URL ?>/usuarios/loginUser" method="post">
  <!-- Login Container -->
     <div class="login-container">
         <!-- Envolve as duas partes do login (branco e verde)-->
@@ -9,7 +9,7 @@
 
                 <div class="form-group">
                     <label class="form-label">Usuário</label>
-                    <input type="text" name="usuario" class="form-input" placeholder="">
+                    <input type="text" name="email" class="form-input" placeholder="">
                 </div>
 
                 <div class="form-group">

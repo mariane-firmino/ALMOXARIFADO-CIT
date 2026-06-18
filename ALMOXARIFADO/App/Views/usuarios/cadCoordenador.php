@@ -1,3 +1,4 @@
+
 <div class="register-container">
     <div class="register-wrapper">
         <!-- Lado esquerdo - Formulário de cadastro -->
@@ -23,8 +24,8 @@
                         <label class="form-label">Setor</label>
                         <select class="form-input" name="setor">
                             <option value="">Selecione o setor</option>
-                            <option value="Administrativo">CIT</option>
-                            <option value="Financeiro">DAPE</option>
+                            <option value="2">CIT</option>
+                            <option value="3">DAPE</option>
                         </select>
                     </div>
                 </div>

@@ -4,47 +4,45 @@
         <div class="register-left">
             <h1 class="register-title">Cadastro de Servidor</h1>
 
-            <form class="register-form" action="php/cad-servidor.php" method="post">
+            <form class="register-form" action="<?=URL?>/usuarios/cadServidor" method="post">
                 <div class="form-group">
                     <label class="form-label">Nome Completo</label>
-                    <input type="text" name="nomeUsuario" class="form-input" placeholder="Nome Completo" required>
+                    <input type="text" name="nome" class="form-input" placeholder="Nome Completo" required>
                 </div>
 
                 <div class="form-group">
                     <label class="form-label">E-mail Institucional</label>
-                    <input type="email" name="emailUsuario" class="form-input" placeholder="seuemail@instituicao.edu.br" required>
+                    <input type="email" name="email" class="form-input" placeholder="seuemail@instituicao.edu.br" required>
                 </div>
 
                 <div class="form-row">
                     <div class="form-group half">
                         <label class="form-label">SIAPE</label>
-                        <input type="text" name="siapUsuario" class="form-input" placeholder="0000000" required>
+                        <input type="text" name="siap" class="form-input" placeholder="0000000" required>
                     </div>
                     <div class="form-group half">
                         <label class="form-label">Setor</label>
-                        <select class="form-input" name="setorServidor">
+                        <select class="form-input" name="setor">
                             <option value="">Selecione o setor</option>
-                            <option value="Administrativo">Administrativo</option>
-                            <option value="Financeiro">Financeiro</option>
-                            <option value="Tecnologia">Tecnologia</option>
-                            <option value="Operacional">Operacional</option>
+                            <option value="2">CIT</option>
+                            <option value="3">DAPE</option>
                         </select>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label class="form-label">Telefone</label>
-                    <input type="tel" name="telefoneUsuario" class="form-input" placeholder="(99) 99999-9999" required>
+                    <input type="tel" name="celular" class="form-input" placeholder="(99) 99999-9999" required>
                 </div>
 
                 <div class="form-row">
                     <div class="form-group half">
                         <label class="form-label">Senha</label>
-                        <input type="password" name="senha1" class="form-input" placeholder="Digite sua senha" required>
+                        <input type="password" name="senha" class="form-input" placeholder="Digite sua senha" required>
                     </div>
                     <div class="form-group half">
                         <label class="form-label">Confirmar Senha</label>
-                        <input type="password" name="senha2" class="form-input" placeholder="Confirme sua senha" required>
+                        <input type="password" name="confirma_senha" class="form-input" placeholder="Confirme sua senha" required>
                     </div>
                 </div>
 
