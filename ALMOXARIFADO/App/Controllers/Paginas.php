@@ -7,6 +7,14 @@ class Paginas extends Controller
       'titulo' => 'Pagina Inicial',
       'descricao' => 'Aula de PHP'
     ];
+    $this->view('usuarios/login', $dados);
+  }
+  public function home()
+  {
+    $dados = [
+      'titulo' => 'Home',
+      'descricao' => 'Página inicial para coordenadores'
+    ];
     $this->view('pagina/home', $dados);
   }
   public function sobre()

@@ -302,6 +302,10 @@ class Usuarios extends Controller
 
     public function loginUser()
     {
+    echo "loginUser";
+    echo "<pre>";
+    print_r($_POST);
+    echo "</pre>";
 
         $formulario = filter_input_array(INPUT_POST, FILTER_SANITIZE_SPECIAL_CHARS);
         if (isset($formulario)) :
@@ -309,6 +313,11 @@ class Usuarios extends Controller
                 'email' => trim($formulario['email']),
                 'senha' => trim($formulario['senha']),
             ];
+
+            echo "dados";
+            echo "<pre>";
+            var_dump($dados);
+            echo "</pre>";
 
             if (in_array("", $formulario)) :
 
@@ -323,12 +332,21 @@ class Usuarios extends Controller
             else :
                 if (Checa::checarEmail($formulario['email'])) :
                     $dados['email_erro'] = 'O e-mail informado é invalido';
+                    echo "email invalido";
                 else :
 
                     $usuario = $this->usuarioModel->checarLogin($formulario['email'], $formulario['senha']);
+                    echo "checarLogin";
+                     echo "<pre>";
+                     var_dump($usuario);
+                     echo "</pre>";
 
                     if ($usuario):
                         $this->criarSessaoUsuario($usuario);
+                        echo "usuario criado<br>";
+                         echo "<pre>";
+                         var_dump($usuario);
+                         echo "</pre>";
                     else:
                         Sessao::mensagem('usuario', 'Usuario ou senha invalidos', 'alert alert-danger');
                     endif;
@@ -346,8 +364,11 @@ class Usuarios extends Controller
 
         endif;
 
-
-        $this->view('usuarios/login', $dados);
+        echo "erro";
+            echo "<pre>";
+            var_dump($dados);
+            echo "</pre>";
+        // $this->view('pagina/home', $dados);
     }
 
     private function criarSessaoUsuario($usuario)
@@ -355,6 +376,8 @@ class Usuarios extends Controller
         $_SESSION['usuario_id'] = $usuario->usua_id;
         $_SESSION['usuario_nome'] = $usuario->usua_nome;
         $_SESSION['usuario_email'] = $usuario->usua_email;
+        $_SESSION['usuario_funcao'] = $usuario->func_id;
+        var_dump($usuario);
 
         URL::redirecionar('paginas/inicioCoor');
     }

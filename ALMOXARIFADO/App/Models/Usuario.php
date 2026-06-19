@@ -34,9 +34,8 @@ class Usuario
         $this->db->bind('turma', $dados['turma']);
 
         if (!$this->db->executa()) {
-           return false;
+            return false;
         }
-        var_dump($dados);
 
 
 
@@ -47,7 +46,7 @@ class Usuario
 
         if ($this->db->executa()) :
             return true;
-        else :  
+        else :
             return false;
         endif;
     }
@@ -57,8 +56,9 @@ class Usuario
         $this->db->query("SELECT * FROM usuario WHERE usua_email = :e");
         $this->db->bind(":e", $email);
 
-        if ($this->db->resultado()) :
-            $resultado = $this->db->resultado();
+        $resultado = $this->db->resultado();
+
+        if ($resultado) :
             if (password_verify($senha, $resultado->usua_senha)):
                 return $resultado;
             else:
@@ -73,7 +73,7 @@ class Usuario
     public function lerUsuarioPorId($id)
     {
         $this->db->query("SELECT * FROM usuario WHERE usua_id = :id");
-        $this->db->bind('usua_id', $id);
+        $this->db->bind('id', $id);
 
         return $this->db->resultado();
     }

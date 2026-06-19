@@ -132,6 +132,8 @@
     font-size: clamp(14px, 2vw, 18px);
     color: white;
     font-weight: 700;
+    border: none;
+    background: none;
 }
 
 /* Links do Rodapé */

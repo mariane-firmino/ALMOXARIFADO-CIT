@@ -1,4 +1,5 @@
 <?php include "../App/Views/header.php"; ?>
+
 <main class="main-content">
     <header class="page-header">
         <div class="page-title">
@@ -6,7 +7,7 @@
                 <span class="title-flag"></span>
                 <h1>Início</h1>
             </div>
-            <p class="subtitle">Bem-vindo(a), Nome !</p>
+            <p class="subtitle">Bem-vindo(a), <?= $_SESSION['usuario_nome'] ?> !</p>
         </div>
         <img src="../img/logo-sacit.png" alt="SACIT Logo" class="brand-logo">
     </header>
