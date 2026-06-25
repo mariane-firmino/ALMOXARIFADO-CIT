@@ -7,12 +7,18 @@
             <form class="register-form" action="<?= URL ?>/usuarios/cadCoordenador" method="POST">
                 <div class="form-group">
                     <label class="form-label">Nome Completo</label>
-                    <input type="text" class="form-input" name="nome" placeholder="Nome Completo">
+                    <input type="text" class="form-input" name="nome" placeholder="Nome Completo" class='form-control <?= $dados['nome_erro'] ? 'is-invalid' : '' ?>'>
+                     <div class='invalid-feedback'>
+                        <?= $dados['nome_erro'] ?>
+                    </div>
                 </div>
 
                 <div class="form-group">
                     <label class="form-label">E-mail</label>
-                    <input type="email" class="form-input" name="email" placeholder="digiteseuemail@exemplo.com">
+                    <input type="email" class="form-input" name="email" placeholder="digiteseuemail@exemplo.com"  class='form-control <?= $dados['email_erro'] ? 'is-invalid' : '' ?>'>
+                     <div class='invalid-feedback'>
+                        <?= $dados['email_erro'] ?>
+                    </div>
                 </div>
 
                 <div class="form-row">
@@ -38,11 +44,17 @@
                 <div class="form-row">
                     <div class="form-group half">
                         <label class="form-label">Senha</label>
-                        <input type="password" class="form-input" name="senha" placeholder="Digite sua senha">
+                        <input type="password" class="form-input" name="senha" placeholder="Digite sua senha"class='form-control  <?= $dados['senha_erro'] ? 'is-invalid' : '' ?>'>
+                         <div class='invalid-feedback'>
+                            <?= $dados['senha_erro'] ?>
+                        </div>
                     </div>
                     <div class="form-group half">
                         <label class="form-label">Confirmar Senha</label>
-                        <input type="password" class="form-input" name="confirma_senha" placeholder="Confirme sua senha">
+                        <input type="password" class="form-input" name="confirma_senha" placeholder="Confirme sua senha"class='form-control  <?= $dados['confirma_senha_erro'] ? 'is-invalid' : '' ?>'>
+                         <div class='invalid-feedback'>
+                            <?= $dados['confirma_senha_erro'] ?>
+                        </div>
                     </div>
                 </div>
 

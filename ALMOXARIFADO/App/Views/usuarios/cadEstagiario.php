@@ -4,7 +4,7 @@
         <div class="register-left">
             <h1 class="register-title">Cadastro de Estagiário</h1>
 
-            <form class="register-form" action="php/cad-estagiario.php" method="post">
+            <form class="register-form" action="<?= URL ?>/usuarios/cadEstagiario" method="post">
                 <div class="form-group">
                     <label class="form-label">Nome Completo</label>
                     <input type="text" class="form-input" name="nome" placeholder="Nome Completo">

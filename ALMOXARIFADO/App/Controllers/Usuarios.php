@@ -106,7 +106,7 @@ class Usuarios extends Controller
             ];
 
         endif;
-        $this->view('usuarios/cadServidor', $dados);
+        $this->view('usuarios/cadCoordenador', $dados);
     } // fim do método cadCoordenador
 
     public function cadServidor()
@@ -212,7 +212,7 @@ class Usuarios extends Controller
                 'email' => trim($formulario['email']),
                 'senha' => trim($formulario['senha']),
                 'confirma_senha' => trim($formulario['confirma_senha']),
-                'funcao' => 2,
+                'funcao' => 3,
                 'curso' => trim($formulario['curso']),
                 'ano' => trim($formulario['ano']),
                 'celular' => trim($formulario['celular']),
@@ -380,7 +380,16 @@ class Usuarios extends Controller
         $_SESSION['usuario_funcao'] = $usuario->func_id;
         var_dump($usuario);
 
-        URL::redirecionar('paginas/inicioCoor');
+        URL::redirecionar('paginas/home'); 
+        /*if($usuario->func_id == 1){
+            URL::redirecionar('paginas/inicioCoor');
+        }elseif($usuario->func_id == 2){
+            URL::redirecionar('paginas/inicioServ');
+        }elseif($usuario->func_id == 3){
+            URL::redirecionar('paginas/inicioEstag');
+        }else{
+            URL::redirecionar('paginas/inicio'); 
+        }*/
     }
 
 
