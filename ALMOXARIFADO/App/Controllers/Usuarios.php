@@ -28,6 +28,7 @@ class Usuarios extends Controller
                 'nome' => trim($formulario['nome']),
                 'email' => trim($formulario['email']),
                 'siap' => trim($formulario['siap']),
+                'matricula' => NULL,
                 'senha' => trim($formulario['senha']),
                 'confirma_senha' => trim($formulario['confirma_senha']),
                 'funcao' => 1,
@@ -116,6 +117,7 @@ class Usuarios extends Controller
                 'nome' => trim($formulario['nome']),
                 'email' => trim($formulario['email']),
                 'siap' => trim($formulario['siap']),
+                'matricula' => NULL,
                 'senha' => trim($formulario['senha']),
                 'confirma_senha' => trim($formulario['confirma_senha']),
                 'funcao' => 2,
@@ -208,14 +210,13 @@ class Usuarios extends Controller
             $dados = [
                 'nome' => trim($formulario['nome']),
                 'email' => trim($formulario['email']),
-                'siap' => trim($formulario['siap']),
                 'senha' => trim($formulario['senha']),
                 'confirma_senha' => trim($formulario['confirma_senha']),
                 'funcao' => 2,
                 'curso' => trim($formulario['curso']),
                 'ano' => trim($formulario['ano']),
-                'celular' => trim($formulario['celular'])
-
+                'celular' => trim($formulario['celular']),
+                'matricula' => trim($formulario['matricula']),
 
             ];
 
@@ -229,8 +230,8 @@ class Usuarios extends Controller
                     $dados['email_erro'] = 'Preencha o campo e-mail';
                 endif;
 
-                if (empty($formulario['siap'])) :
-                    $dados['siap_erro'] = 'Preencha o campo SIAP';
+                if (empty($formulario['matricula'])) :
+                    $dados['matricula_erro'] = 'Preencha o campo Matrícula';
                 endif;
                 if (empty($formulario['curso'])) :
                     $dados['curso_erro'] = 'Preencha o campo curso';

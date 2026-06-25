@@ -23,11 +23,12 @@ class Usuario
 
     public function armazenar($dados)
     {
-        $this->db->query("INSERT INTO usuario(usua_nome, usua_email, usua_siap, usua_senha, func_id, seto_id, turm_id) VALUES (:nome, :email, :siap, :senha, :funcao, :setor, :turma)");
+        $this->db->query("INSERT INTO usuario(usua_nome, usua_email, usua_siap, usua_matricula, usua_senha, func_id, seto_id, turm_id) VALUES (:nome, :email, :siap, :matricula, :senha, :funcao, :setor, :turma)");
 
         $this->db->bind('nome', $dados['nome']);
         $this->db->bind('email', $dados['email']);
         $this->db->bind('siap', $dados['siap']);
+        $this->db->bind('matricula', $dados['matricula']);
         $this->db->bind('senha', $dados['senha']);
         $this->db->bind('funcao', $dados['funcao']);
         $this->db->bind('setor', $dados['setor']);
@@ -36,8 +37,6 @@ class Usuario
         if (!$this->db->executa()) {
             return false;
         }
-
-
 
         $this->db->query("INSERT INTO telefone(tele_numero, usua_id) VALUES (:celular, :id_usuario)");
         $this->db->bind("celular", $dados['celular']);

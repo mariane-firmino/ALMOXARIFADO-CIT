@@ -24,8 +24,8 @@
                         <label class="form-label">Curso</label>
                         <select class="form-input" name="curso">
                             <option value="">Selecione o curso</option>
-                            <option value="Informática">Informática</option>
-                            <option value="Biotecnologia">Biotecnologia</option>
+                            <option value="Técnico em Informática">Informática</option>
+                            <option value="Técnico em Biotecnologia">Biotecnologia</option>
                         </select>
                     </div>
                 </div>
@@ -35,9 +35,9 @@
                         <label class="form-label">Ano</label>
                         <select class="form-input" name="ano">
                             <option value="">Selecione o ano</option>
-                            <option value="1º Ano">1º Ano</option>
-                            <option value="2º Ano">2º Ano</option>
-                            <option value="3º Ano">3º Ano</option>
+                            <option value="1">1º Ano</option>
+                            <option value="2">2º Ano</option>
+                            <option value="3">3º Ano</option>
                         </select>
                     </div>
                     <div class="form-group half">
