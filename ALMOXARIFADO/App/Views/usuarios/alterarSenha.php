@@ -36,7 +36,7 @@
                     <input id="new-password" class="password-input" type="password" placeholder="">
                     <button type="button" class="password-toggle" data-target="new-password"
                         title="Mostrar/Ocultar senha">
-                        <img src="../img/olhoAberto.png" alt="Mostrar senha" class="eye-icon">
+                        <img src="<?= URL ?>/public/img/olhoAberto.png" alt="Mostrar senha" class="eye-icon">
                     </button>
                 </div>
             </div>
@@ -47,7 +47,7 @@
                     <input id="confirm-password" class="password-input" type="password" placeholder="">
                     <button type="button" class="password-toggle" data-target="confirm-password"
                         title="Mostrar/Ocultar senha">
-                        <img src="../img/olhoAberto.png" alt="Mostrar senha" class="eye-icon">
+                        <img src="<?= URL ?>/public/img/olhoAberto.png" alt="Mostrar senha" class="eye-icon">
                     </button>
                 </div>
             </div>
@@ -70,7 +70,7 @@
             const icon = button.querySelector('img');
             const isPassword = input.type === 'password';
             input.type = isPassword ? 'text' : 'password';
-            icon.src = isPassword ? '../img/olhoFechado.png' : '../img/olhoAberto.png';
+            icon.src = isPassword ? `${URL}/public/img/olhoFechado.png` : `${URL}/public/img/olhoAberto.png`;
             icon.alt = isPassword ? 'Ocultar senha' : 'Mostrar senha';
         });
     });

@@ -53,11 +53,11 @@
                 <div class="footer-links">
                     <div class="link-row">
                         <span class="link-text">Já tem conta?</span>
-                        <a href="index.html" class="link-blue">Fazer Login</a>
+                        <a href="<?= URL ?>/usuarios/login" class="link-blue">Fazer Login</a>
                     </div>
                     <div class="link-row">
                         <span class="link-text">Voltar para</span>
-                        <a href="cadastro.html" class="link-blue">Tipos de Cadastro</a>
+                        <a href="<?= URL ?>/usuarios/cadastrar" class="link-blue">Tipos de Cadastro</a>
                     </div>
                 </div>
             </form>

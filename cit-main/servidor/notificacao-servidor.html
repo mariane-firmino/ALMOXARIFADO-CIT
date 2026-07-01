@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notificações - Servidor - SACIT</title>
+    <link rel="stylesheet" href="css/notificacao-servidor.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@400;700;800&family=Inter:wght@600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+<body>
+    <input type="checkbox" id="openSidebarMenu">
+
+    <label for="openSidebarMenu" class="sidebarIconToggle">
+        <div class="spinner"></div>
+        <div class="spinner"></div>
+        <div class="spinner"></div>
+    </label>
+
+    <label for="openSidebarMenu" class="overlay"></label>
+    <div class="page">
+        <aside class="sidebar" id="sidebarMenu">
+            <div class="sidebar-header">
+                <img src="../img/avatar-menu.png" alt="Avatar" class="sidebar-avatar">
+                <div>
+                    <p class="sidebar-title">Nome</p>
+                </div>
+            </div>
+
+            <nav>
+                <a href="inicio-servidor.html" class="menu-link">
+                    <span class="icon">
+                        <img src="../img/icone_inicio (1).png" alt="Icone Início" class="menu-icon">
+                    </span>
+                    Início
+                </a>
+                <a href="perfil-servidor.html" class="menu-link">
+                    <span class="icon">
+                        <img src="../img/icon_perfil.png" alt="Icone Perfil" class="menu-icon perfil-icon">
+                    </span>
+                    Perfil
+                </a>
+                <a href="notificacao-servidor.html" class="menu-link">
+                    <span class="icon">
+                        <img src="../img/icone_notificacao.png" alt="Icone Notificações" class="menu-icon">
+                    </span>
+                    Notificações
+                </a>
+                <a href="solicitacao-servidor.html" class="menu-link">
+                    <span class="icon">
+                        <img src="../img/icone_analisar_solicitacao.png" alt="Icone Solicitação" class="menu-icon">
+                    </span>
+                    Minhas Solicitações
+                </a>
+                <a href="consultar-produto.html" class="menu-link">
+                    <span class="icon">
+                        <img src="../img/icon_consultar_produto (1).png" alt="Icone Consultar Produto"
+                            class="menu-icon">
+                    </span>
+                    Consultar Produto
+                </a>
+                <a href="consultar-historico.html" class="menu-link">
+                    <span class="icon">
+                        <img src="../img/icon_historico.png" alt="Icone Consultar Histórico" class="menu-icon">
+                    </span>
+                    Consultar Histórico
+                </a>
+                <a href="sair.html" class="menu-link">
+                    <span class="icon">
+                        <img src="../img/icone_sair.png" alt="Icone Sair" class="menu-icon">
+                    </span>
+                    Sair
+                </a>
+            </nav>
+
+        </aside>
+
+        <main class="content">
+            <header class="page-header">
+                <div class="title-group">
+                    <div class="title-row">
+                        <span class="title-mark"></span>
+                        <h1>Notificações</h1>
+                    </div>
+                    <p class="subtitle">Acompanhe suas notificações</p>
+                </div>
+                <img src="../img/logo-sacit.png" alt="SACIT Logo" class="brand-logo" />
+            </header>
+
+            <section class="notifications-container">
+                <div class="notifications-toolbar">
+
+                    <button class="filter-btn active">Todas</button>
+                    <button class="filter-btn">Não lidas</button>
+                    <button class="filter-btn">Lidas</button>
+
+                    <div class="search-box">
+                        <img src="../img/lupa.png" alt="Icone Buscar" class="search-icon">
+                        <input type="text" placeholder="Buscar notificações...">
+                    </div>
+
+                    <div class="date-box">
+                        <input type="date" placeholder="dd/mm/aaaa">
+                    </div>
+
+                    <button class="filter-box">
+                        <img src="../img/icon_filtro.png" alt="Icone Filtrar" class="filter-icon">
+                        Filtrar
+                    </button>
+
+                </div>
+                    <div class="notifications-list">
+
+                        <div class="notification-item unread">
+                            <div class="notification-icon icon-green">
+                                <img class= "icon-total" src="../img/icon_total.png" alt="Icone total">
+                                <span class="status-badge online"></span>
+                            </div>
+                            <div class="notification-content">
+                                <h3>Solicitação registrada</h3>
+                                <p>Sua solicitação xxxxxxxx está em análise.</p>
+                                <span class="notification-time">Há x dias</span>
+                            </div>
+                            <div class="notification-action">
+                                <button class="menu-dots">⋯</button>
+
+                                <div class="dropdown-menu">
+                                    <a href="detalhe-notificacao.html"><button>Ver detalhes</button></a>
+                                    <button>Marcar como lida</button>
+                                    <a href="excluir-notificacao.html"><button class="delete-btn">Excluir</button></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="notification-item unread">
+                            <div class="notification-icon icon-blue">
+                                <img class= "icon-estoque" src="../img/caixa.png" alt="Icone de estoque">
+                                <span class="status-badge online"></span>
+                            </div>
+                            <div class="notification-content">
+                                <h3>Produto disponível para retirada</h3>
+                                <p>O produto da  solicitação xxxxx está pronto para retirada.</p>
+                                <span class="notification-time">Há x dias</span>
+                            </div>
+                            <div class="notification-action">
+                                <button class="menu-dots">⋯</button>
+
+                                <div class="dropdown-menu">
+                                    <a href="detalhe-notificacao.html"><button>Ver detalhes</button></a>
+                                    <button>Marcar como lida</button>
+                                    <a href="excluir-notificacao.html"><button class="delete-btn">Excluir</button></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="notification-item unread">
+                            <div class="notification-icon icon-green">
+                                <img class="icon-verificado" src="../img/icon_verificado.png" alt="Icone de sem estoque">
+                                <span class="status-badge online"></span>
+                            </div>
+                            <div class="notification-content">
+                                <h3>Solicitação aprovada</h3>
+                                <p>Sua solicitação xxxxx foi aprovada.</p>
+                                <span class="notification-time">Há x dias</span>
+                            </div>
+                            <div class="notification-action">
+                                <button class="menu-dots">⋯</button>
+
+                                <div class="dropdown-menu">
+                                    <a href="detalhe-notificacao.html"><button>Ver detalhes</button></a>
+                                    <button>Marcar como lida</button>
+                                    <a href="excluir-notificacao.html"><button class="delete-btn">Excluir</button></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="notification-item unread">
+                            <div class="notification-icon icon-roxo">
+                                <img class="icon-devolucao" src="../img/icon_devolucao.png" alt="Icone de devolução">
+                                <span class="status-badge offline"></span>
+                            </div>
+                            <div class="notification-content">
+                                <h3>Produto devolvido</h3>
+                                <p>A devolução do produto xxxxxx foi registrada com sucesso.</p>
+                                <span class="notification-time">Há x dias</span>
+                            </div>
+                            <div class="notification-action">
+                                <button class="menu-dots">⋯</button>
+
+                                <div class="dropdown-menu">
+                                    <a href="detalhe-notificacao.html"><button>Ver detalhes</button></a>
+                                    <button>Marcar como lida</button>
+                                    <a href="excluir-notificacao.html"><button class="delete-btn">Excluir</button></a>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+            <footer class="footer">
+                <nav class="footer-links">
+                    <a href="inicio-servidor.html">Início</a>
+                    <a href="/coordenador/sobreNos.html">Sobre nós</a>
+                    <a href="consultar-produto.html">Consultar Produto</a>
+                </nav>
+
+                <div class="footer-center">
+                    <img src="../img/ifro-logo.webp" alt="IFRO Logo" class="footer-logo">
+                </div>
+
+                <div class="footer-contact">
+                    <p>Contatos:</p>
+                    <p>Telefone: (99) 99999-9999</p>
+                    <p>E-mail: algumacoisa@ifro.edu.br</p>
+                </div>
+            </footer>
+</body>
+</html>

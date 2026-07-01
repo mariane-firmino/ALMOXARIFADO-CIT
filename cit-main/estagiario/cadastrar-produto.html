@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Produto - SACIT</title>
+    <link rel="stylesheet" href="css/cadastrar-produto.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@400;700;800&family=Inter:wght@600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <input type="checkbox" id="openSidebarMenu">
+
+        <label for="openSidebarMenu" class="sidebarIconToggle">
+            <div class="spinner"></div>
+            <div class="spinner"></div>
+            <div class="spinner"></div>
+        </label>
+        
+        <label for="openSidebarMenu" class="overlay"></label>
+    <div class="page">
+        <aside class="sidebar" id="sidebarMenu">
+            <div class="sidebar-header">
+                <img src="../img/avatar-menu.png" alt="Avatar" class="sidebar-avatar">
+                <div>
+                    <p class="sidebar-title">Nome</p>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="inicio-estagiario.html" class="menu-link">
+                    <img src="../img/icone_inicio (1).png" alt="Início" class="menu-icon">
+                    Início
+                </a>
+                <a href="perfil-estagiario.html" class="menu-link">
+                    <img src="../img/icon_perfil.png" alt="Perfil" class="menu-icon perfil-icon">
+                    Perfil
+                </a>
+                <a href="notificacao-estagiario.html" class="menu-link">
+                    <img src="../img/icone_notificacao.png" alt="Notificações" class="menu-icon">
+                    Notificações
+                </a>
+                <a href="controlar-estoque.html" class="menu-link">
+                    <img src="../img/icone_controlar_estoque.png" alt="Controlar Estoque" class="menu-icon">
+                    Controlar Estoque
+                </a>
+                <a href="controlar-produto.html" class="menu-link">
+                    <img src="../img/icone_controlar_produto.png" alt="Controlar Produto" class="menu-icon">
+                    Controlar Produto
+                </a>
+                <a href="sair.html" class="menu-link logout-link">
+                    <img src="../img/icone_sair.png" alt="Sair" class="menu-icon">
+                    Sair
+                </a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="page-header">
+                <div class="header-title">
+                    <div class="title-flag"></div>
+                    <div>
+                        <h1>Cadastrar Produto</h1>
+                        <p class="subtitle">Cadastre novos produtos no estoque.</p>
+                    </div>
+                </div>
+                <img src="../img/logo-sacit.png" alt="SACIT" class="brand-logo">
+            </header>
+
+            <section class="card-panel">
+                <div class="card-header">
+                    <h2>Cadastro de Produto</h2>
+                    <a href="controlar-estoque.html" class="close-btn" aria-label="Fechar">
+                        <img src="../img/fechar.png" alt="Fechar">
+                    </a>
+                </div>
+
+                <div class="upload-block">
+                    <div class="upload-placeholder">
+                        <img src="../img/adicionar-img.png" alt="Adicionar imagem" class="upload-icon">
+                    </div>
+                </div>
+
+                <form class="product-form">
+                    <div class="form-row">
+
+                        <div class="form-group">
+                            <label class="field-label" for="product-name">Nome</label>
+
+                            <input id="product-name"
+                                type="text" placeholder="Digite o nome do produto..." class="field-input">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="field-label" for="category">Categoria</label>
+
+                            <select id="category" class="field-input select-field">
+                                <option>Selecionar categoria</option>
+                                <option>Eletrônicos</option>
+                                <option>Materiais</option>
+                                <option>Informática</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+                            <label class="field-label" for="location">Localização</label>
+
+                            <select id="location" class="field-input select-field">
+                                <option>Selecionar local</option>
+                                <option>CX Lote 1</option>
+                                <option>Armário 1 (sala de aula)</option>
+                                <option>Armário 2</option>
+                                <option>Armário 3</option>
+                                <option>Depósito</option>
+                                <option>Sala CIT</option>
+                                <option>Gaveta do CIT</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="field-label" for="quantity">Quantidade</label>
+
+                            <input id="quantity"
+                                type="number"
+                                placeholder="0"
+                                class="field-input">
+                        </div>
+
+                    </div>
+
+                    <label class="field-label" for="description">Descrição</label>
+                    <textarea id="description" rows="5" placeholder="Descreva o produto..."
+                        class="field-input textarea-field"></textarea>
+
+                    <div class="button-row">
+                        <button type="button" class="btn-outline">Gerar QR Code</button>
+                    </div>
+
+                    <button type="submit" class="btn-primary">Cadastrar Produto</button>
+                </form>
+            </section>
+        </main>
+    </div>
+    <footer class="footer">
+        <nav class="footer-links">
+            <a href="inicio-estagiario.html">Início</a>
+            <a href="/coordenador/sobreNos.html">Sobre nós</a>
+            <a href="consultar-prod-estagiario.html">Consultar Produto</a>
+        </nav>
+
+        <div class="footer-center">
+            <img src="../img/ifro-logo.webp" alt="IFRO Logo" class="footer-logo">
+        </div>
+
+        <div class="footer-contact">
+            <p>Contatos:</p>
+            <p>Telefone: (99) 99999-9999</p>
+            <p>E-mail: algumacoisa@ifro.edu.br</p>
+        </div>
+    </footer>
+</body>
+
+</html>

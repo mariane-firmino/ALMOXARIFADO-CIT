@@ -210,6 +210,8 @@ class Usuarios extends Controller
             $dados = [
                 'nome' => trim($formulario['nome']),
                 'email' => trim($formulario['email']),
+                'siap' => NULL,
+                'setor' => NULL,
                 'senha' => trim($formulario['senha']),
                 'confirma_senha' => trim($formulario['confirma_senha']),
                 'funcao' => 3,
@@ -217,8 +219,24 @@ class Usuarios extends Controller
                 'ano' => trim($formulario['ano']),
                 'celular' => trim($formulario['celular']),
                 'matricula' => trim($formulario['matricula']),
-
+                'turma' => null,
             ];
+
+            if ($dados['curso'] == 'Técnico em Informática' && $dados['ano'] == 1) {
+                $dados['turma'] = 1;
+            } elseif ($dados['curso'] == 'Técnico em Informática' && $dados['ano'] == 2) {
+                $dados['turma'] = 2;
+            } elseif ($dados['curso'] == 'Técnico em Informática' && $dados['ano'] == 3) {
+                $dados['turma'] = 3;
+            } elseif ($dados['curso'] == 'Técnico em Biotecnologia' && $dados['ano'] == 1) {
+                $dados['turma'] = 4;
+            } elseif ($dados['curso'] == 'Técnico em Biotecnologia' && $dados['ano'] == 2) {
+                $dados['turma'] = 5;
+            } elseif ($dados['curso'] == 'Técnico em Biotecnologia' && $dados['ano'] == 3) {
+                $dados['turma'] = 6;
+            } else {
+                $dados['turma'] = null;
+            }
 
             if (in_array("", $formulario)) :
 
@@ -303,10 +321,10 @@ class Usuarios extends Controller
 
     public function loginUser()
     {
-    echo "loginUser";
-    echo "<pre>";
-    print_r($_POST);
-    echo "</pre>";
+        /*echo "loginUser";
+        echo "<pre>";
+        print_r($_POST);
+        echo "</pre>";*/
 
         $formulario = filter_input_array(INPUT_POST, FILTER_SANITIZE_SPECIAL_CHARS);
         if (isset($formulario)) :
@@ -314,11 +332,6 @@ class Usuarios extends Controller
                 'email' => trim($formulario['email']),
                 'senha' => trim($formulario['senha']),
             ];
-
-            echo "dados";
-            echo "<pre>";
-            var_dump($dados);
-            echo "</pre>";
 
             if (in_array("", $formulario)) :
 
@@ -337,17 +350,13 @@ class Usuarios extends Controller
                 else :
 
                     $usuario = $this->usuarioModel->checarLogin($formulario['email'], $formulario['senha']);
-                    echo "checarLogin";
-                     echo "<pre>";
-                     var_dump($usuario);
-                     echo "</pre>";
-
+            
                     if ($usuario):
                         $this->criarSessaoUsuario($usuario);
                         echo "usuario criado<br>";
-                         echo "<pre>";
-                         var_dump($usuario);
-                         echo "</pre>";
+                        echo "<pre>";
+                        var_dump($usuario);
+                        echo "</pre>";
                     else:
                         Sessao::mensagem('usuario', 'Usuario ou senha invalidos', 'alert alert-danger');
                     endif;
@@ -365,10 +374,6 @@ class Usuarios extends Controller
 
         endif;
 
-        echo "erro";
-            echo "<pre>";
-            var_dump($dados);
-            echo "</pre>";
         // $this->view('pagina/home', $dados);
     }
 
@@ -378,9 +383,8 @@ class Usuarios extends Controller
         $_SESSION['usuario_nome'] = $usuario->usua_nome;
         $_SESSION['usuario_email'] = $usuario->usua_email;
         $_SESSION['usuario_funcao'] = $usuario->func_id;
-        var_dump($usuario);
 
-        URL::redirecionar('paginas/home'); 
+        URL::redirecionar('paginas/home');
         /*if($usuario->func_id == 1){
             URL::redirecionar('paginas/inicioCoor');
         }elseif($usuario->func_id == 2){
@@ -406,13 +410,22 @@ class Usuarios extends Controller
 
 
 
+    public function login()
+    {
+        $dados = [
+            'titulo' => 'Login',
+            'descricao' => 'Página de login'
+        ];
+        $this->view('usuarios/login', $dados);
+    }
+
     public function esqueciSenha()
     {
         $dados = [
             'titulo' => 'Esqueci minha senha',
             'descricao' => 'Página para recuperação de senha'
         ];
-        $this->view('usuario/esqueciSenha', $dados);
+        $this->view('usuarios/esqueciSenha', $dados);
     }
     public function alterarSenha()
     {
@@ -420,6 +433,6 @@ class Usuarios extends Controller
             'titulo' => 'Alterar Senha',
             'descricao' => 'Página para alteração de senha'
         ];
-        $this->view('usuario/alterarSenha', $dados);
+        $this->view('usuarios/alterarSenha', $dados);
     }
 }

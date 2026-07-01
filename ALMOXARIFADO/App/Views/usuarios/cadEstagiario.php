@@ -42,18 +42,18 @@
                     </div>
                     <div class="form-group half">
                         <label class="form-label">Telefone</label>
-                        <input type="tel" class="form-input" name="telefone" placeholder="(99) 99999-9999">
+                        <input type="tel" class="form-input" name="celular" placeholder="(99) 99999-9999">
                     </div>
                 </div>
 
                 <div class="form-row">
                     <div class="form-group half">
                         <label class="form-label">Senha</label>
-                        <input type="password" class="form-input" name="senha1" placeholder="Digite sua senha">
+                        <input type="password" class="form-input" name="senha" placeholder="Digite sua senha">
                     </div>
                     <div class="form-group half">
                         <label class="form-label">Confirmar Senha</label>
-                        <input type="password" class="form-input" name="senha2" placeholder="Confirme sua senha">
+                        <input type="password" class="form-input" name="confirma_senha" placeholder="Confirme sua senha">
                     </div>
                 </div>
 
@@ -64,11 +64,11 @@
                 <div class="footer-links">
                     <div class="link-row">
                         <span class="link-text">Já tem conta?</span>
-                        <a href="index.html" class="link-blue">Fazer Login</a>
+                        <a href="<?= URL ?>/usuarios/login" class="link-blue">Fazer Login</a>
                     </div>
                     <div class="link-row">
                         <span class="link-text">Voltar para</span>
-                        <a href="cadastro.html" class="link-blue">Tipos de Cadastro</a>
+                        <a href="<?= URL ?>/usuarios/cadastrar" class="link-blue">Tipos de Cadastro</a>
                     </div>
                 </div>
             </form>

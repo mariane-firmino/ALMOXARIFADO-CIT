@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controlar Estoque - SACIT</title>
+    <link rel="stylesheet" href="css/controlar-estoque.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@400;700;800&family=Inter:wght@600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <input type="checkbox" id="openSidebarMenu">
+
+    <label for="openSidebarMenu" class="sidebarIconToggle">
+        <div class="spinner"></div>
+        <div class="spinner"></div>
+        <div class="spinner"></div>
+    </label>
+
+    <label for="openSidebarMenu" class="overlay"></label>
+
+    <div class="page">
+        <aside class="sidebar" id="sidebarMenu">
+            <div class="sidebar-header">
+                <img src="../img/avatar-menu.png" alt="Avatar" class="sidebar-avatar">
+                <div>
+                    <p class="sidebar-title">Nome</p>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="inicio-estagiario.html" class="menu-link">
+                    <img src="../img/icone_inicio (1).png" alt="Início" class="menu-icon">
+                    Início
+                </a>
+                <a href="perfil-estagiario.html" class="menu-link">
+                    <img src="../img/icon_perfil.png" alt="Perfil" class="menu-icon perfil-icon">
+                    Perfil
+                </a>
+                <a href="notificacao-estagiario.html" class="menu-link">
+                    <img src="../img/icone_notificacao.png" alt="Notificações" class="menu-icon">
+                    Notificações
+                </a>
+                <a href="controlar-estoque.html" class="menu-link">
+                    <img src="../img/icone_controlar_estoque.png" alt="Controlar Estoque" class="menu-icon">
+                    Controlar Estoque
+                </a>
+                <a href="controlar-produto.html" class="menu-link">
+                    <img src="../img/icone_controlar_produto.png" alt="Controlar Produto" class="menu-icon">
+                    Controlar Produto
+                </a>
+                <a href="sair.html" class="menu-link logout-link">
+                    <img src="../img/icone_sair.png" alt="Sair" class="menu-icon">
+                    Sair
+                </a>
+            </nav>
+        </aside>
+
+        <main class="content">
+                    <header class="page-header">
+                        <div class="title-group">
+                            <div class="title-row">
+                                <span class="title-mark"></span>
+                                <h1>Controlar Estoque</h1>
+                            </div>
+                            <p class="subtitle">Gerencie os produtos em estoque.</p>
+                        </div>
+                        <img src="../img/logo-sacit.png" alt="SACIT Logo" class="brand-logo" />
+                    </header>
+
+                    <section class="actions-panel">
+
+                        <div class="summary-card">
+                            <div class="summary-top">
+                                <div class="summary-icon green">
+                                    <img src="../img/icone_caixaVerde.png" alt="Total de produtos" class="summary-img total-icon">
+                                </div>
+                                <p class="summary-label">Total de Produtos</p>
+                            </div>
+
+                            <h2>00</h2>
+                            <span class="summary-text">Produtos cadastrados</span>
+                        </div>
+
+                        <div class="summary-card">
+                            <div class="summary-top">
+                                <div class="summary-icon blue">
+                                    <img src="../img/icone_caixaAzul.png" alt="Itens em estoque" class="summary-img active-icon">
+                                </div>
+                                <p class="summary-label">Itens em Estoque</p>
+                            </div>
+
+                            <h2>00</h2>
+                            <span class="summary-text">Produtos disponíveis</span>
+                        </div>
+
+                        <div class="summary-card">
+                            <div class="summary-top">
+                                <div class="summary-icon yellow">
+                                    <img src="../img/icone_alerta.png" alt="Estoque baixo" class="summary-img inactive-icon">
+                                </div>
+                                <p class="summary-label">Estoque Baixo</p>
+                            </div>
+
+                            <h2>00</h2>
+                            <span class="summary-text">Produtos com estoque baixo</span>
+                        </div>
+
+                        <div class="summary-card">
+                            <div class="summary-top">
+                                <div class="summary-icon red">
+                                    <img src="../img/x.png" alt="Sem Estoque" class="summary-img removed-icon">
+                                </div>
+                                <p class="summary-label">Sem Estoque</p>
+                            </div>
+
+                            <h2>00</h2>
+                            <span class="summary-text">Produtos indisponíveis</span>
+                        </div>
+
+                    </section>
+
+                    <section class="management-panel">
+
+                        <div class="panel-actions">
+
+                            <form class="search-box" action="" method="GET">
+
+                                <span class="search-icon">
+                                    <img src="../img/lupa.png" alt="Buscar" class="search-img">
+                                </span>
+
+                                <input type="search" name="pesquisa" placeholder="Buscar por usuário, produto ou nº da solicitação...">
+
+                            </form>
+
+                                <div class="select-wrapper">
+                                    <select class="filter-select">
+                                        <option>Categoria</option>
+                                        <option>Todas as categorias</option>
+                                        <option>Nome 1</option>
+                                        <option>Nome 2</option>
+                                        <option>Nome 3</option>
+                                    </select>
+                                </div>
+
+                            <select class="filter-select">
+                                <option>Status</option>
+                                <option>Todos os status</option>
+                                <option>Disponível</option>
+                                <option>Estoque baixo</option>
+                                <option>Sem estoque</option>
+                            </select>
+
+                            <a href="cadastrar-produto.html" class="btn btn-primary">
+                                + Novo Produto
+                            </a>
+
+                        </div>
+
+                        <div class="table-wrapper">
+
+                        <div class="table-wrapper">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Código</th>
+                                        <th>Produto</th>
+                                        <th>Categoria</th>
+                                        <th>Estoque Atual</th>
+                                        <th>Estoque Mínimo</th>
+                                        <th>Status</th>
+                                        <th>Ações</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        
+                                        <td>xxxxx</td>
+                                        <td>Nome</td>
+                                        <td>Nome</td>
+                                        <td>00</td>
+                                        <td>00</td>
+                                        <td><span class="status active">Disponível</span></td>
+                                        <td>
+                                            <a href="detalhar-produto.html" class="btn btn-tertiary">Ver detalhes</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>xxxxx</td>
+                                        <td>Nome</td>
+                                        <td>Nome</td>
+                                        <td>00</td>
+                                        <td>00</td>
+                                        <td><span class="status active">Disponível</span></td>
+                                        <td>
+                                            <a href="detalhar-produto.html" class="btn btn-tertiary">Ver detalhes</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>xxxxx</td>
+                                        <td>Nome</td>
+                                        <td>Nome</td>
+                                        <td>00</td>
+                                        <td>00</td>
+                                        <td><span class="status removed">Em falta</span></td>
+                                        <td>
+                                            <a href="detalhar-produto.html" class="btn btn-tertiary">Ver detalhes</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>xxxxx</td>
+                                        <td>Nome</td>
+                                        <td>Nome</td>
+                                        <td>00</td>
+                                        <td>00</td>
+                                        <td><span class="status inactive">Estoque baixo</span></td>
+                                        <td>
+                                            <a href="detalhar-produto.html" class="btn btn-tertiary">Ver detalhes</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="table-footer">
+
+                            <p class="table-info">
+                                Mostrando 4 de 15 produtos
+                            </p>
+
+                            <div class="pagination">
+
+                                <button class="page-btn">
+                                    &#8249;
+                                </button>
+
+                                <button class="page-btn active-page">
+                                    1
+                                </button>
+
+                                <button class="page-btn">
+                                    2
+                                </button>
+
+                                <button class="page-btn">
+                                    3
+                                </button>
+
+                                <button class="page-btn">
+                                    4
+                                </button>
+
+                                <button class="page-btn">
+                                    &#8250;
+                                </button>
+
+                            </div>
+
+                        </div>
+                    </section>
+                </main>
+            </div>
+
+    <footer class="footer">
+        <nav class="footer-links">
+            <a href="inicio-estagiario.html">Início</a>
+            <a href="/coordenador/sobreNos.html">Sobre nós</a>
+            <a href="consultar-prod-estagiario.html">Consultar Produto</a>
+        </nav>
+
+        <div class="footer-center">
+            <img src="../img/ifro-logo.webp" alt="IFRO Logo" class="footer-logo">
+        </div>
+
+        <div class="footer-contact">
+            <p>Contatos:</p>
+            <p>Telefone: (99) 99999-9999</p>
+            <p>E-mail: algumacoisa@ifro.edu.br</p>
+        </div>
+    </footer>
+</body>
+
+</html>

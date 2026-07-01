@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Coordenador - SACIT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@400;700&family=Inter:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/criar-coordenador.css">
+</head>
+
+<body>
+    <input type="checkbox" id="openSidebarMenu">
+
+    <label for="openSidebarMenu" class="sidebarIconToggle">
+        <div class="spinner"></div>
+        <div class="spinner"></div>
+        <div class="spinner"></div>
+    </label>
+
+    <label for="openSidebarMenu" class="overlay"></label>
+
+    <div class="page">
+        <aside class="sidebar" id="sidebarMenu">
+            <div class="sidebar-header">
+                <img src="../img/avatar-menu.png" alt="Avatar" class="sidebar-avatar">
+                <div>
+                    <p class="sidebar-title">Nome</p>
+                </div>
+            </div>
+
+            <nav>
+                <a href="inicio.html" class="menu-link">
+                    <span class="icon">
+                        <img src="../img/icone_inicio (1).png" alt="Icone Início" class="menu-icon">
+                    </span>
+                    Início
+                </a>
+                <a href="perfil.html" class="menu-link">
+                    <span class="icon">
+                        <img src="../img/icon_perfil.png" alt="Icone Perfil" class="menu-icon perfil-icon">
+                    </span>
+                    Perfil
+                </a>
+                <a href="notificacao-coordenador.html" class="menu-link">
+                    <span class="icon">
+                        <img src="../img/icone_notificacao.png" alt="Icone Notificações" class="menu-icon">
+                    </span>
+                    Notificações
+                </a>
+                <a href="gerenciar-perfil.html" class="menu-link">
+                    <span class="icon">
+                        <img src="../img/icone_gerenciar_perfis.png" alt="Icone Gerenciar Perfis" class="menu-icon">
+                    </span>
+                    Gerenciar Perfis
+                </a>
+                <a href="analisar-solicitacao.html" class="menu-link">
+                    <span class="icon">
+                        <img src="../img/icone_analisar_solicitacao.png" alt="Icone Analisar Solicitação"
+                            class="menu-icon">
+                    </span>
+                    Analisar Solicitação
+                </a>
+                <a href="controlar-estoque.html" class="menu-link">
+                    <span class="icon">
+                        <img src="../img/icone_controlar_estoque.png" alt="Icone Controlar Estoque" class="menu-icon">
+                    </span>
+                    Controlar Estoque
+                </a>
+                <a href="controlar-produto.html" class="menu-link">
+                    <span class="icon">
+                        <img src="../img/icone_controlar_produto.png" alt="Icone Controlar Produto" class="menu-icon">
+                    </span>
+                    Controlar Produto
+                </a>
+                <a href="consultar-historico.html" class="menu-link">
+                    <span class="icon">
+                        <img src="../img/icon_historico.png" alt="Icone Consultar Histórico" class="menu-icon">
+                    </span>
+                    Consultar Histórico
+                </a>
+                <a href="sair.html" class="menu-link">
+                    <span class="icon">
+                        <img src="../img/icone_sair.png" alt="Icone Sair" class="menu-icon">
+                    </span>
+                    Sair
+                </a>
+            </nav>
+
+        </aside>
+
+        <main class="content">
+            <header class="page-header">
+                <div class="title-group">
+                    <div class="title-row">
+                        <span class="title-mark"></span>
+                        <h1>Cadastrar Perfis</h1>
+                    </div>
+                    <p class="subtitle">Cadastre novos perfis de usuário</p>
+                </div>
+                <img src="../img/logo-sacit.png" alt="SACIT Logo" class="brand-logo">
+            </header>
+
+            <section class="create-card">
+                <div class="card-inner">
+                    <aside class="role-panel">
+                        <a href="criar-servidor.html" class="role-item">Servidor</a>
+                        <a href="criar-estagiario.html" class="role-item">Estagiário</a>
+                        <a href="criar-coordenador.html" class="role-item active">Coordenador</a>
+                    </aside>
+
+                    <div class="form-area">
+                        <div class="form-header-actions">
+                            <a href="gerenciar-perfil.html" class="close-link" title="Fechar">
+                                <img src="../img/fechar.png" alt="Fechar" class="close-icon">
+                            </a>
+                        </div>
+                        <h2>Cadastro de Coordenador</h2>
+                        <form class="create-form">
+
+                            <div class="form-row">
+                                <div class="field-group">
+                                    <label>Nome Completo</label>
+                                    <input type="text" placeholder="Nome completo">
+                                </div>
+
+                                <div class="field-group">
+                                    <label>Setor</label>
+                                <select>
+                                    <option value="">Selecione o setor</option>
+                                    <option value="Administrativo">Administrativo</option>
+                                    <option value="Financeiro">Financeiro</option>
+                                    <option value="Tecnologia">Tecnologia</option>
+                                    <option value="Operacional">Operacional</option>
+                                </select>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="field-group">
+                                    <label>E-mail Institucional</label>
+                                    <input type="email" placeholder="Digite seu e-mail...">
+                                </div>
+
+                                <div class="field-group">
+                                    <label>SIAPE</label>
+                                    <input type="text" placeholder="0000000">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="field-group">
+                                    <label>Senha</label>
+                                    <input type="password" placeholder="Senha">
+                                </div>
+
+                                <div class="field-group">
+                                    <label>Telefone</label>
+                                    <input type="tel" placeholder="(99) 99999-9999">
+                                </div>
+                            </div>
+
+                            <div class="field-group campo-confirmar">
+                                <label>Confirmar Senha</label>
+                                <input type="password" placeholder="Confirmar senha">
+                            </div>
+
+                            <div class="submit-wrap">
+                                <button class="btn btn-primary">Cadastrar</button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer class="footer">
+
+        <nav class="footer-links">
+            <a href="inicio.html">Início</a>
+            <a href="sobreNos.html">Sobre nós</a>
+            <a href="gerenciar-perfil.html">Gerenciar perfis</a>
+            <a href="consultar-produto.html">Consultar Produto</a>
+        </nav>
+
+        <div class="footer-center">
+            <img src="../img/ifro-logo.webp" alt="IFRO Logo" class="footer-logo">
+        </div>
+
+        <div class="footer-contact">
+            <p>Contatos:</p>
+            <p>Telefone: (99) 99999-9999</p>
+            <p>E-mail: algumacoisa@ifro.edu.br</p>
+        </div>
+
+    </footer>
+</body>
+
+</html>
