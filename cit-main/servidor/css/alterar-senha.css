@@ -28,15 +28,6 @@ a {
     transform: translateX(0);
 }
 
-#openSidebarMenu:checked ~ .footer{
-    transform: translateX(270px);
-    width: calc(100% - 270px);
-}
-
-#openSidebarMenu:checked ~ .page{
-    margin-left: 260px;
-}
-
 #openSidebarMenu:checked + .sidebarIconToggle .spinner{
     background: white;
 }
@@ -71,19 +62,9 @@ a {
     transition: 0.3s;
 }
 
-#openSidebarMenu:checked ~ .overlay{
-    opacity: 1;
-    visibility: visible;
-}
-
 .page{
     display: block;
     transition: margin-left 0.3s ease;
-}
-
-.main-content{
-    padding-top: 90px;
-    transition: 0.3s ease;
 }
 
 .sidebar{
@@ -314,7 +295,6 @@ h1 {
     font-size: 16px;
     font-weight: 700;
     cursor: pointer;
-    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
 }
 
 .btn-primary {
@@ -322,32 +302,30 @@ h1 {
     color: #ffffff;
 }
 
-.btn-secondary {
-    background: #ffffff;
-    color: #109e8c;
-    border: 1px solid #d9d9d9;
-}
-
 .footer{
-    background: #17443e;
-    color: white;
-    padding: 24px 15px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    position: relative;
-    z-index: 50;
-    transition: 0.25s ease;
-    will-change: transform;
-    align-items: center;
+    background:#17443e;
+    color:white;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+    padding:24px 15px;
 }
 
-.footer-links {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-self: start;
-    text-align: center;
-    gap: 8px;
+.footer-links,
+.footer-center,
+.footer-contact{
+    flex:1;
+    text-align:center;
+}
+
+.footer-links{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    gap:8px;
 }
 
 .footer-links a {
@@ -355,13 +333,10 @@ h1 {
     font-weight: 600;
 }
 
-.footer-center {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    gap: 10px;
+.footer-center{
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
 .footer-logo {
@@ -371,13 +346,12 @@ h1 {
     display: block;
 }
 
-.footer-contact {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-self: end;
-    text-align: center;
-    gap: 2px;
+.footer-contact{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    gap:2px;
 }
 
 .footer-contact p {
@@ -385,98 +359,210 @@ h1 {
     line-height: 2;
 }
 
-@media (max-width: 1000px) {
-    .page {
-        grid-template-columns: 220px 1fr;
+@media (max-width: 1400px){
+
+    .content{
+        padding: 32px;
     }
 
-    .sidebar {
-        width: 220px;
-        padding: 20px 10px;
+    .password-card{
+        max-width: 650px;
     }
 
-    .menu-link {
-        font-size: 15px;
-        gap: 10px;
-        padding: 10px 14px;
-    }
-
-    .menu-icon {
-        width: 28px;
-        height: 28px;
-    }
-
-    .content {
-        padding: 24px;
-    }
-
-    .password-card {
-        max-width: 600px;
-    }
 }
 
-@media (max-width: 700px) {
-    .page {
-        grid-template-columns: 90px 1fr;
+@media (max-width: 1200px){
+
+    .content{
+        padding: 28px 22px;
     }
 
-    .sidebar-title {
-        display: none;
+    .password-card{
+        max-width: 620px;
     }
 
-    .menu-link {
-        justify-content: center;
-        font-size: 0;
-        padding: 12px 0;
+    .brand-logo{
+        width: 125px;
     }
 
-    .menu-link span {
-        margin: 0;
+}
+
+@media (max-width: 992px){
+
+    .page-header{
+        display:flex;
+        justify-content:space-between;
+        align-items:flex-start;
+        gap:20px;
     }
 
-    .content {
-        padding: 18px;
+    .brand-logo{
+        width:115px;
+        flex-shrink:0;
     }
 
-    h1 {
-        font-size: 32px;
+    .password-card{
+        width:100%;
+        max-width:700px;
     }
 
-    .subtitle {
+   .footer{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        gap:20px;
+        padding:24px 15px;
+    }
+
+    .footer-logo{
+        max-width: 150px;
+    }
+
+    .footer-links a{
+        font-size: 15px;
+    }
+
+    .footer-contact p{
         font-size: 14px;
+        line-height: 1.6;
     }
 
-    .password-card {
-        padding: 22px;
-        margin-top: 18px;
-        max-width: 100%;
+}
+
+@media (max-width:768px){
+
+    .content{
+        padding:20px 16px;
     }
 
-    .password-group label {
+    .password-card{
+        padding:24px;
+    }
+
+    .card-heading{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .section-line{
+        width:100%;
+    }
+
+    .form-actions{
+        justify-content:center;
+    }
+
+    .btn{
+        width:100%;
+    }
+
+    .footer{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        gap:20px;
+        padding:24px 15px;
+    }
+
+    .footer-logo{
+        max-width: 150px;
+    }
+
+    .footer-links a{
+        font-size: 15px;
+    }
+
+    .footer-contact p{
         font-size: 14px;
+        line-height: 1.6;
     }
 
-    .password-input {
-        font-size: 14px;
-        padding: 12px 40px 12px 14px;
+}
+
+@media (max-width:576px){
+
+    .page-header{
+        align-items:flex-start;
     }
 
-    .form-actions {
-        justify-content: center;
+    .brand-logo{
+        width:95px;
+        margin-left:auto;
+        flex-shrink:0;
     }
 
-    .btn {
-        padding: 12px 24px;
-        font-size: 14px;
+    h1{
+        font-size:28px;
     }
 
-    .footer {
-        grid-template-columns: 1fr;
-        text-align: center;
+    .subtitle{
+        font-size:15px;
     }
 
-    .footer-contact {
-        align-items: center;
-        text-align: center;
+    .password-card{
+        padding:18px;
+        margin:20px auto;
     }
+
+    .password-group label{
+        font-size:15px;
+    }
+
+    .password-input{
+        font-size:15px;
+        padding:12px 45px 12px 14px;
+    }
+
+    .footer{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .footer-links,
+    .footer-center,
+    .footer-contact{
+        width:100%;
+    }
+
+}
+
+@media (max-width:400px){
+
+    .content{
+        padding:14px;
+    }
+
+    .brand-logo{
+        width:82px;
+    }
+
+    h1{
+        font-size:24px;
+    }
+
+    .subtitle{
+        font-size:14px;
+    }
+
+    .password-card{
+        padding:15px;
+        border-radius:16px;
+    }
+
+    .btn{
+        font-size:15px;
+        padding:12px;
+    }
+
+    .footer{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .footer-links,
+    .footer-center,
+    .footer-contact{
+        width:100%;
+    }
+
 }

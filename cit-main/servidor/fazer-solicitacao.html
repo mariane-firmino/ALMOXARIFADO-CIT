@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Fazer Solicitação | SACIT</title>
+    <title>Realizar Solicitação | SACIT</title>
     <link rel="stylesheet" href="css/fazer-solicitacao.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@400;700;800&family=Inter:wght@600;700;800&display=swap"
@@ -20,7 +20,6 @@
         <div class="spinner"></div>
     </label>
 
-    <label for="openSidebarMenu" class="overlay"></label>
     <div class="page">
         <aside class="sidebar" id="sidebarMenu">
             <div class="sidebar-header">
@@ -82,8 +81,8 @@
                 <div class="header-title">
                     <div class="title-flag"></div>
                     <div>
-                        <h1>Solicitar Produto</h1>
-                        <p class="subtitle">Solcite produtos no estoque.</p>
+                        <h1>Realizar Solicitação</h1>
+                        <p class="subtitle">Escolha os produtos que deseja solicitar.</p>
                     </div>
                 </div>
                 <img src="../img/logo-sacit.png" alt="SACIT" class="brand-logo">
@@ -91,50 +90,70 @@
 
             <section class="card-panel">
                 <div class="card-header">
-                    <h2>Realizar Solicitação</h2>
+                    <h2>Solicitação de Produto(s)</h2>
                     <a href="consultar-produto.html" class="close-btn" aria-label="Fechar">
                         <img src="../img/fechar.png" alt="Fechar">
                     </a>
                 </div>
 
-                <div class="upload-block">
-                    <div class="upload-placeholder">
-                        <img src="../img/adicionar-img.png" alt="Adicionar imagem" class="upload-icon">
-                    </div>
-                </div>
-
                 <form class="product-form">
-                    <div class="form-row">
 
-                        <div class="form-group">
-                            <label class="field-label" for="product-name">Nome</label>
+                    <div class="product-list">
+                        
+                        <div class="product-card">
 
-                            <input id="product-name"
-                                type="text" placeholder="Nome do produto" class="field-input" readonly>
+                            <img src="../img/adicionar-img.png" alt="Produto" class="product-image">
+
+                            <div class="product-info">
+                                <h3>Nome do Produto</h3>
+                                <p>Categoria</p>
+                            </div>
+
+                            <div class="quantity-area">
+                                <label for="qtd1">Quantidade</label>
+                                <input type="number" id="qtd1" min="1" value="1">
+                            </div>
+
                         </div>
 
-                        <div class="form-group">
-                            <label class="field-label" for="product-name">Nome</label>
+                        <div class="product-card">
 
-                            <input id="product-name"
-                                type="text" placeholder="Categoria do produto" class="field-input" readonly>
+                            <img src="../img/adicionar-img.png" alt="Produto" class="product-image">
+
+                            <div class="product-info">
+                                <h3>Nome do Produto</h3>
+                                <p>Categoria</p>
+                            </div>
+
+                            <div class="quantity-area">
+                                <label for="qtd2">Quantidade</label>
+                                <input type="number" id="qtd2" min="1" value="1">
+                            </div>
+
                         </div>
+                        
+                        <div class="product-card">
 
-                    </div>
+                            <img src="../img/adicionar-img.png" alt="Produto" class="product-image">
 
-                    <div class="form-row">
+                            <div class="product-info">
+                                <h3>Nome do Produto</h3>
+                                <p>Categoria</p>
+                            </div>
 
-                        <div class="form-group">
-                            <label class="field-label" for="quantity">Quantidade</label>
+                            <div class="quantity-area">
+                                <label for="qtd3">Quantidade</label>
+                                <input type="number" id="qtd3" min="1" value="1">
+                            </div>
 
-                            <input id="quantity" type="number" placeholder="0" class="field-input">
                         </div>
 
                     </div>
 
                     <button type="submit" class="btn-primary">
-                        <a href="consultar-produto.html">Enviar</a>
+                        Enviar 
                     </button>
+
                 </form>
             </section>
         </main>

@@ -1,0 +1,230 @@
+.card-panel {
+    background: white;
+
+    max-width: 720px;
+
+    margin: auto;
+
+    border-radius: 20px;
+
+    padding: 35px;
+
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 30px;
+}
+
+.card-header h2 {
+    font-size: 28px;
+}
+
+.close-btn img {
+    width: 22px;
+}
+
+.upload-block {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.upload-placeholder {
+    width: 240px;
+    height: 190px;
+    cursor: pointer;
+    background: #edf3f1;
+
+    border-radius: 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.upload-icon {
+    width: 70px;
+}
+
+.product-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    align-items: center;
+}
+
+.form-row,
+.form-group,
+.field-input,
+.textarea-field,
+.field-label {
+    width: 100%;
+}
+
+.field-label {
+    font-weight: 700;
+    color: black;
+    margin-bottom: 8px;
+}
+
+.field-input {
+    padding: 14px;
+    border-radius: 10px;
+    border: 1px solid #d9d9d9;
+    font-size: 16px;
+}
+
+.field-input:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.textarea-field {
+    resize: vertical;
+}
+
+.btn-primary {
+    width: 40%;
+    padding: 15px;
+    border: none;
+    border-radius: 20px;
+    background: var(--primary);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+@media (min-width:1600px) {
+    .card-panel {
+        max-width: 780px;
+    }
+
+}
+
+@media (max-width:1200px) {
+    .card-panel {
+        max-width: 700px;
+    }
+
+}
+
+@media (max-width:992px) {
+
+    .card-panel {
+        max-width: 650px;
+        padding: 30px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .btn-primary {
+        width: 60%;
+    }
+
+}
+
+@media (max-width:768px) {
+
+    .card-panel {
+        width: 100%;
+        max-width: 620px;
+        padding: 25px;
+    }
+
+    .upload-placeholder {
+        width: 210px;
+        height: 170px;
+    }
+
+    .upload-icon {
+        width: 60px;
+    }
+
+    .btn-primary {
+        width: 70%;
+    }
+
+}
+
+@media (max-width:576px) {
+    .page-header {
+        gap: 15px;
+        align-items: flex-start;
+    }
+
+    .header-title {
+        gap: 12px;
+    }
+
+    .title-flag {
+        height: 38px;
+    }
+
+    .card-panel {
+        width: 100%;
+        padding: 20px;
+        border-radius: 16px;
+    }
+
+    .card-header h2 {
+        font-size: 22px;
+    }
+
+    .upload-placeholder {
+        width: 170px;
+        height: 140px;
+    }
+
+    .upload-icon {
+        width: 50px;
+    }
+
+    .field-input {
+        padding: 12px;
+        font-size: 15px;
+    }
+
+    .btn-primary {
+        width: 100%;
+    }
+
+}
+
+@media (max-width:380px) {
+    .card-panel {
+        padding: 16px;
+    }
+
+    .card-header h2 {
+        font-size: 20px;
+    }
+
+    .upload-placeholder {
+        width: 145px;
+        height: 120px;
+    }
+
+    .upload-icon {
+        width: 42px;
+    }
+
+}

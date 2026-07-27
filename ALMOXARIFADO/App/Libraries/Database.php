@@ -63,6 +63,7 @@ class Database{
         $this->executa();
         return $this->stmt->fetch(PDO::FETCH_OBJ);
     }//fim da função resultados
+    
     //obtem um conjunto de registros
     public function resultados(){
         $this->executa();

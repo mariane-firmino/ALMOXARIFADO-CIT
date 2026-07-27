@@ -5,427 +5,418 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Analisar Solicitação - SACIT</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/analisar-solicitacao.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@400;600;700&family=Inria+Serif:wght@400;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="css/analisar-solicitacao.css">
 </head>
 
 <body>
     <input type="checkbox" id="openSidebarMenu">
 
-        <label for="openSidebarMenu" class="sidebarIconToggle">
-            <div class="spinner"></div>
-            <div class="spinner"></div>
-            <div class="spinner"></div>
-        </label>
+    <label for="openSidebarMenu" class="sidebarIconToggle">
+        <div class="spinner"></div>
+        <div class="spinner"></div>
+        <div class="spinner"></div>
+    </label>
 
-        <label for="openSidebarMenu" class="overlay"></label>
-            <div class="page">
-                <aside class="sidebar" id="sidebarMenu">
-                    <div class="sidebar-header">
-                        <img src="../img/avatar-menu.png" alt="Avatar" class="sidebar-avatar">
-                        <div>
-                            <p class="sidebar-title">Nome</p>
-                        </div>
-                    </div>
-
-                    <nav>
-                        <a href="inicio.html" class="menu-link">
-                            <span class="icon">
-                                <img src="../img/icone_inicio (1).png" alt="Icone Início" class="menu-icon">
-                            </span>
-                            Início
-                        </a>
-                        <a href="perfil.html" class="menu-link">
-                            <span class="icon">
-                                <img src="../img/icon_perfil.png" alt="Icone Perfil" class="menu-icon perfil-icon">
-                            </span>
-                            Perfil
-                        </a>
-                        <a href="notificacao-coordenador.html" class="menu-link">
-                            <span class="icon">
-                                <img src="../img/icone_notificacao.png" alt="Icone Notificações" class="menu-icon">
-                            </span>
-                            Notificações
-                        </a>
-                        <a href="gerenciar-perfil.html" class="menu-link active">
-                            <span class="icon">
-                                <img src="../img/icone_gerenciar_perfis.png" alt="Icone Gerenciar Perfis" class="menu-icon">
-                            </span>
-                            Gerenciar Perfis
-                        </a>
-                        <a href="analisar-solicitacao.html" class="menu-link">
-                            <span class="icon">
-                                <img src="../img/icone_analisar_solicitacao.png" alt="Icone Analisar Solicitação" class="menu-icon">
-                            </span>
-                            Analisar Solicitação
-                        </a>
-                        <a href="controlar-estoque.html" class="menu-link">
-                            <span class="icon">
-                                <img src="../img/icone_controlar_estoque.png" alt="Icone Controlar Estoque" class="menu-icon">
-                            </span>
-                            Controlar Estoque
-                        </a>
-                        <a href="controlar-produto.html" class="menu-link">
-                            <span class="icon">
-                                <img src="../img/icone_controlar_produto.png" alt="Icone Controlar Produto" class="menu-icon">
-                            </span>
-                            Controlar Produto
-                        </a>
-                        <a href="consultar-historico.html" class="menu-link">
-                            <span class="icon">
-                                <img src="../img/icon_historico.png" alt="Icone Histórico" class="menu-icon">
-                            </span>
-                            Consultar Histórico
-                        </a>
-                        <a href="sair.html" class="menu-link">
-                            <span class="icon">
-                                <img src="../img/icone_sair.png" alt="Icone Sair" class="menu-icon">
-                            </span>
-                            Sair
-                        </a>
-                    </nav>
-                </aside>
-
-                <main class="content">
-                    <header class="page-header">
-                        <div class="title-group">
-                            <div class="title-row">
-                                <span class="title-mark"></span>
-                                <h1>Analizar Solitações</h1>
-                            </div>
-                            <p class="subtitle">Gerencie e analise as solicitações dos usuários.</p>
-                        </div>
-                        <img src="../img/logo-sacit.png" alt="SACIT Logo" class="brand-logo" />
-                    </header>
-
-                    <section class="actions-panel">
-
-                        <div class="summary-card">
-                            <div class="summary-top">
-                                <div class="summary-icon green">
-                                    <img src="../img/icon_total.png" alt="Total de solicitações" class="summary-img total-icon">
-                                </div>
-                                <p class="summary-label">Total de Solicitações</p>
-                            </div>
-
-                            <h2>00</h2>
-                            <span class="summary-text">Todas as solicitações</span>
-                        </div>
-
-                        <div class="summary-card">
-                            <div class="summary-top">
-                                <div class="summary-icon rox">
-                                    <img src="../img/icon_devolucao.png" alt="Itens em devolução" class="summary-img dev-icon">
-                                </div>
-                                <p class="summary-label">Em Devolução</p>
-                            </div>
-
-                            <h2>00</h2>
-                            <span class="summary-text">Aguardando devolução</span>
-                        </div>
-
-                        <div class="summary-card">
-                            <div class="summary-top">
-                                <div class="summary-icon yellow">
-                                    <img src="../img/icone_alerta.png" alt="Estoque baixo" class="summary-img inactive-icon">
-                                </div>
-                                <p class="summary-label">Pendentes</p>
-                            </div>
-
-                            <h2>00</h2>
-                            <span class="summary-text">Aguardando análise</span>
-                        </div>
-
-                        <div class="summary-card">
-                            <div class="summary-top">
-                                <div class="summary-icon green2">
-                                    <img src="../img/icon_verificado.png" alt="Solicitações aprovadas" class="summary-img active-icon">
-                                </div>
-                                <p class="summary-label">Aprovadas</p>
-                            </div>
-
-                            <h2>00</h2>
-                            <span class="summary-text">Solicitações aprovadas</span>
-                        </div>
-
-                        <div class="summary-card">
-                            <div class="summary-top">
-                                <div class="summary-icon red">
-                                    <img src="../img/x.png" alt="Sem Estoque" class="summary-img removed-icon">
-                                </div>
-                                <p class="summary-label">Negadas</p>
-                            </div>
-
-                            <h2>00</h2>
-                            <span class="summary-text">Solicitações negadas</span>
-                        </div>
-
-                    </section>
-
-                    <section class="management-panel">
-
-                        <div class="panel-actions">
-
-                            <form class="search-box" action="" method="GET">
-
-                                <span class="search-icon">
-                                    <img src="../img/lupa.png" alt="Buscar" class="search-img">
-                                </span>
-
-                                <input type="search" name="pesquisa" placeholder="Buscar por usuário, produto ou nº da solicitação...">
-
-                            </form>
-
-                                <div class="select-wrapper">
-                                    <select class="filter-select">
-                                        <option>Status</option>
-                                        <option>Todos os status</option>
-                                        <option>Aprovada</option>
-                                        <option>Pendente</option>
-                                        <option>Negada</option>
-                                        <option>Em devolução</option>
-                                    </select>
-                                </div>
-
-                                <div class="select-wrapper">
-                                    <select class="filter-select">
-                                        <option>Categoria</option>
-                                        <option>Todas as categorias</option>
-                                        <option>X</option>
-                                        <option>Y</option>
-                                        <option>Z</option>
-                                        <option>A</option>
-                                    </select>
-                            </div>
-
-                            <div class="date-box">
-                                <input type="date">
-                            </div>
-
-                        </div>
-
-                        <div class="table-wrapper">
-
-                        <div class="table-wrapper">
-                            <table>
-                                <thead>
-                                    <div class="tabs">
-                                        <button class="tab active">Todas</button>
-                                        <button class="tab">Pendentes</button>
-                                        <button class="tab">Aprovadas</button>
-                                        <button class="tab">Negadas</button>
-                                        <button class="tab">Em devolução</button>
-                                    </div>
-
-                                    <script>
-                                    const tabs = document.querySelectorAll('.tab');
-
-                                    tabs.forEach(tab => {
-                                        tab.addEventListener('click', () => {
-
-                                            tabs.forEach(t => t.classList.remove('active'));
-
-                                            tab.classList.add('active');
-                                        });
-                                    });
-                                    </script>
-                                    <tr>
-                                        <th>Código</th>
-                                        <th>Usuário</th>
-                                        <th>Produto(s)</th>
-                                        <th>Quantidade</th>
-                                        <th>Data da Solicitação</th>
-                                        <th>Status</th>
-                                        <th>Ações</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>xxxxxxx</td>
-                                        <td>
-                                            Nome <br>
-                                            <span class="codigo-produto">nome@ifro.edu.br</span>
-                                        </td>
-                                        <td> Nome </td>
-                                        <td>X unidades</td>
-                                        <td>
-                                            dd/mm/aaaa <br> hh:mm
-                                        </td>
-                                        <td><span class="status removed">Negada</span></td>
-                                        <td class="acoes">
-                                            <div class="dropdown">
-                                                <button class="menu-btn">...</button>
-
-                                                <div class="dropdown-content">
-                                                    <a href="#">Ver solicitação</a>
-                                                    <a href="#">Aprovar solicitação</a>
-                                                    <a href="#">Negar solicitação</a>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>xxxxxxx</td>
-                                        <td>
-                                            Nome <br>
-                                            <span class="codigo-produto">nome@ifro.edu.br</span>
-                                        </td>
-                                        <td> Nome </td>
-                                        <td>X unidades</td>
-                                        <td>
-                                            dd/mm/aaaa <br> hh:mm
-                                        </td>
-                                        <td><span class="status active">Aprovada</span></td>
-                                        <td class="acoes">
-                                            <div class="dropdown">
-                                                <button class="menu-btn">...</button>
-
-                                                <div class="dropdown-content">
-                                                    <a href="#">Ver solicitação</a>
-                                                    <a href="#">Aprovar solicitação</a>
-                                                    <a href="#">Negar solicitação</a>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>xxxxxxx</td>
-                                        <td>
-                                            Nome <br>
-                                            <span class="codigo-produto">nome@ifro.edu.br</span>
-                                        </td>
-                                        <td> Nome </td>
-                                        <td>X unidades</td>
-                                        <td>
-                                            dd/mm/aaaa <br> hh:mm
-                                        </td>
-                                        <td><span class="status roxex">Em devolução</span></td>
-                                        <td class="acoes">
-                                            <div class="dropdown">
-                                                <button class="menu-btn">...</button>
-
-                                                <div class="dropdown-content">
-                                                    <a href="#">Ver solicitação</a>
-                                                    <a href="#">Aprovar solicitação</a>
-                                                    <a href="#">Negar solicitação</a>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>xxxxxxx</td>
-                                        <td>
-                                            Nome <br>
-                                            <span class="codigo-produto">nome@ifro.edu.br</span>
-                                        </td>
-                                        <td> Nome </td>
-                                        <td>X unidades</td>
-                                        <td>
-                                            dd/mm/aaaa <br> hh:mm
-                                        </td>
-                                        <td><span class="status removed">Negada</span></td>
-                                        <td class="acoes">
-                                            <div class="dropdown">
-                                                <button class="menu-btn">...</button>
-
-                                                <div class="dropdown-content">
-                                                    <a href="#">Ver solicitação</a>
-                                                    <a href="#">Aprovar solicitação</a>
-                                                    <a href="#">Negar solicitação</a>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>xxxxxxx</td>
-                                        <td>
-                                            Nome <br>
-                                            <span class="codigo-produto">nome@ifro.edu.br</span>
-                                        </td>
-                                        <td> Nome </td>
-                                        <td>X unidades</td>
-                                        <td>
-                                            dd/mm/aaaa <br> hh:mm
-                                        </td>
-                                        <td><span class="status inactive">Pendente</span></td>
-                                        <td class="acoes">
-                                            <div class="dropdown">
-                                                <button class="menu-btn">...</button>
-
-                                                <div class="dropdown-content">
-                                                    <a href="#">Ver solicitação</a>
-                                                    <a href="#">Aprovar solicitação</a>
-                                                    <a href="#">Negar solicitação</a>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="table-footer">
-
-                            <p class="table-info">
-                                Mostrando 1 a 5 de 15 solicitações 
-                            </p>
-
-                            <div class="pagination">
-
-                                <button class="page-btn">
-                                    &#8249;
-                                </button>
-
-                                <button class="page-btn active-page">
-                                    1
-                                </button>
-
-                                <button class="page-btn">
-                                    2
-                                </button>
-
-                                <button class="page-btn">
-                                    3
-                                </button>
-
-                                <button class="page-btn">
-                                    4
-                                </button>
-
-                                <button class="page-btn">
-                                    &#8250;
-                                </button>
-
-                            </div>
-
-                        </div>
-                    </section>
-                </main>
+    <label for="openSidebarMenu" class="overlay"></label>
+    <div class="page">
+        <aside class="sidebar" id="sidebarMenu">
+            <div class="sidebar-header">
+                <img src="../img/avatar-menu.png" alt="Avatar" class="sidebar-avatar">
+                <div>
+                    <p class="sidebar-title">Nome</p>
+                </div>
             </div>
 
-            <footer class="footer">
+            <nav>
+                <a href="inicio.html" class="menu-link">
+                    <span class="icon">
+                        <img src="../img/icone_inicio (1).png" alt="Icone Início" class="menu-icon">
+                    </span>
+                    Início
+                </a>
+                <a href="perfil.html" class="menu-link">
+                    <span class="icon">
+                        <img src="../img/icon_perfil.png" alt="Icone Perfil" class="menu-icon perfil-icon">
+                    </span>
+                    Perfil
+                </a>
+                <a href="notificacao-coordenador.html" class="menu-link">
+                    <span class="icon">
+                        <img src="../img/icone_notificacao.png" alt="Icone Notificações" class="menu-icon">
+                    </span>
+                    Notificações
+                </a>
+                <a href="gerenciar-perfil.html" class="menu-link active">
+                    <span class="icon">
+                        <img src="../img/icone_gerenciar_perfis.png" alt="Icone Gerenciar Perfis" class="menu-icon">
+                    </span>
+                    Gerenciar Perfis
+                </a>
+                <a href="analisar-solicitacao.html" class="menu-link">
+                    <span class="icon">
+                        <img src="../img/icone_analisar_solicitacao.png" alt="Icone Analisar Solicitação"
+                            class="menu-icon">
+                    </span>
+                    Analisar Solicitação
+                </a>
+                <a href="controlar-estoque.html" class="menu-link">
+                    <span class="icon">
+                        <img src="../img/icone_controlar_estoque.png" alt="Icone Controlar Estoque" class="menu-icon">
+                    </span>
+                    Controlar Estoque
+                </a>
+                <a href="controlar-produto.html" class="menu-link">
+                    <span class="icon">
+                        <img src="../img/icone_controlar_produto.png" alt="Icone Controlar Produto" class="menu-icon">
+                    </span>
+                    Controlar Produto
+                </a>
+                <a href="consultar-historico.html" class="menu-link">
+                    <span class="icon">
+                        <img src="../img/icon_historico.png" alt="Icone Histórico" class="menu-icon">
+                    </span>
+                    Consultar Histórico
+                </a>
+                <a href="sair.html" class="menu-link">
+                    <span class="icon">
+                        <img src="../img/icone_sair.png" alt="Icone Sair" class="menu-icon">
+                    </span>
+                    Sair
+                </a>
+            </nav>
+        </aside>
 
-                    <nav class="footer-links">
-                        <a href="inicio.html">Início</a>
-                        <a href="sobreNos.html">Sobre nós</a>
-                        <a href="gerenciar-perfil.html">Gerenciar perfis</a>
-                        <a href="consultar-produto.html">Consultar Produto</a>
-                    </nav>
+        <main class="content">
+            <header class="page-header">
+                <div class="title-group">
+                    <div class="title-row">
+                        <span class="title-mark"></span>
+                        <h1>Analizar Solicitações</h1>
+                    </div>
+                    <p class="subtitle">Gerencie e analise as solicitações dos usuários.</p>
+                </div>
+                <img src="../img/logo-sacit.png" alt="SACIT Logo" class="brand-logo" />
+            </header>
 
-                    <div class="footer-center">
-                        <img src="../img/ifro-logo.webp" alt="IFRO Logo" class="footer-logo">
+            <section class="actions-panel">
+
+                <div class="summary-card">
+                    <div class="summary-top">
+                        <div class="summary-icon green">
+                            <img src="../img/icon_total.png" alt="Total de solicitações" class="summary-img total-icon">
+                        </div>
+                        <p class="summary-label">Total de Solicitações</p>
                     </div>
 
-                    <div class="footer-contact">
-                        <p>Contatos:</p>
-                        <p>Telefone: (99) 99999-9999</p>
-                        <p>E-mail: algumacoisa@ifro.edu.br</p>
+                    <h2>00</h2>
+                    <span class="summary-text">Todas as solicitações</span>
+                </div>
+
+                <div class="summary-card">
+                    <div class="summary-top">
+                        <div class="summary-icon rox">
+                            <img src="../img/icon_devolucao.png" alt="Itens em devolução" class="summary-img dev-icon">
+                        </div>
+                        <p class="summary-label">Em Devolução</p>
                     </div>
 
-                </footer>
+                    <h2>00</h2>
+                    <span class="summary-text">Aguardando devolução</span>
+                </div>
+
+                <div class="summary-card">
+                    <div class="summary-top">
+                        <div class="summary-icon yellow">
+                            <img src="../img/icone_alerta.png" alt="Estoque baixo" class="summary-img inactive-icon">
+                        </div>
+                        <p class="summary-label">Pendentes</p>
+                    </div>
+
+                    <h2>00</h2>
+                    <span class="summary-text">Aguardando análise</span>
+                </div>
+
+                <div class="summary-card">
+                    <div class="summary-top">
+                        <div class="summary-icon green2">
+                            <img src="../img/icon_verificado.png" alt="Solicitações aprovadas"
+                                class="summary-img active-icon">
+                        </div>
+                        <p class="summary-label">Aprovadas</p>
+                    </div>
+
+                    <h2>00</h2>
+                    <span class="summary-text">Solicitações aprovadas</span>
+                </div>
+
+                <div class="summary-card">
+                    <div class="summary-top">
+                        <div class="summary-icon red">
+                            <img src="../img/x.png" alt="Sem Estoque" class="summary-img removed-icon">
+                        </div>
+                        <p class="summary-label">Negadas</p>
+                    </div>
+
+                    <h2>00</h2>
+                    <span class="summary-text">Solicitações negadas</span>
+                </div>
+
+            </section>
+
+            <section class="management-panel">
+
+                <div class="panel-actions">
+
+                    <form class="search-box" action="" method="GET">
+
+                        <span class="search-icon">
+                            <img src="../img/lupa.png" alt="Buscar" class="search-img">
+                        </span>
+
+                        <input type="search" name="pesquisa"
+                            placeholder="Buscar por usuário, produto ou nº da solicitação...">
+
+                    </form>
+
+                    <div class="select-wrapper">
+                        <select class="filter-select">
+                            <option>Status</option>
+                            <option>Todos os status</option>
+                            <option>Aprovada</option>
+                            <option>Pendente</option>
+                            <option>Negada</option>
+                            <option>Em devolução</option>
+                        </select>
+                    </div>
+
+                    <div class="select-wrapper">
+                        <select class="filter-select">
+                            <option>Categoria</option>
+                            <option>Todas as categorias</option>
+                            <option>X</option>
+                            <option>Y</option>
+                            <option>Z</option>
+                            <option>A</option>
+                        </select>
+                    </div>
+
+                    <div class="date-box">
+                        <input type="date" id="dataFiltro" placeholder="dd/mm/aaaa">
+                    </div>
+
+                </div>
+
+                <div class="table-wrapper">
+
+                    <div class="tabs">
+                        <button class="tab active" data-filter="todas">Todas</button>
+                        <button class="tab" data-filter="pendente">Pendentes</button>
+                        <button class="tab" data-filter="aprovada">Aprovadas</button>
+                        <button class="tab" data-filter="negada">Negadas</button>
+                        <button class="tab" data-filter="devolucao">Em devolução</button>
+                    </div>
+
+                    <table>
+                        <thead>
+
+                            <tr>
+                                <th>Código</th>
+                                <th>Usuário</th>
+                                <th>Produto(s)</th>
+                                <th>Quantidade</th>
+                                <th>Data da Solicitação</th>
+                                <th>Status</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr data-status="negada">
+                                <td>xxxxxxx</td>
+                                <td>
+                                    Nome <br>
+                                    <span class="codigo-produto">nome@ifro.edu.br</span>
+                                </td>
+                                <td> Nome </td>
+                                <td>X unidades</td>
+                                <td>
+                                    dd/mm/aaaa <br> hh:mm
+                                </td>
+                                <td><span class="status removed">Negada</span></td>
+                                <td class="acoes">
+                                    <div class="dropdown">
+                                        <button class="menu-btn">...</button>
+
+                                        <div class="dropdown-content">
+                                            <a href="#">Ver solicitação</a>
+                                            <a href="#">Aprovar solicitação</a>
+                                            <a href="#">Negar solicitação</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr data-status="aprovada">
+                                <td>xxxxxxx</td>
+                                <td>
+                                    Nome <br>
+                                    <span class="codigo-produto">nome@ifro.edu.br</span>
+                                </td>
+                                <td> Nome </td>
+                                <td>X unidades</td>
+                                <td>
+                                    dd/mm/aaaa <br> hh:mm
+                                </td>
+                                <td><span class="status active">Aprovada</span></td>
+                                <td class="acoes">
+                                    <div class="dropdown">
+                                        <button class="menu-btn">...</button>
+
+                                        <div class="dropdown-content">
+                                            <a href="#">Ver solicitação</a>
+                                            <a href="#">Aprovar solicitação</a>
+                                            <a href="#">Negar solicitação</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr data-status="devolucao">
+                                <td>xxxxxxx</td>
+                                <td>
+                                    Nome <br>
+                                    <span class="codigo-produto">nome@ifro.edu.br</span>
+                                </td>
+                                <td> Nome </td>
+                                <td>X unidades</td>
+                                <td>
+                                    dd/mm/aaaa <br> hh:mm
+                                </td>
+                                <td><span class="status roxex">Em devolução</span></td>
+                                <td class="acoes">
+                                    <div class="dropdown">
+                                        <button class="menu-btn">...</button>
+
+                                        <div class="dropdown-content">
+                                            <a href="#">Ver solicitação</a>
+                                            <a href="#">Aprovar solicitação</a>
+                                            <a href="#">Negar solicitação</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr data-status="negada">
+                                <td>xxxxxxx</td>
+                                <td>
+                                    Nome <br>
+                                    <span class="codigo-produto">nome@ifro.edu.br</span>
+                                </td>
+                                <td> Nome </td>
+                                <td>X unidades</td>
+                                <td>
+                                    dd/mm/aaaa <br> hh:mm
+                                </td>
+                                <td><span class="status removed">Negada</span></td>
+                                <td class="acoes">
+                                    <div class="dropdown">
+                                        <button class="menu-btn">...</button>
+
+                                        <div class="dropdown-content">
+                                            <a href="#">Ver solicitação</a>
+                                            <a href="#">Aprovar solicitação</a>
+                                            <a href="#">Negar solicitação</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr data-status="pendente">
+                                <td>xxxxxxx</td>
+                                <td>
+                                    Nome <br>
+                                    <span class="codigo-produto">nome@ifro.edu.br</span>
+                                </td>
+                                <td> Nome </td>
+                                <td>X unidades</td>
+                                <td>
+                                    dd/mm/aaaa <br> hh:mm
+                                </td>
+                                <td><span class="status inactive">Pendente</span></td>
+                                <td class="acoes">
+                                    <div class="dropdown">
+                                        <button class="menu-btn">...</button>
+
+                                        <div class="dropdown-content">
+                                            <a href="#">Ver solicitação</a>
+                                            <a href="#">Aprovar solicitação</a>
+                                            <a href="#">Negar solicitação</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-footer">
+
+                    <p class="table-info">
+                        Mostrando 1 a 5 de 15 solicitações
+                    </p>
+
+                    <div class="pagination">
+
+                        <button class="page-btn">
+                            &#8249;
+                        </button>
+
+                        <button class="page-btn active-page">
+                            1
+                        </button>
+
+                        <button class="page-btn">
+                            2
+                        </button>
+
+                        <button class="page-btn">
+                            3
+                        </button>
+
+                        <button class="page-btn">
+                            4
+                        </button>
+
+                        <button class="page-btn">
+                            &#8250;
+                        </button>
+
+                    </div>
+
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer class="footer">
+
+        <nav class="footer-links">
+            <a href="inicio.html">Início</a>
+            <a href="sobreNos.html">Sobre nós</a>
+            <a href="gerenciar-perfil.html">Gerenciar perfis</a>
+            <a href="consultar-produto.html">Consultar Produto</a>
+        </nav>
+
+        <div class="footer-center">
+            <img src="../img/ifro-logo.webp" alt="IFRO Logo" class="footer-logo">
+        </div>
+
+        <div class="footer-contact">
+            <p>Contatos:</p>
+            <p>Telefone: (99) 99999-9999</p>
+            <p>E-mail: algumacoisa@ifro.edu.br</p>
+        </div>
+
+    </footer>
+    <script src="../js/datas.js"></script>
+    <script src="../js/analisar-solicitacao-coordenador.js"></script>
 </body>
 
 </html>

@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Histórico Servidor - SACIT</title>
     <link rel="stylesheet" href="css/consultar-historico.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@400;700;800&family=Inter:wght@600;700;800&display=swap"
-        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@400;700;800&family=Inter:wght@600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <input type="checkbox" id="openSidebarMenu">
@@ -17,9 +16,7 @@
         <div class="spinner"></div>
         <div class="spinner"></div>
     </label>
-
-    <label for="openSidebarMenu" class="overlay"></label>
-
+    
     <div class="page">
         <aside class="sidebar" id="sidebarMenu">
             <div class="sidebar-header">
@@ -163,22 +160,12 @@
                             </select>
 
                             <div class="date-group">
-                                    <label>Data de início</label>
-                                    <div class="date-box">
-                                        <input type="date" placeholder="dd/mm/aaaa">
-                                    </div>
-                                </div>
 
-                                <div class="date-group">
-                                    <label>Data final</label>
-                                    <div class="date-box">
-                                        <input type="date" placeholder="dd/mm/aaaa">
-                                    </div>
-                                </div>
+                                <input type="text" id="periodo" class="date-range-input" placeholder="dd/mm/aaaa até dd/mm/aaaa">
+
+                            </div>
 
                         </div>
-
-                        <div class="table-wrapper">
 
                         <div class="table-wrapper">
                             <table>
@@ -188,7 +175,7 @@
                                         <th>Produto</th>
                                         <th>Quantidade</th>
                                         <th>Data</th>
-                                        <th>Satus</th>
+                                        <th>Status</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -220,6 +207,7 @@
                                         <td>dd/mm/aaaa<br>hh:mm</td>
                                         <td><span class="status active">Aprovada</span></td>
                                     </tr>
+                                    <tr>  
                                         <td>00000</td>
                                         <td>Nome</td>
                                         <td>00</td>
@@ -285,6 +273,10 @@
             <p>E-mail: algumacoisa@ifro.edu.br</p>
         </div>
     </footer>
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/pt.js"></script>
+
+        <script src="../js/datas.js"></script>
 </body>
 
 </html>

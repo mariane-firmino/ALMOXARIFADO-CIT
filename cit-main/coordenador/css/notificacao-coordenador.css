@@ -28,15 +28,6 @@ a{
     transform: translateX(0);
 }
 
-#openSidebarMenu:checked ~ .footer{
-    transform: translateX(270px);
-    width: calc(100% - 270px);
-}
-
-#openSidebarMenu:checked ~ .page{
-    margin-left: 260px;
-}
-
 #openSidebarMenu:checked + .sidebarIconToggle .spinner{
     background: white;
 }
@@ -64,26 +55,13 @@ a{
 .spinner{
     width: 100%;
     height: 3px;
-    background: rgb(255, 255, 255,0.85);
     background: #4b5564;
     margin: 3px 0;
     border-radius: 20px;
     transition: 0.3s;
 }
-
-#openSidebarMenu:checked ~ .overlay{
-    opacity: 1;
-    visibility: visible;
-}
-
 .page{
     display: block;
-    transition: margin-left 0.3s ease;
-}
-
-.main-content{
-    padding-top: 90px;
-    transition: 0.3s ease;
 }
 
 .sidebar{
@@ -212,17 +190,10 @@ h1 {
     margin: 20px auto 40px auto;
 }
 
-.search-icon {
+.search-img {
     width: 16px;
     height: 16px;
     object-fit: contain;
-}
-
-.filter-icon{
-    width: 38px;
-    height: 38px;
-    object-fit: contain;
-    flex-shrink: 0;
 }
 
 .notifications-toolbar{
@@ -275,22 +246,6 @@ h1 {
     background: transparent;
 }
 
-.filter-box{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    padding: 4px 20px;
-    border: none;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    background: white;
-    border-radius: 10px;
-    font-size: 15px;
-    font-weight: 700;
-    cursor: pointer;
-    overflow: hidden;
-}
-
 .notifications-list{
     display: flex;
     flex-direction: column;
@@ -311,27 +266,13 @@ h1 {
     cursor: pointer;
 }
 
-.notification-item:hover{
-    transform: none;
-    box-shadow: none;
-}
-
-.notification-item.read{
-    background: #ffffff;
-    opacity: 1;
-    border: 1px solid #e5e5e5;
-}
-
 .notification-icon{
     width: 38px;
     height: 38px;
-
     border-radius: 50%;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     flex-shrink: 0;
 }
 
@@ -407,24 +348,6 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.btn-mark-read,
-.btn-mark-unread{
-    background: none;
-    border: none;
-    cursor: pointer;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    transition: 0.2s ease;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.notification-action{
     position: relative;
 }
 
@@ -474,20 +397,6 @@ h1 {
     display: block;
 }
 
-.btn-mark-read:hover{
-    background: #0d7866;
-    transform: scale(1.1);
-}
-
-.btn-mark-unread{
-    background: #e8e8e8;
-}
-
-.btn-mark-unread:hover{
-    background: #d0d0d0;
-    transform: scale(1.1);
-}
-
 .footer{
     background: #17443e;
     color: white;
@@ -495,8 +404,6 @@ h1 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     position: relative;
-    z-index: 50;
-    transition: 0.25s ease;
     will-change: transform;
     align-items: center;
 }
@@ -545,125 +452,228 @@ h1 {
     line-height: 2;
 }
 
-@media(max-width: 1000px){
-
-    .page{
-        grid-template-columns: 220px 1fr;
-    }
-
-    .sidebar{
-        width: 220px;
-        padding: 20px 10px;
-    }
-
-    .menu-link{
-        font-size: 14px;
-        gap: 10px;
-    }
-
-    .menu-icon{
-        width: 34px;
-        height: 34px;
-    }
+@media (max-width:768px){
 
     .content{
-        padding: 20px;
-    }
-
-    .brand-logo{
-        width: 110px;
+        padding:22px;
     }
 
     .page-header{
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .notification-item{
-        padding: 16px;
-        gap: 12px;
-    }
-
-    .notification-icon img{
-        width: 40px;
-        height: 40px;
-    }
-}
-
-@media(max-width: 600px){
-
-    .page{
-        grid-template-columns: 85px 1fr;
-    }
-
-    .sidebar{
-        width: 85px;
-        padding: 15px 6px;
-    }
-
-    .sidebar-title{
-        display: none;
-    }
-
-    .menu-link{
-        justify-content: center;
-        padding: 10px 0;
-        font-size: 0;
-    }
-
-    .menu-icon{
-        width: 28px;
-        height: 28px;
-    }
-
-    .content{
-        padding: 12px;
-    }
-
-    .page-header{
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    h1{
-        font-size: 28px;
-    }
-
-    .subtitle{
-        font-size: 14px;
+        display:flex;
+        justify-content:space-between;
+        align-items:flex-start;
     }
 
     .brand-logo{
-        width: 85px;
+        width:130px;
+        flex-shrink:0;
+    }
+
+    .notifications-toolbar{
+        display:flex;
+        flex-wrap:wrap;
+        gap:12px;
+    }
+
+    .filter-btn{
+        flex:0 0 auto;
+    }
+
+    .search-box{
+        flex:1;
+        min-width:0;
+    }
+
+    .date-box{
+        flex:0 0 auto;
+        width:190px;
+        max-width:190px;
+        min-width:190px;
+        padding:12px 16px;
+    }
+
+    .date-box input{
+        width:100%;
+    }
+
+
+    .filter-box{
+        padding:6px 16px;
     }
 
     .notification-item{
-        padding: 12px;
-        gap: 10px;
-    }
-
-    .notification-icon img{
-        width: 36px;
-        height: 36px;
+        padding:14px;
     }
 
     .notification-content h3{
-        font-size: 14px;
+        font-size:15px;
     }
 
     .notification-content p{
-        font-size: 12px;
+        font-size:13px;
+    }
+}
+
+@media (max-width:576px){
+
+    .content{
+        padding:18px;
     }
 
-    .notification-time{
-        font-size: 11px;
+    .page-header{
+        display:flex;
+        justify-content:space-between;
+        align-items:flex-start;
+    }
+
+    .brand-logo{
+        width:120px;
+        flex-shrink:0;
+    } 
+
+    .notifications-toolbar{
+        display:flex;
+        flex-wrap:wrap;
+        gap:12px;
+    }
+
+    .filter-btn{
+        flex:0 0 auto;
+    }
+
+    .search-box{
+        flex:1;
+        min-width:0;
+    }
+
+    .date-box{
+        flex:0 0 auto;
+        width:190px;
+        max-width:190px;
+        min-width:190px;
+        padding:12px 16px;
+    }
+
+    .date-box input{
+        width:100%;
+    }
+
+
+    .filter-box{
+        padding:6px 16px;
+    }
+
+    .notification-item{
+        display:flex;
+        align-items:flex-start;
+        gap:12px;
+        padding:14px;
+    }
+
+    .notification-icon{
+        width:34px;
+        height:34px;
+    }
+
+    .notification-content h3{
+        font-size:15px;
+    }
+
+    .notification-content p{
+        font-size:13px;
+    }
+
+    .menu-dots{
+        font-size:24px;
     }
 
     .footer{
-        grid-template-columns: 1fr;
-        gap: 20px;
-        text-align: center;
+        grid-template-columns:1fr;
+        text-align:center;
+        gap:25px;
+    }
+
+    .footer-links,
+    .footer-center,
+    .footer-contact{
+        justify-self:center;
+    }
+}
+
+@media (max-width:480px){
+
+    
+
+    .notifications-toolbar{
+        display:flex;
+        flex-wrap:wrap;
+        gap:12px;
+    }
+
+    .filter-btn{
+        flex:0 0 auto;
+    }
+
+    .search-box{
+        flex:1;
+        min-width:0;
+    }
+
+    .date-box{
+        flex:0 0 auto;
+        width:190px;
+        max-width:190px;
+        min-width:190px;
+        padding:12px 16px;
+    }
+
+    .date-box input{
+        width:100%;
+    }
+
+
+    .filter-box{
+        padding:6px 16px;
+    }
+
+}
+
+@media (max-width:390px){
+
+    .content{
+        padding:14px;
+    }
+
+    .brand-logo{
+        width:105px;
+    }
+
+    h1{
+        font-size:28px;
+    }
+
+    .subtitle{
+        font-size:15px;
+    }
+
+    .notification-item{
+        gap:10px;
+        padding:12px;
+    }
+
+    .notification-content h3{
+        font-size:14px;
+    }
+
+    .notification-content p{
+        font-size:12px;
+    }
+
+    .notification-time{
+        font-size:12px;
+    }
+
+    .menu-dots{
+        font-size:22px;
     }
 }

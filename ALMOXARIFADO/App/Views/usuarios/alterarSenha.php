@@ -7,10 +7,29 @@
                 <span class="title-mark"></span>
                 <h1>Meu Perfil</h1>
             </div>
-            <p class="subtitle">Bem-vindo(a), Nome !</p>
+            <p class="subtitle">Bem-vindo(a), <?= $_SESSION['usuario_nome'] ?>!</p>
         </div>
-        <img src="../img/logo-sacit.png" alt="SACIT Logo" class="brand-logo" />
+        <img src="<?= URL ?>/img/logo-sacit.png" alt="SACIT Logo" class="brand-logo" />
     </header>
+
+    <?php if (isset($_SESSION['erro'])): ?>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                alert("<?= addslashes($_SESSION['erro']) ?>");
+            });
+        </script>
+        <?php unset($_SESSION['erro']); ?>
+    <?php endif; ?>
+
+
+    <?php if (isset($_SESSION['sucesso'])): ?>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                alert("<?= addslashes($_SESSION['sucesso']) ?>");
+            });
+        </script>
+        <?php unset($_SESSION['sucesso']); ?>
+    <?php endif; ?>
 
     <section class="password-card">
         <div class="card-heading">
@@ -18,14 +37,23 @@
             <div class="section-line"></div>
         </div>
 
-        <form class="password-form">
+        <form
+            class="password-form"
+            action="<?= URL ?>/usuarios/salvarSenha"
+            method="POST">
             <div class="password-group">
                 <label for="current-password">Digite a senha atual:</label>
                 <div class="password-input-wrapper">
-                    <input id="current-password" class="password-input" type="password" placeholder="">
+                    <input
+                        id="current-password"
+                        name="senha_atual"
+                        class="password-input"
+                        placeholder="Digite sua senha atual"
+                        type="password"
+                        required>
                     <button type="button" class="password-toggle" data-target="current-password"
                         title="Mostrar/Ocultar senha">
-                        <img src="../img/olhoAberto.png" alt="Mostrar senha" class="eye-icon">
+                        <img src="<?= URL ?>/img/olhoAberto.png" alt="Mostrar senha" class="eye-icon">
                     </button>
                 </div>
             </div>
@@ -33,10 +61,16 @@
             <div class="password-group">
                 <label for="new-password">Digite a nova senha:</label>
                 <div class="password-input-wrapper">
-                    <input id="new-password" class="password-input" type="password" placeholder="">
+                    <input
+                        id="new-password"
+                        name="nova_senha"
+                        class="password-input"
+                        placeholder="Digite sua nova senha"
+                        type="password"
+                        required>
                     <button type="button" class="password-toggle" data-target="new-password"
                         title="Mostrar/Ocultar senha">
-                        <img src="<?= URL ?>/public/img/olhoAberto.png" alt="Mostrar senha" class="eye-icon">
+                        <img src="<?= URL ?>/img/olhoAberto.png" alt="Mostrar senha" class="eye-icon">
                     </button>
                 </div>
             </div>
@@ -44,10 +78,16 @@
             <div class="password-group">
                 <label for="confirm-password">Confirme a nova senha:</label>
                 <div class="password-input-wrapper">
-                    <input id="confirm-password" class="password-input" type="password" placeholder="">
+                    <input
+                        id="confirm-password"
+                        name="confirmar_senha"
+                        class="password-input"
+                        placeholder="Confirme sua nova senha"
+                        type="password"
+                        required>
                     <button type="button" class="password-toggle" data-target="confirm-password"
                         title="Mostrar/Ocultar senha">
-                        <img src="<?= URL ?>/public/img/olhoAberto.png" alt="Mostrar senha" class="eye-icon">
+                        <img src="<?= URL ?>/img/olhoAberto.png" alt="Mostrar senha" class="eye-icon">
                     </button>
                 </div>
             </div>
@@ -60,18 +100,3 @@
 </main>
 </div>
 <?php include "../App/Views/footer.php"; ?>
-
-<script>
-    document.querySelectorAll('.password-toggle').forEach(button => {
-        button.addEventListener('click', (e) => {
-            e.preventDefault();
-            const targetId = button.getAttribute('data-target');
-            const input = document.getElementById(targetId);
-            const icon = button.querySelector('img');
-            const isPassword = input.type === 'password';
-            input.type = isPassword ? 'text' : 'password';
-            icon.src = isPassword ? `${URL}/public/img/olhoFechado.png` : `${URL}/public/img/olhoAberto.png`;
-            icon.alt = isPassword ? 'Ocultar senha' : 'Mostrar senha';
-        });
-    });
-</script>

@@ -28,19 +28,6 @@ a {
     transform: translateX(0);
 }
 
-#openSidebarMenu:checked ~ .footer{
-    transform: translate(270px);
-    width: calc(100% - 270px);
-}
-
-#openSidebarMenu:checked ~ .page{
-    margin-left: 260px;
-}
-
-#openSidebarMenu:checked ~ .page .dashboard{
-    gap: 15px;
-}
-
 #openSidebarMenu:checked + .sidebarIconToggle .spinner{
     background: white;
 }
@@ -68,26 +55,13 @@ a {
 .spinner{
     width: 100%;
     height: 3px;
-    background: rgb(255, 255, 255,0.85);
     background: #4b5564;
     margin: 3px 0;
     border-radius: 20px;
-    transition: 0.3s;
-}
-
-#openSidebarMenu:checked ~ .overlay{
-    opacity: 1;
-    visibility: visible;
 }
 
 .page{
     display: block;
-    transition: 0.3s ease;
-}
-
-.main-content{
-    padding-top: 90px;
-    transition: 0.3s ease;
 }
 
 .sidebar{
@@ -171,7 +145,6 @@ a {
 
 .content {
     padding: 36px;
-    transition: transform 0.35s ease;
 }
 
 .page-header {
@@ -234,12 +207,6 @@ h1 {
     justify-content: center;
 }
 
-.icon-sair {
-    width: 250px;
-    height: 250px;
-    object-fit: contain;
-}
-
 .logout-card h2 {
     margin: 0 0 16px;
     font-size: 30px;
@@ -292,9 +259,6 @@ h1 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     position: relative;
-    z-index: 50;
-    transition: 0.25s ease;
-    will-change: transform;
     align-items: center;
 }
 
@@ -342,38 +306,237 @@ h1 {
     line-height: 2;
 }
 
+@media (max-width:1400px){
 
-@media (max-width: 980px) {
-    .page {
-        grid-template-columns: 1fr;
+    .content{
+        padding:32px;
     }
 
-    .content {
-        padding: 28px 20px 32px;
+    .logout-card{
+        max-width:580px;
     }
 
-    .page-header {
-        flex-direction: column;
-        align-items: flex-start;
+    .brand-logo{
+        width:130px;
     }
 
-    .footer {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
 }
 
-@media (max-width: 620px) {
-    .logout-card {
-        padding: 30px 22px;
+@media (max-width:1024px){
+
+    .content{
+        padding:28px;
     }
 
-    .logout-actions {
-        flex-direction: column;
+    .page-header{
+        display:flex;
+        justify-content:space-between;
+        align-items:flex-start;
+        gap:20px;
     }
 
-    .menu-icon {
-        width: 36px;
-        height: 36px;
+    .title-group{
+        flex:1;
+        min-width:0;
     }
+
+    .brand-logo{
+        width:115px;
+        flex-shrink:0;
+    }
+
+    .logout-card{
+        max-width:560px;
+        padding:35px;
+    }
+
+    .icone-sair{
+        width:200px;
+        height:200px;
+    }
+
+    .logout-card h2{
+        font-size:28px;
+    }
+
+    .logout-actions{
+        gap:50px;
+    }
+
+    .footer{
+        grid-template-columns:1fr 1fr 1fr;
+    }
+
+}
+
+@media (max-width:768px){
+
+    .content{
+        padding:22px;
+    }
+
+    .page-header{
+        display:flex;
+        justify-content:space-between;
+        align-items:flex-start;
+        gap:15px;
+    }
+
+    .brand-logo{
+        width:100px;
+        flex-shrink:0;
+    }
+
+    h1{
+        font-size:30px;
+    }
+
+    .subtitle{
+        font-size:16px;
+    }
+
+    .logout-card{
+        max-width:100%;
+        padding:30px 25px;
+    }
+
+    .icone-sair{
+        width:180px;
+        height:180px;
+    }
+
+    .logout-card h2{
+        font-size:26px;
+    }
+
+    .logout-card p{
+        font-size:16px;
+    }
+
+    .logout-actions{
+        gap:30px;
+    }
+
+    .btn{
+        min-width:160px;
+    }
+
+    /* Footer continua em três colunas */
+
+    .footer{
+        grid-template-columns:1fr 1fr 1fr;
+    }
+
+}
+
+@media (max-width:600px){
+
+    .content{
+        padding:16px;
+    }
+
+    .page-header{
+        display:flex;
+        justify-content:space-between;
+        align-items:flex-start;
+        gap:12px;
+    }
+
+    .brand-logo{
+        width:85px;
+        flex-shrink:0;
+    }
+
+    .title-row{
+        gap:10px;
+    }
+
+    .title-mark{
+        height:36px;
+    }
+
+    h1{
+        font-size:26px;
+    }
+
+    .subtitle{
+        font-size:14px;
+    }
+
+    .logout-card{
+        padding:25px 18px;
+        border-radius:20px;
+    }
+
+    .logout-illustration{
+        width:90px;
+        height:90px;
+    }
+
+    .icone-sair{
+        width:150px;
+        height:150px;
+    }
+
+    .logout-card h2{
+        font-size:22px;
+    }
+
+    .logout-card p{
+        font-size:15px;
+        line-height:1.6;
+    }
+
+    .logout-actions{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .btn{
+        width:100%;
+        padding:14px;
+    }
+
+    .footer{
+        grid-template-columns:1fr;
+        gap:20px;
+        text-align:center;
+        padding:22px 18px;
+    }
+
+    .footer-links,
+    .footer-center,
+    .footer-contact{
+        justify-self:center;
+    }
+
+    .footer-logo{
+        max-width:150px;
+    }
+
+}
+
+@media (max-width:380px){
+
+    h1{
+        font-size:23px;
+    }
+
+    .subtitle{
+        font-size:13px;
+    }
+
+    .brand-logo{
+        width:72px;
+    }
+
+    .icone-sair{
+        width:130px;
+        height:130px;
+    }
+
+    .logout-card h2{
+        font-size:20px;
+    }
+
 }

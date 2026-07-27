@@ -11,7 +11,7 @@
 
 html, body {
     margin: 0;
-    min-height: 100%;
+    min-height: 100vh;
 }
 
 body {
@@ -25,21 +25,12 @@ a {
 
 #openSidebarMenu{          
     display: none;          
-}          
-          
+}                   
+       
 #openSidebarMenu:checked ~ .page #sidebarMenu{          
     transform: translateX(0);          
-}          
-          
-#openSidebarMenu:checked ~ .footer{          
-    transform: translateX(270px);          
-    width: calc(100% - 270px);          
-}          
-          
-#openSidebarMenu:checked ~ .page{          
-    margin-left: 260px;          
-}          
-          
+}
+
 #openSidebarMenu:checked + .sidebarIconToggle .spinner{          
     background: white;          
 }          
@@ -75,8 +66,7 @@ a {
 }          
           
 .page{          
-    display: block;          
-    transition: margin-left 0.3s ease;          
+    display: block;                   
 }          
           
 .sidebar{          
@@ -263,7 +253,7 @@ h1 {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: #ffff;
+    background: #ffffff;
     color: #109e8c;
     border: 1px solid #ccc;
 }
@@ -322,25 +312,247 @@ h1 {
     line-height: 1.6;          
 }
 
-@media (max-width: 1040px) {
-    .page {
-        grid-template-columns: 1fr;
+@media (max-width:1024px){
+
+    .main-content{
+        padding:32px 30px 100px;
     }
 
-    .sidebar {
-        padding: 20px;
+    .page-header{
+        gap:15px;
+        align-items:flex-start;
     }
 
-    .menu-link {
-        width: 100%;
+    .page-title{
+        max-width:calc(100% - 130px);
     }
 
-    .main-content {
-        padding: 24px;
+    h1{
+        font-size:30px;
     }
 
-    .footer {
-        grid-template-columns: 1fr;
-        text-align: center;
+    .subtitle{
+        font-size:16px;
     }
+
+    .brand-logo{
+        width:110px;
+        flex-shrink:0;
+    }
+
+    .delete-panel{
+        padding-top:25px
+    }
+
+    .delete-card{
+        width:100%;
+        max-width:650px;
+        padding:40px 30px;
+    }
+
+    .actions-row{
+        gap:40px;
+    }
+
+    .footer{
+        grid-template-columns:1fr 1fr 1fr;
+    }
+
+}
+
+@media (max-width:768px){
+
+    .main-content{
+        padding:28px 22px 90px;
+    }
+
+    .page-header{
+        align-items:flex-start;
+    }
+
+    .page-title{
+        max-width:calc(100% - 100px);
+    }
+
+    .title-row{
+        gap:10px;
+    }
+
+    .title-flag{
+        height:40px;
+    }
+
+    h1{
+        font-size:26px;
+    }
+
+    .subtitle{
+        font-size:15px;
+        margin-top:8px;
+    }
+
+    .brand-logo{
+        width:90px;
+        flex-shrink:0;
+    }
+
+    .delete-card{
+        border-radius:22px;
+        padding:35px 22px;
+    }
+
+    .delete-content h2{
+        font-size:23px;
+    }
+
+    .delete-content p{
+        font-size:16px;
+        line-height:1.6;
+    }
+
+    .actions-row{
+        gap:25px;
+        margin-top:30px;
+    }
+
+    .btn{
+        font-size:16px;
+        padding:10px 25px;
+    }
+
+    .footer{
+        grid-template-columns:1fr 1fr 1fr;
+        padding:25px 15px;
+    }
+
+    .footer-logo{
+        max-width:140px;
+    }
+
+}
+
+@media (max-width:576px){
+
+    .main-content{
+        padding:25px 18px 70px;
+    }
+
+    .page-header{
+        display:flex;
+        flex-direction:row;
+        justify-content:space-between;
+        align-items:flex-start;
+    }
+
+    .page-title{
+        max-width:calc(100% - 85px);
+    }
+
+    .title-row{
+        gap:8px;
+    }
+
+    .title-flag{
+        width:5px;
+        height:35px;
+    }
+
+    h1{
+        font-size:22px;
+    }
+
+    .subtitle{
+        font-size:14px;
+        line-height:1.4;
+    }
+
+    .brand-logo{
+        width:75px;
+        margin-top:5px;
+    }
+
+    .delete-card{
+        padding:28px 18px;
+        border-radius:18px;
+    }
+
+    .delete-content h2{
+        font-size:21px;
+        line-height:1.3;
+    }
+
+    .delete-content p{
+        font-size:15px;
+    }
+
+    .actions-row{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .btn{
+        width:100%;
+    }
+
+    .footer{
+        display:flex;
+        flex-direction:column;
+        gap:25px;
+        text-align:center;
+    }
+
+    .footer-links{
+        order:1;
+        align-items:center;
+    }
+
+    .footer-center{
+        order:2;
+    }
+
+    .footer-contact{
+        order:3;
+        align-items:center;
+    }
+
+}
+
+@media (max-width:390px){
+
+    .main-content{
+        padding:22px 14px 60px;
+    }
+
+    .page-title{
+        max-width:calc(100% - 75px);
+    }
+
+    h1{
+        font-size:20px;
+    }
+
+    .subtitle{
+        font-size:13px;
+    }
+
+    .brand-logo{
+        width:65px;
+    }
+
+    .delete-card{
+        padding:25px 14px;
+    }
+
+    .delete-content h2{
+        font-size:19px;
+    }
+
+    .delete-content p{
+        font-size:14px;
+    }
+
+    .sidebar{
+        width:230px;
+    }
+
 }

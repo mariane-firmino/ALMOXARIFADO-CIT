@@ -20,7 +20,6 @@
         <div class="spinner"></div>
     </label>
 
-    <label for="openSidebarMenu" class="overlay"></label>
     <div class="page">
         <aside class="sidebar" id="sidebarMenu">
             <div class="sidebar-header">
@@ -65,7 +64,7 @@
                         <span class="title-mark"></span>
                         <h1>Notificações</h1>
                     </div>
-                    <p class="subtitle">Acompanhe suas notificações</p>
+                    <p class="subtitle">Acompanhe suas notificações.</p>
                 </div>
                 <img src="../img/logo-sacit.png" alt="SACIT Logo" class="brand-logo" />
             </header>
@@ -77,111 +76,113 @@
                     <button class="filter-btn">Não lidas</button>
                     <button class="filter-btn">Lidas</button>
 
-                    <div class="search-box">
-                        <img src="../img/lupa.png" alt="Icone Buscar" class="search-icon">
-                        <input type="text" placeholder="Buscar notificações...">
+                    <div class="panel-actions">
+
+                        <form class="search-box" action="" method="GET">
+
+                            <span class="search-icon">
+                                <img src="../img/lupa.png" alt="Buscar" class="search-img">
+                            </span>
+
+                            <input type="search" name="pesquisa" placeholder="Buscar notificações...">
+                        </form>
                     </div>
 
                     <div class="date-box">
-                        <input type="date" placeholder="dd/mm/aaaa">
+                        <input type="date" id="dataFiltro" placeholder="dd/mm/aaaa">
                     </div>
-
-                    <button class="filter-box">
-                        <img src="../img/icon_filtro.png" alt="Icone Filtrar" class="filter-icon">
-                        Filtrar
-                    </button>
 
                 </div>
-                    <div class="notifications-list">
+                <div class="notifications-list">
 
-                        <div class="notification-item unread">
-                            <div class="notification-icon icon-green">
-                                <img class= "icon-total" src="../img/icon_verificado.png" alt="Icone verificado">
-                                <span class="status-badge online"></span>
-                            </div>
-                            <div class="notification-content">
-                                <h3>Produto atualizado</h3>
-                                <p>Quantidade do item xxxxxxxx foi alterada.</p>
-                                <span class="notification-time">Há x dias</span>
-                            </div>
-                            <div class="notification-action">
-                                <button class="menu-dots">⋯</button>
-
-                                <div class="dropdown-menu">
-                                    <a href="detalhe-notificacao.html"><button>Ver detalhes</button></a>
-                                    <button>Marcar como lida</button>
-                                    <a href="excluir-notificacao.html"><button class="delete-btn">Excluir</button></a>
-                                </div>
-                            </div>
+                    <div class="notification-item unread">
+                        <div class="notification-icon icon-green">
+                            <img class="icon-total" src="../img/icon_verificado.png" alt="Icone verificado">
+                            <span class="status-badge online"></span>
                         </div>
-
-                        <div class="notification-item unread">
-                            <div class="notification-icon icon-blue">
-                                <img class= "icon-estoque" src="../img/caixa.png" alt="Icone de estoque">
-                                <span class="status-badge online"></span>
-                            </div>
-                            <div class="notification-content">
-                                <h3>Produto cadastrado</h3>
-                                <p>Novo produto cadastrado: xxxxxx.</p>
-                                <span class="notification-time">Há x dias</span>
-                            </div>
-                            <div class="notification-action">
-                                <button class="menu-dots">⋯</button>
-
-                                <div class="dropdown-menu">
-                                    <a href="detalhe-notificacao.html"><button>Ver detalhes</button></a>
-                                    <button>Marcar como lida</button>
-                                    <a href="excluir-notificacao.html"><button class="delete-btn">Excluir</button></a>
-                                </div>
-                            </div>
+                        <div class="notification-content">
+                            <h3>Produto atualizado</h3>
+                            <p>Quantidade do item xxxxxxxx foi alterada.</p>
+                            <span class="notification-time">Há x dias</span>
                         </div>
+                        <div class="notification-action">
+                            <button class="menu-dots">⋯</button>
 
-                        <div class="notification-item unread">
-                            <div class="notification-icon icon-yellow">
-                                <img class="icon-verificado" src="../img/icone_alerta.png" alt="Icone alerta">
-                                <span class="status-badge online"></span>
+                            <div class="dropdown-menu">
+                                <a href="detalhe-notificacao.html"><button>Ver detalhes</button></a>
+                                <button>Marcar como lida</button>
+                                <a href="excluir-notificacao.html"><button class="delete-btn">Excluir</button></a>
                             </div>
-                            <div class="notification-content">
-                                <h3>Estoque baixo</h3>
-                                <p>O produto xxxxxx atingiu sue estoque mínimo.</p>
-                                <span class="notification-time">Há x dias</span>
-                            </div>
-                            <div class="notification-action">
-                                <button class="menu-dots">⋯</button>
-
-                                <div class="dropdown-menu">
-                                    <a href="detalhe-notificacao.html"><button>Ver detalhes</button></a>
-                                    <button>Marcar como lida</button>
-                                    <a href="excluir-notificacao.html"><button class="delete-btn">Excluir</button></a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="notification-item unread">
-                            <div class="notification-icon icon-roxo">
-                                <img class="icon-devolucao" src="../img/icon_devolucao.png" alt="Icone de devolução">
-                                <span class="status-badge offline"></span>
-                            </div>
-                            <div class="notification-content">
-                                <h3>Produto devolvido</h3>
-                                <p>A devolução do produto xxxxxx foi devolvido ao estoque.</p>
-                                <span class="notification-time">Há x dias</span>
-                            </div>
-                            <div class="notification-action">
-                                <button class="menu-dots">⋯</button>
-
-                                <div class="dropdown-menu">
-                                    <a href="detalhe-notificacao.html"><button>Ver detalhes</button></a>
-                                    <button>Marcar como lida</button>
-                                    <a href="excluir-notificacao.html"><button class="delete-btn">Excluir</button></a>
-                                </div>
-                            </div>
-                        </div>
                         </div>
                     </div>
-                </section>
-            </main>
-        </div>
+
+                    <div class="notification-item unread">
+                        <div class="notification-icon icon-blue">
+                            <img class="icon-estoque" src="../img/caixa.png" alt="Icone de estoque">
+                            <span class="status-badge online"></span>
+                        </div>
+                        <div class="notification-content">
+                            <h3>Produto cadastrado</h3>
+                            <p>Novo produto cadastrado: xxxxxx.</p>
+                            <span class="notification-time">Há x dias</span>
+                        </div>
+                        <div class="notification-action">
+                            <button class="menu-dots">⋯</button>
+
+                            <div class="dropdown-menu">
+                                <a href="detalhe-notificacao.html"><button>Ver detalhes</button></a>
+                                <button>Marcar como lida</button>
+                                <a href="excluir-notificacao.html"><button class="delete-btn">Excluir</button></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="notification-item unread">
+                        <div class="notification-icon icon-yellow">
+                            <img class="icon-verificado" src="../img/icone_alerta.png" alt="Icone alerta">
+                            <span class="status-badge online"></span>
+                        </div>
+                        <div class="notification-content">
+                            <h3>Estoque baixo</h3>
+                            <p>O produto xxxxxx atingiu sue estoque mínimo.</p>
+                            <span class="notification-time">Há x dias</span>
+                        </div>
+                        <div class="notification-action">
+                            <button class="menu-dots">⋯</button>
+
+                            <div class="dropdown-menu">
+                                <a href="detalhe-notificacao.html"><button>Ver detalhes</button></a>
+                                <button>Marcar como lida</button>
+                                <a href="excluir-notificacao.html"><button class="delete-btn">Excluir</button></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="notification-item unread">
+                        <div class="notification-icon icon-roxo">
+                            <img class="icon-devolucao" src="../img/icon_devolucao.png" alt="Icone de devolução">
+                            <span class="status-badge offline"></span>
+                        </div>
+                        <div class="notification-content">
+                            <h3>Produto devolvido</h3>
+                            <p>A devolução do produto xxxxxx foi devolvido ao estoque.</p>
+                            <span class="notification-time">Há x dias</span>
+                        </div>
+                        <div class="notification-action">
+                            <button class="menu-dots">⋯</button>
+
+                            <div class="dropdown-menu">
+                                <a href="detalhe-notificacao.html"><button>Ver detalhes</button></a>
+                                <button>Marcar como lida</button>
+                                <a href="excluir-notificacao.html"><button class="delete-btn">Excluir</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </div>
+    </section>
+    </main>
+    </div>
 
     <footer class="footer">
         <nav class="footer-links">
@@ -200,6 +201,8 @@
             <p>E-mail: algumacoisa@ifro.edu.br</p>
         </div>
     </footer>
+
+    <script src="../js/datas.js"></script>
 </body>
 
 </html>

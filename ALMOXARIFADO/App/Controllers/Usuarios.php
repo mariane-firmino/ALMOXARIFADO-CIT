@@ -3,10 +3,12 @@
 class Usuarios extends Controller
 {
     private $usuarioModel;
+    private $notificacaoModel;
 
     public function __construct()
     {
         $this->usuarioModel = $this->model('Usuario');
+        $this->notificacaoModel = $this->model('Notificacao');
     }
 
     public function cadastrar()
@@ -19,6 +21,93 @@ class Usuarios extends Controller
         $this->view('usuarios/cadastrar', $dados);
     }
 
+    public function login()
+    {
+        $dados = [
+            'titulo' => 'Login',
+            'descricao' => 'Página de login'
+        ];
+        $this->view('usuarios/login', $dados);
+    }
+
+    public function gerenciarPerfis()
+    {
+        $pesquisa = trim($_GET['pesquisa'] ?? '');
+        $funcao = $_GET['funcao'] ?? '';
+        $status = $_GET['status'] ?? '';
+
+        $usuariosPorPagina = 4;
+
+        // Página atual
+        $paginaAtual = $_GET['pagina'] ?? 1;
+
+        $inicio = ($paginaAtual - 1) * $usuariosPorPagina;
+
+
+        // Total de usuários considerando filtros
+        $totalUsuarios = $this->usuarioModel->totalUsuarios(
+            $pesquisa,
+            $funcao,
+            $status
+        );
+
+
+        $totalPaginas = ceil($totalUsuarios / $usuariosPorPagina);
+
+
+        // Busca usuários da página atual
+        $usuarios = $this->usuarioModel->listarUsuarios(
+            $pesquisa,
+            $funcao,
+            $inicio,
+            $usuariosPorPagina
+        );
+
+
+        $dados = [
+
+            'usuarios' => $usuarios,
+
+            'funcoes' => $this->usuarioModel->listarFuncoes(),
+
+            'total' => $totalUsuarios,
+
+            'ativos' => $this->usuarioModel->totalAtivos(),
+
+            'inativos' => $this->usuarioModel->totalInativos(),
+
+            'removidos' => $this->usuarioModel->totalRemovidos(),
+
+            'totalUsuarios' => $totalUsuarios,
+
+            'totalPaginas' => $totalPaginas,
+
+            'paginaAtual' => $paginaAtual,
+
+            'usuariosPorPagina' => $usuariosPorPagina
+
+        ];
+
+
+        $this->view('usuarios/gerenciarPerfis', $dados);
+    }
+
+    public function esqueciSenha()
+    {
+        $dados = [
+            'titulo' => 'Esqueci minha senha',
+            'descricao' => 'Página para recuperação de senha'
+        ];
+        $this->view('usuarios/esqueciSenha', $dados);
+    }
+    public function alterarSenha()
+    {
+        $dados = [
+            'titulo' => 'Alterar Senha',
+            'descricao' => 'Página para alteração de senha'
+        ];
+        $this->view('usuarios/alterarSenha', $dados);
+    }
 
     public function cadCoordenador()
     {
@@ -37,6 +126,7 @@ class Usuarios extends Controller
                 'celular' => trim($formulario['celular'])
 
             ];
+
 
             if (in_array("", $formulario)) :
 
@@ -80,7 +170,9 @@ class Usuarios extends Controller
 
                     if ($this->usuarioModel->armazenar($dados)) :
                         Sessao::mensagem('usuario', 'Cadastro realizado com sucesso');
-                        URL::redirecionar('usuarios/home');
+                        $this->notificacaoModel->criarNotificacao('Novo coordenador', 'Um novo coordenador se cadastrou com sucesso.', 1);
+                        
+                        URL::redirecionar('usuarios/login');
                     else :
                         die("Erro ao armazenar usuario no banco de dados");
                     endif;
@@ -172,6 +264,7 @@ class Usuarios extends Controller
 
                     if ($this->usuarioModel->armazenar($dados)) :
                         Sessao::mensagem('usuario', 'Cadastro realizado com sucesso');
+                        $this->notificacaoModel->criarNotificacao('Novo servidor', 'Um novo servidor se cadastrou com sucesso.', 1);
                         URL::redirecionar('paginas/home');
                     else :
                         die("Erro ao armazenar usuario no banco de dados");
@@ -286,6 +379,7 @@ class Usuarios extends Controller
 
                     if ($this->usuarioModel->armazenar($dados)) :
                         Sessao::mensagem('usuario', 'Cadastro realizado com sucesso');
+                        $this->notificacaoModel->criarNotificacao('Novo estagiário', 'Um novo estagiário se cadastrou com sucesso.', 1);
                         URL::redirecionar('paginas/home');
                     else :
                         die("Erro ao armazenar usuario no banco de dados");
@@ -350,13 +444,14 @@ class Usuarios extends Controller
                 else :
 
                     $usuario = $this->usuarioModel->checarLogin($formulario['email'], $formulario['senha']);
-            
+
                     if ($usuario):
+                        // Atualiza o último acesso do usuário
+                        $this->usuarioModel->atualizarUltimoLogin(
+                            $usuario->usua_id
+                        );
+                        // se tiver tudo certo vai criar a sessão
                         $this->criarSessaoUsuario($usuario);
-                        echo "usuario criado<br>";
-                        echo "<pre>";
-                        var_dump($usuario);
-                        echo "</pre>";
                     else:
                         Sessao::mensagem('usuario', 'Usuario ou senha invalidos', 'alert alert-danger');
                     endif;
@@ -374,7 +469,7 @@ class Usuarios extends Controller
 
         endif;
 
-        // $this->view('pagina/home', $dados);
+        $this->view('usuarios/login', $dados);
     }
 
     private function criarSessaoUsuario($usuario)
@@ -382,9 +477,18 @@ class Usuarios extends Controller
         $_SESSION['usuario_id'] = $usuario->usua_id;
         $_SESSION['usuario_nome'] = $usuario->usua_nome;
         $_SESSION['usuario_email'] = $usuario->usua_email;
+        $_SESSION['usuario_telefone'] = $usuario->tele_numero;
+        $_SESSION['usuario_siap'] = $usuario->usua_siap;
+        $_SESSION['usuario_matricula'] = $usuario->usua_matricula;
+        $_SESSION['usuario_ano'] = $usuario->turm_ano;
+        $_SESSION['usuario_curso'] = $usuario->turm_curso;
         $_SESSION['usuario_funcao'] = $usuario->func_id;
+        $_SESSION['usuario_setor'] = $usuario->seto_nome;
+        $_SESSION['usuario_foto'] = $usuario->usua_foto;
+
 
         URL::redirecionar('paginas/home');
+        exit;
         /*if($usuario->func_id == 1){
             URL::redirecionar('paginas/inicioCoor');
         }elseif($usuario->func_id == 2){
@@ -392,11 +496,12 @@ class Usuarios extends Controller
         }elseif($usuario->func_id == 3){
             URL::redirecionar('paginas/inicioEstag');
         }else{
-            URL::redirecionar('paginas/inicio'); 
+            URL::redirecionar('paginas/inicio');
         }*/
     }
 
 
+    // sair
     public function sair()
     {
         unset($_SESSION['usuario_id']);
@@ -407,32 +512,130 @@ class Usuarios extends Controller
 
         URL::redirecionar('usuarios/login');
     }
-
-
-
-    public function login()
+    // excluir perfil
+    public function excluir($id)
     {
-        $dados = [
-            'titulo' => 'Login',
-            'descricao' => 'Página de login'
-        ];
-        $this->view('usuarios/login', $dados);
+        if ($this->usuarioModel->excluirUsuario($id)) {
+            $titulo = 'Usuário Excluído';
+            $mensagem = 'O usuário (ID: ' . $id . ') foi excluído do sistema.';
+            $funcao = 1; // ID do destinatário ou da função que recebe a notificação
+
+            $this->notificacaoModel->criarNotificacao($titulo, $mensagem, $funcao);
+            header("Location: " . URL . "/usuarios/gerenciarPerfis");
+        } else {
+            echo "Erro ao excluir usuário";
+        }
     }
 
-    public function esqueciSenha()
+    public function editarPerfil()
     {
+
+        $usuario = $this->usuarioModel
+            ->buscarPorId($_SESSION['usuario_id']);
+
+
         $dados = [
-            'titulo' => 'Esqueci minha senha',
-            'descricao' => 'Página para recuperação de senha'
+            'usuario' => $usuario
         ];
-        $this->view('usuarios/esqueciSenha', $dados);
+
+
+        $this->view(
+            'usuarios/editarPerfil',
+            $dados
+        );
     }
-    public function alterarSenha()
+
+    public function salvarAlteracoes()
     {
-        $dados = [
-            'titulo' => 'Alterar Senha',
-            'descricao' => 'Página para alteração de senha'
-        ];
-        $this->view('usuarios/alterarSenha', $dados);
+
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+            // Upload da imagem
+            $foto = $_FILES['foto']['name'];
+            $fotoTemp = $_FILES['foto']['tmp_name'];
+
+            $pasta = "../Public/img/usuarios/"; // aqui é onde vai ser salvo a imagem
+
+
+            if (!is_dir($pasta)) {
+                mkdir($pasta, 0777, true);
+            }
+
+
+            move_uploaded_file(
+                $fotoTemp,
+                $pasta . $foto
+            );
+
+            $dados = [
+
+                'usua_id' => $_SESSION['usuario_id'],
+
+                'usua_nome' => $_POST['nome'],
+
+                'usua_email' => $_POST['email'],
+
+                'usua_foto' => $foto,
+
+                'usua_telefone' => $_POST['telefone']
+
+            ];
+
+
+            if ($this->usuarioModel->editarPerfil($dados)) {
+
+
+                $_SESSION['usuario_nome'] = $dados['usua_nome'];
+
+
+                header(
+                    "Location: " . URL . "/paginas/perfil"
+                );
+            }
+        }
+    }
+
+    public function salvarSenha()
+    {
+
+        if ($_SERVER['REQUEST_METHOD'] != 'POST') {
+            header("Location: " . URL . "/usuarios/alterarSenha");
+            exit;
+        }
+
+        $usuario = $this->usuarioModel->buscarPorId(
+            $_SESSION['usuario_id']
+        );
+
+        if (!password_verify($_POST['senha_atual'], $usuario->usua_senha)) {
+
+            $_SESSION['erro'] = "Senha atual incorreta.";
+
+            header("Location: " . URL . "/usuarios/alterarSenha");
+            exit;
+        }
+
+        if ($_POST['nova_senha'] != $_POST['confirmar_senha']) {
+
+            $_SESSION['erro'] = "As senhas não coincidem.";
+
+            header("Location: " . URL . "/usuarios/alterarSenha");
+            exit;
+        }
+
+        $senha = password_hash(
+            $_POST['nova_senha'],
+            PASSWORD_DEFAULT
+        );
+
+        $this->usuarioModel->alterarSenha(
+            $_SESSION['usuario_id'],
+            $senha
+        );
+
+        $_SESSION['sucesso'] = "Senha alterada com sucesso.";
+
+        header("Location: " . URL . "/paginas/perfil");
+        exit;
     }
 }

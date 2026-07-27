@@ -1,7 +1,15 @@
 /* Importar Fontes Google */
 @import url('https://fonts.googleapis.com/css2?family=Inria+Sans:wght@400;700&family=Inria+Serif:wght@400&display=swap');
 
+.is-invalid {
+    border: 2px solid #dc3545;
+}
 
+.invalid-feedback {
+    color: #dc3545;
+    font-size: 14px;
+    margin-top: 5px;
+}
 
 /* Conteiner Principal de Login */
 .login-container {
@@ -194,11 +202,11 @@
         max-width: 100%;
         min-height: 560px;
     }
-    
+
     .login-left {
         padding: clamp(35px, 5vw, 45px);
     }
-    
+
     .login-right {
         min-height: 480px;
     }
@@ -210,23 +218,23 @@
         padding: 15px;
         min-height: 100vh;
     }
-    
+
     .login-wrapper {
         grid-template-columns: 1fr;
         min-height: auto;
         max-height: none;
     }
-    
+
     .login-left {
         padding: clamp(30px, 5vw, 40px);
         min-height: auto;
     }
-    
+
     .login-right {
         min-height: 300px;
         max-height: 400px;
     }
-    
+
     .logo-container {
         max-width: 300px;
         max-height: 300px;
@@ -239,47 +247,47 @@
         padding: 10px;
         min-height: 100vh;
     }
-    
+
     .login-wrapper {
         border-radius: 6px;
         min-height: auto;
     }
-    
+
     .login-left {
         padding: clamp(20px, 4vw, 30px);
     }
-    
+
     .login-title {
         margin-bottom: clamp(20px, 4vw, 35px);
     }
-    
+
     .form-group {
         margin-bottom: clamp(12px, 2vw, 18px);
     }
-    
+
     .form-label {
         font-size: clamp(14px, 2.2vw, 18px);
     }
-    
+
     .form-input {
         height: clamp(30px, 4.5vw, 36px);
     }
-    
+
     .submit-btn {
         margin-top: clamp(15px, 3vw, 25px);
         margin-bottom: clamp(20px, 4vw, 30px);
     }
-    
+
     .link-row {
         font-size: clamp(12px, 1.8vw, 14px);
         gap: 3px;
     }
-    
+
     .logo-container {
         max-width: 250px;
         max-height: 250px;
     }
-    
+
     .login-right {
         min-height: 250px;
         max-height: 350px;
@@ -292,25 +300,25 @@
     .login-left {
         padding: 15px;
     }
-    
+
     .login-title {
         font-size: clamp(24px, 4.5vw, 32px);
         margin-bottom: clamp(15px, 3vw, 25px);
     }
-    
+
     .form-label {
         font-size: 14px;
         margin-bottom: 6px;
     }
-    
+
     .submit-text {
         font-size: 14px;
     }
-    
+
     .link-row {
         font-size: 12px;
     }
-    
+
     .logo-container {
         max-width: 200px;
         max-height: 200px;

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -19,9 +20,6 @@
         <div class="spinner"></div>
         <div class="spinner"></div>
     </label>
-
-    <label for="openSidebarMenu" class="overlay"></label>
-
     <div class="page">
         <aside class="sidebar" id="sidebarMenu">
             <div class="sidebar-header">
@@ -122,186 +120,201 @@
                         <option>Em falta</option>
                     </select>
                 </div>
+                <button class="btn-primary" id="btnSolicitar" disabled>
+                    Solicitar (0)
+                </button>
+
             </div>
             </section>
 
             <section>
                 <div class="cards-grid">
-                    <article class="product-card">
+                        <article class="product-card">
+                            <div class="card-image">
+                                <label class="card-checkbox">
+                                    <input type="checkbox" class="product-check">
+                                    <span></span>
+                                </label>
 
-                    <div class="card-image">
-
-                        <div class="dropdown">
-                            <button class="menu-btn">⋮</button>
-
-                            <div class="dropdown-content">
-                                <a href="detalhar-produto.html">Ver Detalhes</a>
-                                <a href="fazer-solicitacao.html">Solicitar Produto</a>
+                                <div class="card-header">
+                                    <span class="status-pill status-ok">Disponível</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="card-header">
-                            <span class="status-pill status-baixo">Estoque baixo</span>
-                        </div>
-                    </div>
 
-                    <div class="product-info">
-                        <h2 class="product-name">Nome do Produto</h2>
+                            <div class="product-info">
+                                <div class="product-header">
+                                    <h2 class="product-name">Nome do Produto</h2>
+                                    <a href="detalhar-produto.html" class="btn-details">Ver detalhes</a>
+                                </div>
 
-                        <p class="card-detail">Categoria</p>
-
-                        <p class="card-detail">
-                            <strong>Quantidade:</strong> xx unidades
-                        </p>
-                    </div>
-
-                </article>
-
-                    <article class="product-card">
-
-                    <div class="card-image">
-
-                    <div class="dropdown">
-                        <button class="menu-btn">⋮</button>
-
-                        <div class="dropdown-content">
-                             <a href="detalhar-produto.html">Ver Detalhes</a>
-                            <a href="fazer-solicitacao.html">Solicitar Produto</a>
-                        </div>
-                    </div>
-
-                    <div class="card-header">
-                        <span class="status-pill status-ok">Disponível</span>
-                    </div>
-
-                </div>
-
-                    <div class="product-info">
-                        <h2 class="product-name">Nome do Produto</h2>
-
-                        <p class="card-detail">Categoria</p>
-
-                        <p class="card-detail">
-                            <strong>Quantidade:</strong> xx unidades
-                        </p>
-                    </div>
-
-                </article>
-
-                    <article class="product-card">
-
-                    <div class="card-image">
-                        <div class="dropdown">
-                        <button class="menu-btn">⋮</button>
-
-                        <div class="dropdown-content">
-                            <a href="detalhar-produto.html">Ver Detalhes</a>
-                            <a href="fazer-solicitacao.html">Solicitar Produto</a>
-                        </div>
-                    </div>
-                        <div class="card-header">
-                            <span class="status-pill status-baixo">Estoque baixo</span>
-                        </div>
-                    </div>
-
-                    <div class="product-info">
-                        <h2 class="product-name">Nome do Produto</h2>
-
-                        <p class="card-detail">Categoria</p>
-
-                        <p class="card-detail">
-                            <strong>Quantidade:</strong> xx unidades
-                        </p>
-                    </div>
-
-                </article>
-
-                    <article class="product-card">
-
-                    <div class="card-image">
-                        <div class="dropdown">
-                            <button class="menu-btn">⋮</button>
-
-                            <div class="dropdown-content">
-                                <a href="detalhar-produto.html">Ver Detalhes</a>
-                                <a href="fazer-solicitacao.html">Solicitar Produto</a>
+                                <p class="card-detail">Categoria</p>
+                                <p class="card-detail"><strong>Quantidade:</strong> xx unidades</p>
                             </div>
-                        </div>
-                        <div class="card-header">
-                            <span class="status-pill status-critical">Em falta</span>
-                        </div>
-                    </div>
+                        </article>
 
-                    <div class="product-info">
-                        <h2 class="product-name">Nome do Produto</h2>
+                        <article class="product-card">
+                            <div class="card-image">
+                                <label class="card-checkbox">
+                                    <input type="checkbox" class="product-check">
+                                    <span></span>
+                                </label>
 
-                        <p class="card-detail">Categoria</p>
-
-                        <p class="card-detail">
-                            <strong>Quantidade:</strong> xx unidades
-                        </p>
-                    </div>
-
-                </article>
-
-                    <article class="product-card">
-
-                    <div class="card-image">
-                        <div class="dropdown">
-                            <button class="menu-btn">⋮</button>
-
-                            <div class="dropdown-content">
-                                <a href="detalhar-produto.html">Ver Detalhes</a>
-                                <a href="fazer-solicitacao.html">Solicitar Produto</a>
+                                <div class="card-header">
+                                    <span class="status-pill status-ok">Disponível</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="card-header">
-                            <span class="status-pill status-ok">Disponível</span>
-                        </div>
-                    </div>
 
-                    <div class="product-info">
-                        <h2 class="product-name">Nome do Produto</h2>
+                            <div class="product-info">
+                                <div class="product-header">
+                                    <h2 class="product-name">Nome do Produto</h2>
+                                    <a href="detalhar-produto.html" class="btn-details">Ver detalhes</a>
+                                </div>
 
-                        <p class="card-detail">Categoria</p>
-
-                        <p class="card-detail">
-                            <strong>Quantidade:</strong> xx unidades
-                        </p>
-                    </div>
-
-                </article>
-
-                    <article class="product-card">
-
-                    <div class="card-image">
-                        <div class="dropdown">
-                            <button class="menu-btn">⋮</button>
-
-                            <div class="dropdown-content">
-                                <a href="detalhar-produto.html">Ver Detalhes</a>
-                                <a href="fazer-solicitacao.html">Solicitar Produto</a>
+                                <p class="card-detail">Categoria</p>
+                                <p class="card-detail"><strong>Quantidade:</strong> xx unidades</p>
                             </div>
-                        </div>
-                        <div class="card-header">
-                            <span class="status-pill status-critical">Em falta</span>
-                        </div>
+                        </article>
+
+                        <article class="product-card">
+                            <div class="card-image">
+                                <label class="card-checkbox">
+                                    <input type="checkbox" class="product-check">
+                                    <span></span>
+                                </label>
+
+                                <div class="card-header">
+                                    <span class="status-pill status-baixo">Estoque baixo</span>
+                                </div>
+                            </div>
+
+                            <div class="product-info">
+                                <div class="product-header">
+                                    <h2 class="product-name">Nome do Produto</h2>
+                                    <a href="detalhar-produto.html" class="btn-details">Ver detalhes</a>
+                                </div>
+
+                                <p class="card-detail">Categoria</p>
+                                <p class="card-detail"><strong>Quantidade:</strong> xx unidades</p>
+                            </div>
+                        </article>
+
+                        <article class="product-card">
+                            <div class="card-image">
+                                <label class="card-checkbox">
+                                    <input type="checkbox" class="product-check">
+                                    <span></span>
+                                </label>
+
+                                <div class="card-header">
+                                    <span class="status-pill status-critical">Em falta</span>
+                                </div>
+                            </div>
+
+                            <div class="product-info">
+                                <div class="product-header">
+                                    <h2 class="product-name">Nome do Produto</h2>
+                                    <a href="detalhar-produto.html" class="btn-details">Ver detalhes</a>
+                                </div>
+
+                                <p class="card-detail">Categoria</p>
+                                <p class="card-detail"><strong>Quantidade:</strong> xx unidades</p>
+                            </div>
+                        </article>
+
+                        <article class="product-card">
+                            <div class="card-image">
+                                <label class="card-checkbox">
+                                    <input type="checkbox" class="product-check">
+                                    <span></span>
+                                </label>
+
+                                <div class="card-header">
+                                    <span class="status-pill status-ok">Disponível</span>
+                                </div>
+                            </div>
+
+                            <div class="product-info">
+                                <div class="product-header">
+                                    <h2 class="product-name">Nome do Produto</h2>
+                                    <a href="detalhar-produto.html" class="btn-details">Ver detalhes</a>
+                                </div>
+
+                                <p class="card-detail">Categoria</p>
+                                <p class="card-detail"><strong>Quantidade:</strong> xx unidades</p>
+                            </div>
+                        </article>
+
+                        <article class="product-card">
+                            <div class="card-image">
+                                <label class="card-checkbox">
+                                    <input type="checkbox" class="product-check">
+                                    <span></span>
+                                </label>
+
+                                <div class="card-header">
+                                    <span class="status-pill status-baixo">Estoque baixo</span>
+                                </div>
+                            </div>
+
+                            <div class="product-info">
+                                <div class="product-header">
+                                    <h2 class="product-name">Nome do Produto</h2>
+                                    <a href="detalhar-produto.html" class="btn-details">Ver detalhes</a>
+                                </div>
+
+                                <p class="card-detail">Categoria</p>
+                                <p class="card-detail"><strong>Quantidade:</strong> xx unidades</p>
+                            </div>
+                        </article>
+
+                        <article class="product-card">
+                            <div class="card-image">
+                                <label class="card-checkbox">
+                                    <input type="checkbox" class="product-check">
+                                    <span></span>
+                                </label>
+
+                                <div class="card-header">
+                                    <span class="status-pill status-critical">Em falta</span>
+                                </div>
+                            </div>
+
+                            <div class="product-info">
+                                <div class="product-header">
+                                    <h2 class="product-name">Nome do Produto</h2>
+                                    <a href="detalhar-produto.html" class="btn-details">Ver detalhes</a>
+                                </div>
+
+                                <p class="card-detail">Categoria</p>
+                                <p class="card-detail"><strong>Quantidade:</strong> xx unidades</p>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="card-image">
+                                <label class="card-checkbox">
+                                    <input type="checkbox" class="product-check">
+                                    <span></span>
+                                </label>
+
+                                <div class="card-header">
+                                    <span class="status-pill status-ok">Disponível</span>
+                                </div>
+                            </div>
+
+                            <div class="product-info">
+                                <div class="product-header">
+                                    <h2 class="product-name">Nome do Produto</h2>
+                                    <a href="detalhar-produto.html" class="btn-details">Ver detalhes</a>
+                                </div>
+
+                                <p class="card-detail">Categoria</p>
+                                <p class="card-detail"><strong>Quantidade:</strong> xx unidades</p>
+                            </div>
+                        </article>
                     </div>
-
-                    <div class="product-info">
-                        <h2 class="product-name">Nome do Produto</h2>
-
-                        <p class="card-detail">Categoria</p>
-
-                        <p class="card-detail">
-                            <strong>Quantidade:</strong> xx unidades
-                        </p>
-                    </div>
-
-                </article>
-                </div>
-            </section>
-        </main>
-    </div>
+                </section>
+            </main>
+        </div>
 
     <footer class="footer">
         <nav class="footer-links">
@@ -320,6 +333,7 @@
             <p>E-mail: algumacoisa@ifro.edu.br</p>
         </div>
     </footer>
+    <script src="../js/consultar-produto-servidor.js"></script>
 </body>
 
 </html>

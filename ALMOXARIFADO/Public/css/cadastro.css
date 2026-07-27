@@ -1,9 +1,24 @@
 /* Importar Fontes Google */
 @import url('https://fonts.googleapis.com/css2?family=Inria+Sans:wght@400;700&family=Inria+Serif:wght@400&display=swap');
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Inria Sans', sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
 
 /* Estilos da Página de Cadastro */
-.register-container {
+.cadastro-register-container {
     background-color: #0a7f70;
     width: 100%;
     min-height: 100vh;
@@ -14,56 +29,53 @@
     padding: 20px;
 }
 
-.register-wrapper {
+.cadastro-register-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 100%;
-    max-width: 1036px;
     height: auto;
-    min-height: 648px;
+    max-width: 920px;
+    min-height: 540px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
     border-radius: 8px;
     overflow: hidden;
 }
 
-/* Lado Esquerdo - Formulário de Cadastro */
-.register-left {
+.cadastro-register-left {
     background-color: #075248;
-    padding: 60px 40px;
+    padding: 45px 35px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
 }
 
-.register-title {
-    font-family: 'Inria Serif', serif;
+.cadastro-register-title {
     font-size: clamp(32px, 5vw, 48px);
     color: white;
-    margin-bottom: clamp(60px, 10vw, 120px);
+    margin-bottom: clamp(35px, 6vw, 60px);
     font-weight: 400;
     text-align: center;
 }
 
-/* Contêiner de Opções de Cadastro */
-.register-options {
+.cadastro-register-options {
     display: flex;
     flex-direction: column;
     gap: clamp(20px, 3vw, 30px);
     width: 100%;
-    max-width: 400px;
+    max-width: 350px;
+    gap: 20px;
 }
 
-.register-btn {
+.cadastro-register-btn {
     background-color: white;
-    height: clamp(40px, 6vw, 55px);
+    height: 48px;
     border: none;
     border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     font-weight: 600;
     padding: clamp(8px, 1.5vw, 15px);
@@ -71,163 +83,25 @@
     color: #000;
 }
 
-.register-btn:hover {
-    background-color: #f0f0f0;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-.register-btn:active {
-    transform: translateY(0);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.register-btn-text {
-    font-family: 'Inria Sans', sans-serif;
-    font-size: clamp(18px, 2.8vw, 24px);
-    color: #000;
+.cadastro-register-btn-text {
+    font-size: clamp(17px, 2vw, 21px);    color: #000;
     font-weight: 700;
 }
 
-/* Formulário de Cadastro */
-.register-form {
-    width: 100%;
-    max-width: 500px;
-}
-
-.form-row {
-    display: flex;
-    gap: clamp(15px, 2vw, 20px);
-    width: 100%;
-}
-
-.form-group {
-    margin-bottom: clamp(20px, 3vw, 30px);
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-
-.form-group.half {
-    width: calc(50% - clamp(7.5px, 1vw, 10px));
-}
-
-.form-label {
-    font-family: 'Inria Sans', sans-serif;
-    font-size: clamp(16px, 2.5vw, 20px);
-    color: white;
-    margin-bottom: clamp(8px, 1.5vw, 12px);
-    font-weight: 400;
-    display: block;
-}
-
-.form-input {
-    height: clamp(32px, 5vw, 40px);
-    background-color: white;
-    border: none;
-    border-radius: 8px;
-    padding: clamp(8px, 1.5vw, 15px);
-    font-size: clamp(14px, 2vw, 16px);
-    font-family: 'Inria Sans', sans-serif;
-    outline: none;
-    transition: box-shadow 0.3s ease;
-    width: 100%;
-}
-
-.form-input:focus {
-    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.2);
-}
-
-.form-input::placeholder {
-    color: #d0d0d0;
-}
-
-/* Botão de Envio */
-.submit-btn {
-    background-color: #ff2f2f;
-    height: clamp(36px, 5vw, 45px);
-    border: none;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    margin-top: clamp(20px, 4vw, 30px);
-    margin-bottom: clamp(30px, 5vw, 40px);
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    width: 100%;
-    max-width: 450px;
-}
-
-.submit-btn:hover {
-    background-color: #e61e1e;
-    transform: scale(1.02);
-}
-
-.submit-btn:active {
-    transform: scale(0.98);
-}
-
-.submit-text {
-    font-family: 'Inria Sans', sans-serif;
-    font-size: clamp(16px, 2.5vw, 20px);
-    color: white;
-    font-weight: 700;
-}
-
-/* Links do Rodapé */
-.footer-links {
-    margin-top: auto;
-    display: flex;
-    flex-direction: column;
-    gap: clamp(8px, 1.5vw, 12px);
-    width: 100%;
-    max-width: 450px;
-    align-items: center;
-}
-
-.link-row {
-    font-family: 'Inria Sans', sans-serif;
-    font-size: clamp(13px, 2vw, 16px);
-    color: white;
-    display: flex;
-    align-items: center;
-    gap: clamp(4px, 1vw, 8px);
-    flex-wrap: wrap;
-}
-
-.link-text {
-    color: white;
-    font-weight: 400;
-}
-
-.link-blue {
-    color: #2384fa;
-    text-decoration: none;
-    font-weight: 400;
-    transition: color 0.3s ease;
-}
-
-.link-blue:hover {
-    color: #1a6fd9;
-    text-decoration: underline;
-}
-
-/* Lado Direito - Logo */
-.register-right {
+.cadastro-register-right {
     background-color: rgba(255, 255, 255, 0.9);
     display: flex;
     align-items: center;
     justify-content: center;
     padding: clamp(20px, 3vw, 40px);
-    min-height: 648px;
+    min-height: 540px;
 }
 
 .logo-container {
     width: 100%;
     height: 100%;
-    max-width: 542px;
-    max-height: 542px;
+    max-width: 430px;
+    max-height: 430px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -240,147 +114,157 @@
     pointer-events: none;
 }
 
-/* Design Responsivo do Cadastro */
+@media (min-width: 1400px) {
 
-/* Tablet e desktop pequeno */
-@media (max-width: 1024px) {
-    .register-wrapper {
-        max-width: 100%;
-        min-height: 600px;
+    .cadastro-register-wrapper{
+        max-width: 1050px;
     }
-    
-    .register-left {
-        padding: clamp(40px, 5vw, 50px);
+
+    .logo-container{
+        max-width: 500px;
+        max-height: 500px;
     }
-    
-    .register-right {
-        min-height: 500px;
-    }
+
 }
 
-/* Celular grande a tablet pequeno */
-@media (max-width: 768px) {
-    .register-container {
-        padding: 15px;
-        min-height: 100vh;
+@media (max-width:1200px){
+
+    .cadastro-register-wrapper{
+        max-width:900px;
     }
-    
-    .register-wrapper {
-        grid-template-columns: 1fr;
-        min-height: auto;
-        max-height: none;
+
+    .cadastro-register-left{
+        padding:40px 30px;
     }
-    
-    .register-left {
-        padding: clamp(30px, 5vw, 40px);
-        min-height: auto;
+
+    .logo-container{
+        max-width:380px;
+        max-height:380px;
     }
-    
-    .register-right {
-        min-height: 300px;
-        max-height: 400px;
-    }
-    
-    .logo-container {
-        max-width: 300px;
-        max-height: 300px;
-    }
-    
-    .register-options {
-        max-width: 100%;
-    }
-    
-    .form-row {
-        flex-direction: column;
-    }
-    
-    .form-group.half {
-        width: 100%;
-    }
+
 }
 
-/* Celulares */
-@media (max-width: 480px) {
-    .register-container {
-        padding: 10px;
-        min-height: 100vh;
+@media (max-width:992px){
+
+    .cadastro-register-wrapper{
+        max-width:800px;
+        min-height:500px;
     }
-    
-    .register-wrapper {
-        border-radius: 6px;
-        min-height: auto;
+
+    .cadastro-register-left{
+        padding:35px 25px;
     }
-    
-    .register-left {
-        padding: clamp(20px, 4vw, 30px);
+
+    .cadastro-register-options{
+        max-width:300px;
     }
-    
-    .register-title {
-        margin-bottom: clamp(40px, 8vw, 60px);
+
+    .cadastro-register-btn{
+        height:45px;
     }
-    
-    .register-options {
-        gap: clamp(15px, 2.5vw, 20px);
-        max-width: 100%;
+
+    .logo-container{
+        max-width:320px;
+        max-height:320px;
     }
-    
-    .register-btn {
-        height: clamp(36px, 5vw, 48px);
-    }
-    
-    .register-btn-text {
-        font-size: clamp(16px, 2.2vw, 20px);
-    }
-    
-    .logo-container {
-        max-width: 250px;
-        max-height: 250px;
-    }
-    
-    .register-right {
-        min-height: 250px;
-        max-height: 350px;
-        padding: clamp(15px, 3vw, 25px);
-    }
-    
-    .form-row {
-        flex-direction: column;
-    }
-    
-    .form-group.half {
-        width: 100%;
-    }
+
 }
 
-/* Celulares extra pequenos */
-@media (max-width: 360px) {
-    .register-left {
-        padding: 15px;
+@media (max-width:768px){
+
+    body{
+        overflow-y:auto;
     }
-    
-    .register-title {
-        font-size: clamp(24px, 4.5vw, 32px);
-        margin-bottom: clamp(30px, 6vw, 40px);
+
+    .cadastro-register-container{
+        padding:25px 15px;
     }
-    
-    .register-options {
-        gap: clamp(12px, 2vw, 18px);
+
+    .cadastro-register-wrapper{
+        grid-template-columns:1fr;
+        max-width:500px;
     }
-    
-    .register-btn-text {
-        font-size: 14px;
+
+    .cadastro-register-right{
+        order:-1;
+        min-height:220px;
+        padding:25px;
     }
-    
-    .logo-container {
-        max-width: 200px;
-        max-height: 200px;
+
+    .cadastro-register-left{
+        padding:35px 25px;
     }
-    
-    .form-row {
-        flex-direction: column;
+
+    .logo-container{
+        max-width:220px;
+        max-height:220px;
     }
-    
-    .form-group.half {
-        width: 100%;
+
+    .cadastro-register-title{
+        margin-bottom:30px;
     }
+
+    .cadastro-register-options{
+        max-width:100%;
+    }
+
+}
+
+@media (max-width:576px){
+
+    .cadastro-register-container{
+        padding:15px;
+    }
+
+    .cadastro-register-wrapper{
+        border-radius:16px;
+    }
+
+    .cadastro-register-left{
+        padding:30px 20px;
+    }
+
+    .cadastro-register-title{
+        font-size:32px;
+    }
+
+    .cadastro-register-btn{
+        height:46px;
+        border-radius:14px;
+    }
+
+    .cadastro-register-btn-text{
+        font-size:17px;
+    }
+
+    .logo-container{
+        max-width:180px;
+        max-height:180px;
+    }
+
+}
+
+@media (max-width:400px){
+
+    .cadastro-register-left{
+        padding:25px 15px;
+    }
+
+    .cadastro-register-title{
+        font-size:28px;
+    }
+
+    .cadastro-register-btn{
+        height:42px;
+    }
+
+    .cadastro-register-btn-text{
+        font-size:16px;
+    }
+
+    .logo-container{
+        max-width:150px;
+        max-height:150px;
+    }
+
 }
