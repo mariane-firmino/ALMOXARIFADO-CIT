@@ -1,10 +1,10 @@
 <?php if ($_SESSION['usuario_funcao'] == 1) { ?>
     <footer class="footer">
         <nav class="footer-links">
-            <a href="<?=URL?>/pagina/inicio">Início</a>
-            <a href="<?=URL?>/pagina/sobreNos">Sobre nós</a>
-            <a href="<?=URL?>/pagina/gerenciarPerfil">Gerenciar perfis</a>
-            <a href="<?=URL?>/produto/consultarProduto">Consultar Produto</a>
+            <a href="<?=URL?>/pagina/home">Início</a>
+            <a href="<?=URL?>/pagina/sobre">Sobre nós</a>
+            <a href="<?=URL?>/usuarios/gerenciarPerfis">Gerenciar perfis</a>
+            <a href="<?=URL?>/produtos/consultarProduto">Consultar Produto</a>
         </nav>
 
         <div class="footer-center">
@@ -22,8 +22,8 @@
 
         <nav class="footer-links">
             <a href="<?=URL?>/pagina/home">Início</a>
-            <a href="<?=URL?>/pagina/sobreNos">Sobre nós</a>
-            <a href="<?=URL?>/produto/consultarProduto">Consultar Produto</a>
+            <a href="<?=URL?>/pagina/sobre">Sobre nós</a>
+            <a href="<?=URL?>/produtos/consultarProduto">Consultar Produto</a>
         </nav>
 
         <div class="footer-center">

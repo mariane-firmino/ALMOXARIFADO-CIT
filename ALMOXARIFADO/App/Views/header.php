@@ -12,7 +12,11 @@
     <div class="page">
         <aside class="sidebar" id="sidebarMenu">
             <div class="sidebar-header">
-                <img src="../img/avatar-menu.png" alt="Avatar" class="sidebar-avatar">
+                <img
+                    src="<?= URL ?>/img/usuarios/<?= !empty($_SESSION['usuario_foto']) ? $_SESSION['usuario_foto'] : 'avatar-padrao.png' ?>"
+                    alt="Avatar"
+                    class="sidebar-avatar"
+                    onerror="this.src='<?= URL ?>/img/usuarios/avatar-padrao.png'">
                 <div>
                     <p class="sidebar-title"><?= $_SESSION['usuario_nome'] ?></p>
                 </div>

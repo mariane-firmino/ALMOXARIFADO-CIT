@@ -265,7 +265,7 @@ class Usuarios extends Controller
                     if ($this->usuarioModel->armazenar($dados)) :
                         Sessao::mensagem('usuario', 'Cadastro realizado com sucesso');
                         $this->notificacaoModel->criarNotificacao('Novo servidor', 'Um novo servidor se cadastrou com sucesso.', 1);
-                        URL::redirecionar('paginas/home');
+                        URL::redirecionar('usuarios/login');
                     else :
                         die("Erro ao armazenar usuario no banco de dados");
                     endif;
@@ -380,7 +380,7 @@ class Usuarios extends Controller
                     if ($this->usuarioModel->armazenar($dados)) :
                         Sessao::mensagem('usuario', 'Cadastro realizado com sucesso');
                         $this->notificacaoModel->criarNotificacao('Novo estagiário', 'Um novo estagiário se cadastrou com sucesso.', 1);
-                        URL::redirecionar('paginas/home');
+                        URL::redirecionar('usuarios/login');
                     else :
                         die("Erro ao armazenar usuario no banco de dados");
                     endif;
