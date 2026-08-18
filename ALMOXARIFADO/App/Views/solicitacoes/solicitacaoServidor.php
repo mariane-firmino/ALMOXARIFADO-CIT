@@ -21,7 +21,7 @@
                 <p class="summary-label">Aprovados</p>
             </div>
 
-            <h2><?= $dados['totais']['aprovada'] ?></h2>
+            <h2 class="h2solicitacao"><?= $dados['totais']['aprovada'] ?></h2>
             <span class="summary-text">Solicitações aprovadas</span>
         </div>
 
@@ -33,7 +33,7 @@
                 <p class="summary-label">Pendentes</p>
             </div>
 
-            <h2><?= $dados['totais']['pendente'] ?></h2>
+            <h2 class="h2solicitacao"><?= $dados['totais']['pendente'] ?></h2>
             <span class="summary-text">Aguardando análise</span>
         </div>
 
@@ -45,7 +45,7 @@
                 <p class="summary-label">Negadas</p>
             </div>
 
-            <h2><?= $dados['totais']['negada'] ?></h2>
+            <h2 class="h2solicitacao"><?= $dados['totais']['negada'] ?></h2>
             <span class="summary-text">Solicitações negadas</span>
         </div>
 
@@ -57,7 +57,7 @@
                 <p class="summary-label">Devolvido</p>
             </div>
 
-            <h2><?= $dados['totais']['devolvido'] ?></h2>
+            <h2 class="h2solicitacao"><?= $dados['totais']['devolvido'] ?></h2>
             <span class="summary-text">Produtos devolvidos</span>
         </div>
 
@@ -66,7 +66,6 @@
     <section class="management-panel">
 
         <h2 class="table-title">Pesquisar produto</h2>
-
 
 
         <form id="formFiltro" action="<?= URL ?>/solicitacoes/solicitacaoServidor" method="GET">

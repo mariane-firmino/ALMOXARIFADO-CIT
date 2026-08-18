@@ -60,4 +60,6 @@ $db = new Database;
 <script src="<?=URL?>/public/js/excluir.js"></script>
 <script src="<?=URL?>/public/js/confirmacao.js"></script>
 <script src="<?=URL?>/public/js/forms.js"></script>
+<script src="<?=URL?>/public/js/imagem.js"></script>
+<script src="<?=URL?>/public/js/imagem2.js"></script>
 </html>

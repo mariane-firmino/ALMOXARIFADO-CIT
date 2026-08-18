@@ -135,8 +135,8 @@
 
 
 
-        <section class="home-dashboard">
-            <article class="home-card home-notification-card">
+        <section class="home-dashboard-servidor">
+            <article class="home-card-servidor home-notification-card-servidor">
                 <div class="home-notification-header">
                     <div class="home-icon-box">
                         <img src="<?= URL ?>/img/notify.png" alt="Notificações" class="home-card-icon">
@@ -147,7 +147,7 @@
                 <p class="home-card-description">Você não possui novas notificações.</p>
             </article>
 
-            <article class="home-card home-summary-card">
+            <article class="home-card-servidor home-summary-card-servidor">
 
                 <div class="home-summary-header">
                     <div class="home-icon-box">
@@ -182,8 +182,8 @@
 
             </article>
 
-            <div class="home-dashboard-row home-bottom-row">
-                <article class="home-card home-activity-card">
+            <div class="home-dashboard-row-servidor home-bottom-row">
+                <article class="home-card-servidor home-activity-card">
                     <div class="home-activity-heading">
                         <div class="home-icon-box small">
                             <img src="<?= URL ?>/img/icon_solici_servidor.png" alt="Resumo das Atividades"

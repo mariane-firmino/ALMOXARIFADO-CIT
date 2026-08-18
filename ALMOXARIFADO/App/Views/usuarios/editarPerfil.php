@@ -23,6 +23,7 @@
 
                             <img
                                 src="<?= URL ?>/img/usuarios/<?= !empty($dados['usuario']->usua_foto) ? $dados['usuario']->usua_foto : 'avatar-padrao.png' ?>"
+                                id="preview"
                                 alt="Avatar"
                                 class="avatar-image">
 

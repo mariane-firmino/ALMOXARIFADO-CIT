@@ -7,6 +7,12 @@
     box-shadow: 0 8px 24px rgba(0,0,0,0.08);
 }
 
+.h2solicitacao{
+    font-size: 36px;
+    text-align: center;
+    text-decoration: bold;
+}
+
 .solicitacao-card-header{
     display: grid;
     grid-template-columns: 1fr auto 1fr;

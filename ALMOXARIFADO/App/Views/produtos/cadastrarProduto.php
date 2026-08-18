@@ -15,7 +15,7 @@
     <section class="card-panel">
         <div class="card-header">
             <h2>Cadastro de Produto</h2>
-            <a href="<?= URL ?>/pagina/controlarEstoque" class="close-btn" aria-label="Fechar">
+            <a href="<?= URL ?>/pagina/estoque" class="close-btn" aria-label="Fechar">
                 <img src="<?= URL ?>/img/fechar.png" alt="Fechar">
             </a>
         </div>
@@ -25,7 +25,7 @@
 
                 <label for="imagem" class="upload-placeholder">
                     <img src="<?= URL ?>/img/adicionar-img.png"
-                        id="preview"
+                        id="preview2"
                         class="upload-icon"
                         alt="Adicionar imagem">
                 </label>
